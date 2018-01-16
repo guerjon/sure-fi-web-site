@@ -355,6 +355,10 @@ ul{
 	color: white;
 }
 
+.product-link{
+	margin-bottom: 100px;
+}
+
 /*
  THIS SIZE IS FOR A MAC O PC WITH HIGH RESOUTION
 */
@@ -443,6 +447,18 @@ ul{
 	.green-with-sizes{
 		width: 50vw;
 		height: 55vw;
+	}
+
+	.product-container{
+		height: 120px;
+	}
+
+	.product-title-container{
+		height: 70px;
+	}
+
+	.product-text-container{
+		height: 50px;
 	}
 }
 
@@ -642,6 +658,18 @@ ul{
 	.green-with-sizes{
 		width: 70vw;
 		height: 80vw;
+	}
+
+	.product-container{
+		height: 85px;
+	}
+
+	.product-title-container{
+		height: 40px;
+	}
+
+	.product-text-container{
+		height: 40px;
 	}
 
 }
