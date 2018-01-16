@@ -56,6 +56,13 @@
     distance: '0px'
   }, 300);
 
+  sr.reveal('.show-on-scroll',{
+    origin: 'right',
+    distance: '800px',
+    duration: 500,
+    mobile: true
+  })
+
   // Magnific popup calls
   $('.popup-gallery').magnificPopup({
     delegate: 'a',
