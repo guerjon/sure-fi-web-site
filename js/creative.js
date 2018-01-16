@@ -40,12 +40,18 @@
   $(window).scroll(navbarCollapse);
 
   // Scroll reveal calls
-  window.sr = ScrollReveal();
-  sr.reveal('.sr-icons', {
+  var sr_icons = {
     duration: 600,
     scale: 0.3,
-    distance: '0px'
-  }, 200);
+    distance: '0px'    
+  }
+
+  window.sr = ScrollReveal();
+  sr.reveal('.sr-icons',sr_icons,200);
+  sr.reveal('.sr-icons-2',sr_icons,200);
+  sr.reveal('.sr-icon-3',sr_icons,200);
+  sr.reveal('.sr-icons-4',sr_icons,200);
+
   sr.reveal('.sr-button', {
     duration: 1000,
     delay: 200
