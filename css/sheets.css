@@ -460,6 +460,12 @@ ul{
 	.product-text-container{
 		height: 50px;
 	}
+
+	.logo-link img{
+		width: 200px;
+		height: 50px;
+		margin: 15px;
+	}
 }
 
 /*tablets*/
@@ -554,6 +560,12 @@ ul{
 	.green-with-sizes{
 		width: 70vw;
 		height: 80vw;
+	}
+
+	.logo-link img{
+		width: 150px;
+		height: 40px;
+		margin: 15px;
 	}
 }
 
@@ -670,6 +682,16 @@ ul{
 
 	.product-text-container{
 		height: 40px;
+	}
+
+	.logo-link{
+		padding: 0px;
+	}
+
+	.logo-link img{
+		width: 100px;
+		height: 25px;
+		margin: 15px;
 	}
 
 }
