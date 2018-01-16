@@ -49,7 +49,7 @@
   window.sr = ScrollReveal();
   sr.reveal('.sr-icons',sr_icons,200);
   sr.reveal('.sr-icons-2',sr_icons,200);
-  sr.reveal('.sr-icon-3',sr_icons,200);
+  sr.reveal('.sr-icons-3',sr_icons,200);
   sr.reveal('.sr-icons-4',sr_icons,200);
 
   sr.reveal('.sr-button', {
