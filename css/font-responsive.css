@@ -1,0 +1,28 @@
+.contact-font {
+  font-size: 14px;
+}
+
+@media screen and (min-width: 576px){
+  .contact-font {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 768px){
+  .contact-font {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 992px){
+  .contact-font {
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 1200px){
+  .contact-font {
+   font-size: 32px; 
+  }
+   
+}
