@@ -63,6 +63,13 @@
     mobile: true
   })
 
+  sr.reveal('.bunker-busting-animation',{
+    duration: 1200,
+    scale: 0.3,
+    distance: '0px'
+  },200)
+
+
   // Magnific popup calls
   $('.popup-gallery').magnificPopup({
     delegate: 'a',
