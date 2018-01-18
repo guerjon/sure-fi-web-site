@@ -366,6 +366,9 @@ ul{
 	margin-bottom: 20px;
 }
 
+
+
+
 /*
  THIS SIZE IS FOR A MAC O PC WITH HIGH RESOUTION
 */
@@ -476,6 +479,10 @@ ul{
 
 	#hall-bottom-foot{
 		height: 130px;
+	}
+
+	.shadow-container{
+		margin-top: 90px;
 	}
 }
 
@@ -729,6 +736,10 @@ ul{
 	.green-with-sizes{
 		width: 50vw;
 		height: 55vw;
+	}
+
+	#shadow-container{
+		margin-top: 90px;
 	}
 
 }
