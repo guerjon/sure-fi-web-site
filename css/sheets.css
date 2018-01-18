@@ -359,6 +359,13 @@ ul{
 	margin-bottom: 100px;
 }
 
+#hall-bottom-foot{
+	background: black;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	margin-bottom: 20px;
+}
+
 /*
  THIS SIZE IS FOR A MAC O PC WITH HIGH RESOUTION
 */
@@ -466,6 +473,10 @@ ul{
 		height: 50px;
 		margin: 15px;
 	}
+
+	#hall-bottom-foot{
+		height: 130px;
+	}
 }
 
 /*tablets*/
@@ -567,6 +578,10 @@ ul{
 		height: 40px;
 		margin: 15px;
 	}
+	
+	#hall-bottom-foot{
+		height: 90px;
+	}	
 }
 
 /* phones */
@@ -677,7 +692,7 @@ ul{
 	}
 
 	.product-title-container{
-		height: 40px;
+		height: 50px;
 	}
 
 	.product-text-container{
@@ -693,6 +708,10 @@ ul{
 		height: 25px;
 		margin: 15px;
 	}
+
+	#hall-bottom-foot{
+		height: 70px;
+	}	
 
 }
 
@@ -731,3 +750,6 @@ ul{
 }
 
 *, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+

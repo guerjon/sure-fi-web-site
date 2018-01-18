@@ -2,9 +2,23 @@
   font-size: 14px;
 }
 
+@media screen and (min-width: 0px) and (max-width: 575px){
+  #southwest_automated{
+    padding: 20px;
+  }
+
+  #jamieson_fence{
+    padding: 20px; 
+  }
+}
+
 @media screen and (min-width: 576px){
   .contact-font {
     font-size: 16px;
+  }
+
+  #southwest_automated{
+    padding: 10px;
   }
 }
 
@@ -12,17 +26,42 @@
   .contact-font {
     font-size: 20px;
   }
+
+  #southwest_automated{
+    padding:10px;margin-bottom: 10px;
+  }
 }
 
 @media screen and (min-width: 992px){
   .contact-font {
     font-size: 24px;
   }
+  
+  #southwest_automated{
+    padding: 40px;
+    margin-top: 80px;
+  }
+
+  #jamieson_fence{
+    padding: 40px; 
+    margin-top: 80px;
+  }
+
 }
 
 @media screen and (min-width: 1200px){
   .contact-font {
    font-size: 28px; 
+  }
+
+  #southwest_automated{
+    padding: 40px;
+    margin-top: 80px;
+  }
+
+  #jamieson_fence{
+    padding: 40px; 
+    margin-top: 80px;
   }
    
 }
