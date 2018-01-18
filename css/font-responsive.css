@@ -18,6 +18,21 @@
   #where_to_buy{
     margin-top: 20px;
   }
+  #carousel-container{
+    display: block;
+  }
+
+  #parterns-images-container{
+    display: none;
+  }
+
+  #back-button{
+    display: block;
+  }
+
+  #front-button{
+    display: block;
+  }
 }
 
 @media screen and (min-width: 576px){
@@ -37,6 +52,22 @@
   #where_to_buy{
     margin-top: 20px;
   }  
+
+  #carousel-container{
+    display: none;
+  }
+
+  #back-button{
+    display: none;
+  }
+
+  #front-button{
+    display: none;
+  }
+
+  #parterns-images-container{
+    display: run-in;
+  }
 }
 
 @media screen and (min-width: 768px){
@@ -47,11 +78,44 @@
   #southwest_automated{
     padding:10px;margin-bottom: 10px;
   }
+
+  #carousel-container{
+    display: none;
+  }
+
+
+  #parterns-images-container{
+    display: run-in;
+  }
+
+  #back-button{
+    display: none;
+  }
+
+  #front-button{
+    display: none;
+  }
 }
 
 @media screen and (min-width: 992px){
   .contact-font {
     font-size: 24px;
+  }
+  #carousel-container{
+    display: none;
+  }  
+
+
+  #parterns-images-container{
+    display: run-in;
+  }
+
+  #back-button{
+    display: none;
+  }
+
+  #front-button{
+    display: none;
   }
 }
 
@@ -67,7 +131,25 @@
 
   #jamieson_fence{
     padding: 40px; 
-    
   }
+
+  #carousel-container{
+    display: none;
+  }
+
+
+  #back-button{
+    display: none;
+  }
+
+  #front-button{
+    display: none;
+  }
+
+  #parterns-images-container{
+    display: run-in;
+  }
+
+
    
 }

@@ -24,6 +24,8 @@
     <link href="css/creative.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/font-responsive.css">
     <link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" href="js/OwlCarousel2-2.2.0/dist/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="js/OwlCarousel2-2.2.0/dist/assets/owl.theme.default.min.css">
 
   </head>
 
@@ -70,21 +72,60 @@
 			      		<div class="col" style="text-align: center;color: white;font-weight: bold;" id="where_to_buy">
 			      			<h1>Where to Buy</h1>
 			      		</div>
-			      	</div>			      	
-			        <div class="row">
-			          <div class="col-lg-6">
+			      	</div>
+			      	<div class="row" >
+			      		<div class="col-1" style="background-color: rgb(250,250,250);margin: auto;" id="back-button">							
+							<h4 style="text-align: center;align-items: center;margin-top: 5px;">
+								<a onclick="return false;" href="#" class="no-decoration-link ">
+									<span style="font-weight: 900; color: black;letter-spacing: 3px">
+										<
+									</span>
+								</a>
+							</h4>
+			      		</div>
+			      		<div class="col-10">
+					      	<div class="row" id="carousel-container">
+								<div class="container" >
+									<div class="owl-carousel">
+										<div class="company-image-container">
+											<a onclick="return false;" href="http://www.southwestautomated.com/">
+												<img  src="images/southwest_automated.png">
+											</a>
+										</div>
+										<div class="company-image-container">
+											<a onclick="return false;" href="https://jamiesonfence.com/">
+												<img src="images/jamieson_fence.png">
+											</a>
+										</div>
+									</div>
+								</div>	
+					      	</div>			      			
+			      		</div>
+			      		<div class="col-1" style="margin: auto;background-color: rgb(250,250,250);" id="front-button">	
+							<h4 style="text-align: center;align-items: center;margin-top: 5px;">
+								<a onclick="return false;" href="#" class="no-decoration-link">
+									<span style="font-weight: 900; color: black;letter-spacing: 3px">
+										>
+									</span>
+								</a>
+							</h4>
+						
+			      		</div>
+			      	</div>
+			        <div class="row" id="parterns-images-container">
+			          <div class="col-sm-6 col-md-6 col-lg-6">
 			            <a href="http://www.southwestautomated.com/">
 			              <img src="images/southwest_automated.png" class="img-fluid" id="southwest_automated">      
 			            </a>
 			          </div>
-			          <div class="col-lg-6">
+			          <div class="col-sm-6 col-md-6 col-lg-6">
 			            <a href="https://jamiesonfence.com/">
 			              <img src="images/jamieson_fence.png" class="img-fluid" id="jamieson_fence" >      
 			            </a>
 			          </div>  
 			        </div>
 			      </div>
-			    </div>  					
+			    </div>					
   					<div class="row">
 						<center>
 							<img src="images/heavy-red.png" class="rounded" style="width: 100%;height: auto;padding: 10%;">				
@@ -340,6 +381,7 @@
     <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
     <!-- Custom scripts for this template -->
+    <script src="js/OwlCarousel2-2.2.0/dist/owl.carousel.min.js"></script>
     <script src="js/creative.js"></script>
 
   </body>
