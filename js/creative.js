@@ -65,7 +65,6 @@
   }, 300);
 
   sr.reveal('.show-on-scroll',{
-    origin: 'right',
     distance: '0px',
     duration: 500,
     mobile: true
