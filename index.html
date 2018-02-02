@@ -71,7 +71,10 @@
             <hr>
           </div>
           <div class="col-lg-8 mx-auto">
-            <p class="text-faded mb-5" style="color: white;">Sure-Fi is the worlds first radio design to reliably connect through heavy obstruction. Features one-mile range with obstructions 50+ miles line-of-sight. We call it Bunker Busting 900MHz     </p>
+            <p class="text-faded mb-5" style="color: white;">
+              Sure-Fi is the worlds first radio design to reliably connect through heavy obstruction. 
+              Features one-mile range with obstructions and 50+ miles line-of-sight.
+            </p>
             <a class="btn btn-primary btn-xl js-scroll-trigger" href="#services">Products</a>
           </div>
         </div>
@@ -244,33 +247,31 @@
         </div>        
       </div>
     </section>
-    <div style="background-color: black;height: 200px;width: 100%;">
-        <div class="row">
-          <div class="col">
-            <div class="container-fluid">
-              <div class="row" style="margin-top: 40px;margin-bottom: 20px;">
-                <div class="col-6 col-lg-6" >
-                  <a href="https://itunes.apple.com/us/app/sure-fi/id1259963492?mt=8" target="_blank" style="float: right;">
-                    <img src="images/app_store.png" class="img-fluid">  
-                  </a>                                          
-                </div>
-                <div class="col-6 col-lg-6">
-                  <a href="https://play.google.com/store/apps/details?id=com.surefi&hl=en" target="_blank" >
-                    <img src="images/play_store.png" class="img-fluid">
-                  </a>                                          
-                </div>
-              </div>
-            </div>
+    <section style="background-color: black;height: auto;">
+      <div class="container">      
+        <div class="row" >
+          <div class="col-6 col-lg-6" >
+            <a href="https://itunes.apple.com/us/app/sure-fi/id1259963492?mt=8" target="_blank" style="float: right;">
+              <img src="images/app_store.png" class="img-fluid">  
+            </a>                                          
+          </div>
+          <div class="col-6 col-lg-6">
+            <a href="https://play.google.com/store/apps/details?id=com.surefi&hl=en" target="_blank" >
+              <img src="images/play_store.png" class="img-fluid">
+            </a>                                          
           </div>
         </div>
         <div class="row">
-          <div class="col" style="text-align: center;">
-          <h4 style="color: white;margin-top: -7px;">
+          <div class="col col-lg-12" style="text-align: center;padding: 60px">
+          <h4 style="color: white;">
             Sure-Fi Inc. © 2017
           </h4>                  
           </div>
         </div>
-    </div>
+      </div>
+    </section>
+        
+   
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -280,13 +281,25 @@
     <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
     <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
-    <!-- Custom scripts for this template -->
+    <!-- Custom scripts for this template 
   
     
     <script type="text/javascript" src="js/animations.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
+    -->
+    
+    <script type="text/javascript" >
+        var docWidth = document.documentElement.offsetWidth;
 
-
+        [].forEach.call(
+          document.querySelectorAll('*'),
+          function(el) {
+            if (el.offsetWidth > docWidth) {
+              console.log(el);
+            }
+          }
+        );
+    </script>
 
   </body>
 
