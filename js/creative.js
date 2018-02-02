@@ -64,6 +64,7 @@
 
   sr.reveal('.show-on-scroll',{
     origin: 'right',
+    
     distance: '50px',
     duration: 500,
     mobile: true
