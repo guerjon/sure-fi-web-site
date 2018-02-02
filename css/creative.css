@@ -298,9 +298,12 @@
   }
 
   #services {
-    padding: 5rem 0
+    padding: 5rem 0;
   }
 
+  #about {
+    padding: 5rem 0;
+  }
 }
 /*pc desktops */
 @media screen and (min-width: 1024px){
