@@ -467,10 +467,6 @@ ul{
 		height: 120px;
 	}
 
-	.product-title-container{
-		height: 40px;
-	}
-
 	.product-text-container{
 		height: 50px;
 	}
@@ -493,6 +489,10 @@ ul{
 		background-color:#000;
 		padding:20px;
 		margin:0px -20px 0px -70px;	
+	}
+
+	.product-title-container{
+		height: 40px;
 	}
 }
 
@@ -604,12 +604,15 @@ ul{
 		padding:20px;
 		margin:0px -20px 0px -70px;	
 	}
+	.product-title-container{
+		height: 70px;
+	}
 }
 
 /* phones */
 @media screen and (min-width: 100px) and (max-width: 799px){
 
-	
+
 
 	.black-div{
 		background-color:#000;

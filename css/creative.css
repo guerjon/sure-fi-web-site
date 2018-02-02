@@ -252,6 +252,7 @@
 
 /* phones */
 @media screen and (min-width: 100px) and (max-width: 799px){
+ 
  header.masthead {
      padding-top: 5rem;
      padding-bottom: calc(10rem - 56px);
@@ -262,6 +263,19 @@
      -o-background-size: cover;
      background-size: cover;
   }
+
+  #services {
+    padding: 3rem 0
+  }
+
+  .product-link{
+    margin: 0px; 
+  }  
+
+  .product-link img{
+   margin: 50px 0px 80px 0px;
+  }
+
 }
 
  /*tablets*/
@@ -277,6 +291,10 @@
      background-size: cover;
   }
 
+  #services {
+    padding: 5rem 0
+  }
+
 }
 /*pc desktops */
 @media screen and (min-width: 1024px){
@@ -290,6 +308,8 @@
     -o-background-size: cover;
     background-size: cover;
   }
+
+
 
 }
 
