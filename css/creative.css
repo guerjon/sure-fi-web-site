@@ -254,7 +254,7 @@
 @media screen and (min-width: 100px) and (max-width: 799px){
  
  header.masthead {
-     padding-top: 3rem;
+     padding-top: 3rem !important;
      padding-bottom: calc(10rem - 56px);
      background-image: url("../images/master.png");
      background-position: center center;
@@ -281,7 +281,7 @@
  /*tablets*/
 @media screen and (min-width: 800px) and (max-width: 1024px){
   header.masthead {
-     padding-top: 3rem;
+     padding-top: 3rem !important;
      padding-bottom: calc(10rem - 56px);
      background-image: url("../images/master.png");
      background-position: center center;
@@ -299,7 +299,7 @@
 /*pc desktops */
 @media screen and (min-width: 1024px){
   header.masthead {
-    padding-top: 10rem;
+    padding-top: 10rem !important;
     padding-bottom: calc(10rem - 56px);
     background-image: url("../images/master.png");
     background-position: center center;
