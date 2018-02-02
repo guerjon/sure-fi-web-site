@@ -77,12 +77,15 @@
     distance: '0px'
   },200)
 
+  var myArray = [0, 1, 2];   
+  var rand = myArray[Math.floor(Math.random() * myArray.length)];
 
- var owl = $(".owl-carousel").owlCarousel(
+  var owl = $(".owl-carousel").owlCarousel(
       {
+        startPosition: rand,
         nav : true,
         navText: ['<span class="fa fa-angle-left"></span>','<span class="fa fa-angle-right"></span>'],
-        autoplay : false,
+        autoplay : true,
         autoplayTimeout:3000,
         autoplaySpeed: 200,
         loop: true,
