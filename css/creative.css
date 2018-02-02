@@ -254,7 +254,7 @@
 @media screen and (min-width: 100px) and (max-width: 799px){
  
  header.masthead {
-     padding-top: 2rem;
+     padding-top: 3rem;
      padding-bottom: calc(10rem - 56px);
      background-image: url("../images/master.png");
      background-position: center center;
