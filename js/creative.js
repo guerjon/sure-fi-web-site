@@ -86,7 +86,7 @@
         nav : true,
         navText: ['<span class="fa fa-angle-left"></span>','<span class="fa fa-angle-right"></span>'],
         autoplay : true,
-        autoplayTimeout:5000,
+        autoplayTimeout:10000,
         autoplaySpeed: 200,
         loop: true,
         responsive:{
