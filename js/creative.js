@@ -64,11 +64,12 @@
     distance: '0px'
   }, 300);
 
-  sr.reveal('.show-on-scroll',{
-    distance: '0px',
-    duration: 500,
-    mobile: true
-  })
+
+  sr.reveal('.show-on-scroll', {
+    duration: 600,
+    scale: 0.3,
+    distance: '0px'
+  }, 300);
 
   sr.reveal('.bunker-busting-animation',{
     duration: 1200,
