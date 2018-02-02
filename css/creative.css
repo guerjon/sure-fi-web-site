@@ -305,7 +305,7 @@
 /*pc desktops */
 @media screen and (min-width: 1024px){
   header.masthead {
-    padding-top: 3rem !important;
+    padding-top: 7rem !important;
     padding-bottom: calc(10rem - 56px);
     background-image: url("../images/master.png");
     background-position: center center;
