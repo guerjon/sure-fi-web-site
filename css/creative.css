@@ -265,7 +265,8 @@
   }
 
   #services {
-    padding: 3rem 0
+    padding-top: 3em;
+    padding-bottom: 0em;
   }
 
   .product-link{
@@ -274,6 +275,11 @@
 
   .product-link img{
    margin: 50px 0px 80px 0px;
+  }
+
+  #contact {
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
   }
 
 }
