@@ -163,7 +163,27 @@ ul{
 .green-list{
   list-style: none;
   list-style-image: url('../images/green-ball.png');
+  list-style-position: outside;
   padding: 0;
+}
+
+.gray-list {
+  	list-style: none;
+ 	list-style-position: inside;
+ 	padding: 0;
+}
+.gray-list li{
+	margin-bottom: 20px;
+}
+
+.red-ball-list {
+  	list-style: none;
+ 	list-style-position: inside;
+ 	padding: 0;
+}
+
+.red-ball-list li {
+	margin-bottom: 20px;
 }
 
 .red-list{
