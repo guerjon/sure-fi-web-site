@@ -164,7 +164,7 @@ ul{
   list-style: none;
   list-style-image: url('../images/green-ball.png');
   list-style-position: outside;
-  padding: 0;
+  
 }
 
 .gray-list {
@@ -189,7 +189,7 @@ ul{
 .red-list{
 	list-style: none;
   	list-style-image: url('../images/red-circule.png');
-  	padding: 0;	
+  	
 }
 
 .blue-list{
