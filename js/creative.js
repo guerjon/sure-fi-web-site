@@ -1,3 +1,23 @@
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
+
+
 (function($) {
   "use strict"; // Start of use strict
 
@@ -25,6 +45,18 @@
     target: '#mainNav',
     offset: 57
   });
+
+  var item_1 = '<a href="http://www.southwestautomated.com/"><img src="images/southwest_automated.png" class="img-fluid" id="southwest_automated"></a>'
+  var item_2 = '<a href="https://jamiesonfence.com/"><img src="images/jamieson_fence.png" class="img-fluid" id="jamieson_fence" ></a>'
+  var item_3 = '<a href="https://www.controlledproducts.com/" ><img src="images/controlled_product_systems.png" class="img-fluid"></a>'
+  var items_array = [item_1,item_2,item_3]
+  var shuffle_array = shuffle(items_array)
+  
+
+  $("#southwest_automated_container").append(shuffle_array[0]);
+  $("#jamieson_fence_container").append(shuffle_array[1]);
+  $("#controller_product_systems_container").append(shuffle_array[2])
+
 
   // Collapse Navbar
   var navbarCollapse = function() {
@@ -113,3 +145,4 @@
   })
 
 })(jQuery); // End of use strict
+
