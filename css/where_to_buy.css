@@ -1,6 +1,6 @@
 @media screen and (min-width: 0px) and (max-width: 575px){
   .company-image-movil-container{
-    padding: 20px;
+    padding-top: 20px;
   }
 
   .text-logo-movil-container a{
@@ -15,9 +15,31 @@
   }
 
   .company-logo-container img{
-      width: 100px;
-      height: 75px;
-      margin-top: 25px; 
+      width: 120px;
+      margin-top: 30px; 
+  }
+
+  .body-symulator{
+    height: 350px;
+    overflow: hidden;
+  }
+  .Loop {
+    position: relative;
+    height: 350px;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .company-image-movil-container {
+    position: relative;
+    text-align: center;
+    min-height: 200px;
+    max-height: 400px;
+    height: 70%;
+  }
+
+  ::scrollbar {
+    display: none;
   }
 }
 
