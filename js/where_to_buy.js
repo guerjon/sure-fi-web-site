@@ -9,7 +9,8 @@ $(document).ready(function(){
     slidesToShow: 2,
     slidesToMove: 1,
     arrows: false,
-    initialSlide : rand
+    initialSlide : rand,
+    respondTo: 'slider'
   });
 });
 
