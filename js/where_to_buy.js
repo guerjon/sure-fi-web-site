@@ -1,24 +1,3 @@
-if ( !window.requestAnimationFrame ) {
-
-  window.requestAnimationFrame = ( function() {
-
-    return window.webkitRequestAnimationFrame ||
-    window.mozRequestAnimationFrame ||
-    window.oRequestAnimationFrame ||
-    window.msRequestAnimationFrame ||
-    function( /* function FrameRequestCallback */ callback, /* DOMElement Element */ element ) {
-
-      window.setTimeout( callback, 1000 / 60 );
-
-    };
-
-  } )();
-
-}
-
-var scroll_positions = [5,252,494,747,987]
-var rand = scroll_positions[Math.floor(Math.random() * scroll_positions.length)];
-
 var doc = window.document,
   context = doc.querySelector('.js-loop'),
   clones = context.querySelectorAll('.is-clone'),
@@ -47,19 +26,19 @@ function getClonesHeight () {
 }
 
 function reCalc () {
-  console.log("reCalc")
   scrollPos = getScrollPos();
   scrollHeight = context.scrollHeight;
   clonesHeight = getClonesHeight();
 
   if (scrollPos <= 0) {
-    setScrollPos(rand); // Scroll 1 pixel to allow upwards scrolling
+    setScrollPos(1); // Scroll 1 pixel to allow upwards scrolling
   }
 }
 
 function scrollUpdate () {
-  //if (!disableScroll) {
+  if (!disableScroll) {
     scrollPos = getScrollPos();
+
     if (clonesHeight + scrollPos >= scrollHeight) {
       // Scroll to the top when you’ve reached the bottom
       setScrollPos(1); // Scroll down 1 pixel to allow upwards scrolling
@@ -69,7 +48,7 @@ function scrollUpdate () {
       setScrollPos(scrollHeight - clonesHeight);
       disableScroll = true;
     }
-  //}
+  }
 
   if (disableScroll) {
     // Disable scroll-jumping for a short time to avoid flickering
@@ -85,9 +64,13 @@ context.addEventListener('scroll', function () {
   window.requestAnimationFrame(scrollUpdate);
 }, false);
 
+window.addEventListener('resize', function () {
+  window.requestAnimationFrame(reCalc);
+}, false);
+
 // Just for this demo: Center the middle block on page load
 window.onload = function () {
-  setScrollPos(rand)
+  setScrollPos(2)
 };
 
 
