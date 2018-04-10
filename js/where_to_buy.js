@@ -1,29 +1,13 @@
-
-/*$(document).ready(function(){
-  /*
-  $('.vertical-carousel').slick({
-    vertical: true,
-    verticalSwiping: true,
-    arrows: false,
-    initialSlide : rand,
-    swipe: true,
-    swipeToSlide: false,
-    touchMove: false,
-    adaptiveHeight: true
-  });
-  */
-
-  /*var childs = $(".my-own-carousel").childNodes
-  if(childs.length > 0){
-    var initialPosition = selectRandom(childs)
-    
-
-  }else{
-    console.log("No childs")
-  }
-
-});
-*/
+window.requestAnimationFrame = (function(){
+return window.requestAnimationFrame  ||
+  window.webkitRequestAnimationFrame ||
+  window.mozRequestAnimationFrame    ||
+  window.oRequestAnimationFrame      ||
+  window.msRequestAnimationFrame     ||
+  function(callback){
+  window.setTimeout(callback, 1000 / 60);
+};
+})();
 
 var doc = window.document,
   context = doc.querySelector('.js-loop'),
