@@ -20,12 +20,12 @@
   }
 
   .body-symulator{
-    height: 350px;
+    height: 500px;
     overflow: hidden;
   }
   .loop {
     position: relative;
-    height: 350px;
+    height: 500px;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
   }
@@ -35,7 +35,7 @@
     text-align: center;
     min-height: 200px;
     max-height: 400px;
-    height: 70%;
+    height: 50%;
   }
 
   ::scrollbar {
