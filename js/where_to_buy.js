@@ -5,8 +5,8 @@ return window.requestAnimationFrame  ||
   window.oRequestAnimationFrame      ||
   window.msRequestAnimationFrame     ||
   function(callback){
-  window.setTimeout(callback, 1000 / 60);
-};
+    window.setTimeout(callback, 1000 / 60);
+  };
 })();
 
 var doc = window.document,
@@ -67,7 +67,7 @@ function scrollUpdate (data) {
     // Disable scroll-jumping for a short time to avoid flickering
     window.setTimeout(function () {
       disableScroll = false;
-    }, 40);
+    }, 80);
   }
 }
 
