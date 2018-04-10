@@ -36,7 +36,7 @@ function reCalc () {
 }
 
 function scrollUpdate () {
-  if (!disableScroll) {
+  //if (!disableScroll) {
     scrollPos = getScrollPos();
 
     if (clonesHeight + scrollPos >= scrollHeight) {
@@ -48,25 +48,24 @@ function scrollUpdate () {
       setScrollPos(scrollHeight - clonesHeight);
       disableScroll = true;
     }
-  }
+  //}
 
-  if (disableScroll) {
+ /* if (disableScroll) {
     // Disable scroll-jumping for a short time to avoid flickering
     window.setTimeout(function () {
       disableScroll = false;
     }, 60);
-  }
+  }*/
 }
 
 window.requestAnimationFrame(reCalc);
 
 context.addEventListener('scroll', function () {
+  console.log("scroll")
   window.requestAnimationFrame(scrollUpdate);
 }, false);
 
-window.addEventListener('resize', function () {
-  window.requestAnimationFrame(reCalc);
-}, false);
+
 
 // Just for this demo: Center the middle block on page load
 window.onload = function () {
