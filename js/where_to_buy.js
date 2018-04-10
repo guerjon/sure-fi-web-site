@@ -33,17 +33,20 @@ function reCalc () {
   console.log("scrollPos",scrollPos)
   console.log("scrollHeight",scrollHeight)
   console.log("clonesHeight",clonesHeight)
+
   if (scrollPos <= 0) {
     setScrollPos(1); // Scroll 1 pixel to allow upwards scrolling
   }
 }
 
 function scrollUpdate () {
+
   if (!disableScroll) {
     scrollPos = getScrollPos();
 
     if (clonesHeight + scrollPos >= scrollHeight) {
       // Scroll to the top when you’ve reached the bottom
+      console.log("se paso",scrollPos)
       setScrollPos(1); // Scroll down 1 pixel to allow upwards scrolling
       disableScroll = true;
     } else if (scrollPos <= 0) {
@@ -57,7 +60,7 @@ function scrollUpdate () {
     // Disable scroll-jumping for a short time to avoid flickering
     window.setTimeout(function () {
       disableScroll = false;
-    }, 40);
+    }, 800);
   }
 }
 
