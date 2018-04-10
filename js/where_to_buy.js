@@ -47,19 +47,19 @@ function getClonesHeight () {
 }
 
 function reCalc () {
+  console.log("reCalc")
   scrollPos = getScrollPos();
   scrollHeight = context.scrollHeight;
   clonesHeight = getClonesHeight();
 
   if (scrollPos <= 0) {
-    setScrollPos(1); // Scroll 1 pixel to allow upwards scrolling
+    setScrollPos(rand); // Scroll 1 pixel to allow upwards scrolling
   }
 }
 
 function scrollUpdate () {
   //if (!disableScroll) {
     scrollPos = getScrollPos();
-    console.log("scrollPos",scrollPos)
     if (clonesHeight + scrollPos >= scrollHeight) {
       // Scroll to the top when you’ve reached the bottom
       setScrollPos(1); // Scroll down 1 pixel to allow upwards scrolling
