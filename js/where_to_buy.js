@@ -46,7 +46,8 @@ function scrollUpdate () {
 
     if (clonesHeight + scrollPos >= scrollHeight) {
       // Scroll to the top when you’ve reached the bottom
-      console.log("se paso",scrollPos)
+      
+      $("#logica").text("se paso")
       setScrollPos(1); // Scroll down 1 pixel to allow upwards scrolling
       disableScroll = true;
     } else if (scrollPos <= 0) {
