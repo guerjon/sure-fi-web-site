@@ -63,12 +63,14 @@ function scrollUpdate (data) {
     }
   }
 
-  if (disableScroll) {
+/*  if (disableScroll) {
     // Disable scroll-jumping for a short time to avoid flickering
     window.setTimeout(function () {
       disableScroll = false;
     }, 80);
+
   }
+  */
 }
 
 window.requestAnimationFrame(reCalc);
