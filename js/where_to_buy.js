@@ -1,3 +1,6 @@
+var scroll_positions = [5,252,494,747,987]
+var rand = scroll_positions[Math.floor(Math.random() * scroll_positions.length)];
+
 var doc = window.document,
   context = doc.querySelector('.js-loop'),
   clones = context.querySelectorAll('.is-clone'),
@@ -38,7 +41,7 @@ function reCalc () {
 function scrollUpdate () {
   //if (!disableScroll) {
     scrollPos = getScrollPos();
-
+    console.log("scrollPos",scrollPos)
     if (clonesHeight + scrollPos >= scrollHeight) {
       // Scroll to the top when you’ve reached the bottom
       setScrollPos(1); // Scroll down 1 pixel to allow upwards scrolling
@@ -50,26 +53,23 @@ function scrollUpdate () {
     }
   //}
 
- /* if (disableScroll) {
+  if (disableScroll) {
     // Disable scroll-jumping for a short time to avoid flickering
     window.setTimeout(function () {
       disableScroll = false;
-    }, 60);
-  }*/
+    }, 40);
+  }
 }
 
 window.requestAnimationFrame(reCalc);
 
 context.addEventListener('scroll', function () {
-  console.log("scroll")
   window.requestAnimationFrame(scrollUpdate);
 }, false);
 
-
-
 // Just for this demo: Center the middle block on page load
 window.onload = function () {
-  setScrollPos(2)
+  setScrollPos(rand)
 };
 
 
