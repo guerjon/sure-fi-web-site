@@ -20,12 +20,12 @@
   }
 
   .body-symulator{
-    height: 350px;
+    height: 500px;
     overflow: hidden;
   }
   .Loop {
     position: relative;
-    height: 350px;
+    height: 450px;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
   }
