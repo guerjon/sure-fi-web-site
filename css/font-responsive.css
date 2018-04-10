@@ -65,23 +65,6 @@
     margin-top: 20px;
     display: none;
   }
-  #where-to-buy-movil-section{
-    
-  }
-  .company-logo-container{
-      width: 150px;
-      height: 150px;    
-      background-color: black;
-      padding: 10px;
-      border-radius: 50%;
-  }
-
-  .company-logo-container img{
-      width: 100px;
-      height: 75px;
-      margin-top: 20px; 
-  }
-
 }
 
 @media screen and (min-width: 576px){
@@ -207,9 +190,7 @@
     margin-top: 20px;
     display: block;
   }
-  #where-to-buy-movil-section{
-    display: none;
-  }
+
 }
 
 @media screen and (min-width: 992px){
@@ -242,9 +223,7 @@
     display: block;
   }
 
-  #where-to-buy-movil-section{
-    display: none;
-  }  
+
 }
 
 @media screen and (min-width: 1200px){
@@ -298,8 +277,6 @@
     display: block;
   }
 
-  #where-to-buy-movil-section{
-    display: none;
-  }  
+
 }
 
