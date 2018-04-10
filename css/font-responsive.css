@@ -68,11 +68,20 @@
   #where-to-buy-movil-section{
     
   }
-
-  .company-image-movil-container img{
-    width: 250px;
-    height: 200px;
+  .company-logo-container{
+      width: 150px;
+      height: 150px;    
+      background-color: black;
+      padding: 10px;
+      border-radius: 50%;
   }
+
+  .company-logo-container img{
+      width: 100px;
+      height: 75px;
+      margin-top: 20px; 
+  }
+
 }
 
 @media screen and (min-width: 576px){
