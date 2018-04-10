@@ -1,14 +1,3 @@
-window.requestAnimationFrame = (function(){
-return window.requestAnimationFrame  ||
-  window.webkitRequestAnimationFrame ||
-  window.mozRequestAnimationFrame    ||
-  window.oRequestAnimationFrame      ||
-  window.msRequestAnimationFrame     ||
-  function(callback){
-    window.setTimeout(callback, 1000 / 60);
-  };
-})();
-
 var doc = window.document,
   context = doc.querySelector('.js-loop'),
   clones = context.querySelectorAll('.is-clone'),
@@ -37,18 +26,19 @@ function getClonesHeight () {
 }
 
 function reCalc () {
-  console.log("recalc")
   scrollPos = getScrollPos();
   scrollHeight = context.scrollHeight;
   clonesHeight = getClonesHeight();
 
+  console.log("scrollPos",scrollPos)
+  console.log("scrollHeight",scrollHeight)
+  console.log("clonesHeight",clonesHeight)
   if (scrollPos <= 0) {
     setScrollPos(1); // Scroll 1 pixel to allow upwards scrolling
   }
 }
 
-function scrollUpdate (data) {
-  console.log("disableScroll",disableScroll)
+function scrollUpdate () {
   if (!disableScroll) {
     scrollPos = getScrollPos();
 
@@ -63,14 +53,12 @@ function scrollUpdate (data) {
     }
   }
 
-/*  if (disableScroll) {
+  if (disableScroll) {
     // Disable scroll-jumping for a short time to avoid flickering
     window.setTimeout(function () {
       disableScroll = false;
-    }, 80);
-
+    }, 40);
   }
-  */
 }
 
 window.requestAnimationFrame(reCalc);
@@ -79,13 +67,7 @@ context.addEventListener('scroll', function () {
   window.requestAnimationFrame(scrollUpdate);
 }, false);
 
-window.addEventListener('resize', function () {
-  window.requestAnimationFrame(reCalc);
-}, false);
-
 // Just for this demo: Center the middle block on page load
 window.onload = function () {
 
 };
-
-
