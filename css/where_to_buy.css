@@ -44,7 +44,28 @@
 }
 
 @media screen and (min-width: 576px){
+  .body-symulator{
+      height: 500px;
+      overflow: hidden;
+    }
+    .Loop {
+      position: relative;
+      height: 450px;
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
+    }
 
+    .company-image-movil-container {
+      position: relative;
+      text-align: center;
+      min-height: 200px;
+      max-height: 400px;
+      height: 70%;
+    }
+
+    ::scrollbar {
+      display: none;
+    }
 }
 
 @media screen and (min-width: 768px){
