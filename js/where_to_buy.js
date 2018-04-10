@@ -1,9 +1,36 @@
+
+/*$(document).ready(function(){
+  /*
+  $('.vertical-carousel').slick({
+    vertical: true,
+    verticalSwiping: true,
+    arrows: false,
+    initialSlide : rand,
+    swipe: true,
+    swipeToSlide: false,
+    touchMove: false,
+    adaptiveHeight: true
+  });
+  */
+
+  /*var childs = $(".my-own-carousel").childNodes
+  if(childs.length > 0){
+    var initialPosition = selectRandom(childs)
+    
+
+  }else{
+    console.log("No childs")
+  }
+
+});
+*/
+
 var doc = window.document,
   context = doc.querySelector('.js-loop'),
   clones = context.querySelectorAll('.is-clone'),
   disableScroll = false,
   scrollHeight = 0,
-  scrollPos = 3,
+  scrollPos = 0,
   clonesHeight = 0,
   i = 0;
 
@@ -70,7 +97,7 @@ window.addEventListener('resize', function () {
 
 // Just for this demo: Center the middle block on page load
 window.onload = function () {
-  setScrollPos(2)
+  setScrollPos(Math.round(clones[1].getBoundingClientRect().top + getScrollPos() - (context.offsetHeight - clones[1].offsetHeight) / 2));
 };
 
 
