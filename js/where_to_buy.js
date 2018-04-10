@@ -53,6 +53,7 @@ function getClonesHeight () {
 }
 
 function reCalc () {
+  console.log("recalc")
   scrollPos = getScrollPos();
   scrollHeight = context.scrollHeight;
   clonesHeight = getClonesHeight();
@@ -62,7 +63,8 @@ function reCalc () {
   }
 }
 
-function scrollUpdate () {
+function scrollUpdate (data) {
+  console.log("disableScroll",disableScroll)
   if (!disableScroll) {
     scrollPos = getScrollPos();
 
@@ -97,7 +99,7 @@ window.addEventListener('resize', function () {
 
 // Just for this demo: Center the middle block on page load
 window.onload = function () {
-  setScrollPos(Math.round(clones[1].getBoundingClientRect().top + getScrollPos() - (context.offsetHeight - clones[1].offsetHeight) / 2));
+
 };
 
 
