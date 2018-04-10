@@ -5,7 +5,9 @@ var doc = window.document,
   scrollHeight = 0,
   scrollPos = 0,
   clonesHeight = 0,
+  useless_variable = 0,
   i = 0;
+
 
 function getScrollPos () {
   return (context.pageYOffset || context.scrollTop) - (context.clientTop || 0);
@@ -46,8 +48,8 @@ function scrollUpdate () {
 
     if (clonesHeight + scrollPos >= scrollHeight) {
       // Scroll to the top when you’ve reached the bottom
-      
-      $("#logica").text("se paso")
+      useless_variable = useless_variable + 1
+      $("#logica").text(useless_variable)
       setScrollPos(1); // Scroll down 1 pixel to allow upwards scrolling
       disableScroll = true;
     } else if (scrollPos <= 0) {
