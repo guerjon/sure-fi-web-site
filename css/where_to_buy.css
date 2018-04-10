@@ -46,13 +46,12 @@
 @media screen and (min-width: 576px){
   .body-symulator{
       height: 500px;
-      overflow: hidden;
     }
     .Loop {
       position: relative;
       height: 450px;
       overflow: auto;
-      -webkit-overflow-scrolling: touch;
+      -webkit-overflow-scrolling: auto;
     }
 
     .company-image-movil-container {
