@@ -109,10 +109,9 @@ function init(){
     
     setInterval(function() {
         if ( didScroll ) {
+            $("#logic").text(getScrollPos())
             windows.requestAnimationFrame(scrollIOSUpdate)  
             didScroll = false;
-            logic = logic + 1
-            $("#logic").text(logic)
         }
     }, 10);    
   }
