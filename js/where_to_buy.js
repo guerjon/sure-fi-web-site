@@ -77,17 +77,13 @@ function scrollUpdate () {
 
 function goToTheTop(){
   console.log("work")
+  $("#go-to-the-top-button").hide()
   requestAnimationFrame(function (){
     setScrollPos(0)
+    scrollPos = 0
   })
 }
 
-function scrollIOSUpdate(timestamp){
-  console.log("scrollIOSUpdate",scrollPos,scrollHeight)
-  if( (scrollPos + 200) > scrollHeight){
-    $("#go-to-the-top-button").removeAttr('hidden')  
-  }
-}
 
 function getClonesHeight () {
   clonesHeight = 0;
@@ -100,7 +96,6 @@ function getClonesHeight () {
 function init(){
   var os = getMobileOperatingSystem()
   if(os == "iOS")  {
-    window.requestAnimationFrame(reCalc);
     handleIOS()
   }else{
     window.requestAnimationFrame(reCalc);
@@ -112,8 +107,26 @@ function handleIOS(){
   
   deleteClones()
 
+  window.requestAnimationFrame(function(){
+    setScrollPos(rand); // Scroll 1 pixel to allow upwards scrolling
+  })
+
+  scrollPos = rand;
+
+  if(scrollPos > 250){
+    $("#go-to-the-top-button").show()
+  }else{
+    $("#go-to-the-top-button").hide()
+  }
+
   context.addEventListener('scroll', function (pos) {    
-    window.requestAnimationFrame(scrollIOSUpdate)
+    console.log("scrollPos",scrollPos)
+    scrollPos = rand + getScrollPos();
+    if(scrollPos > 250){
+      $("#go-to-the-top-button").show()
+    }else{
+      $("#go-to-the-top-button").hide()
+    }
   })
 }
 
@@ -141,5 +154,7 @@ function handleAndroid(){
 
 // Just for this demo: Center the middle block on page load
 window.onload = function () {
+  $("#go-to-the-top-button").hide()
   init()
+
 };
