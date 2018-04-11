@@ -5,7 +5,7 @@ var doc = window.document,
   scrollHeight = 0,
   scrollPos = 0,
   clonesHeight = 0,
-  logic = 0,
+  flag = true,
   didScroll = false,
   i = 0;
 
@@ -73,21 +73,33 @@ function scrollUpdate () {
   }
 }
 
+
+
 function scrollIOSUpdate(){
   console.log("scrollIOSUpdate",scrollPos,scrollHeight)
+  if(flag){
+    flag = false
     scrollPos = getScrollPos();
 
     if (scrollPos > scrollHeight -100) {
+      //var elements = getElements()
+      if(scrollPos != 0){
+        setScrollPos(0)  
+      }
       
-      var elements = getElements()
-      for(var i = elements.length; i >= 0; i--){
+      flag = true
+     /* for(var i = elements.length; i >= 0; i--){
           var element = elements[i]
           context.appendChild(element)
-      }
+      }**/
 
     } else if (scrollPos <= 0) {
+      flag = true
       setScrollPos(scrollHeight - clonesHeight);
+    }else{
+      flag =true
     }
+  }
 }
 
 function getClonesHeight () {
@@ -111,9 +123,6 @@ function handleIOS(){
   console.log("handleIOS()")
   var clonesHeight = getClonesHeight()
   deleteClones()
-  console.log("clonesHeight",clonesHeight)
-  console.log("scrollHeight",context.scrollHeight)
-
   scrollHeight = context.scrollHeight - clonesHeight;
 
   context.addEventListener('scroll', function (pos) {    
