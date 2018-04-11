@@ -27,11 +27,6 @@ function getClonesHeight () {
   return clonesHeight;
 }
 
-
-getMobileOperatingSystem(){
-
-}
-
 function reCalc () {
   scrollPos = getScrollPos();
   scrollHeight = context.scrollHeight;
@@ -48,17 +43,16 @@ function reCalc () {
 
 function scrollUpdate () {
   
-
   if (!disableScroll) {
     scrollPos = getScrollPos();
 
     if (clonesHeight + scrollPos >= scrollHeight) {
       // Scroll to the top when you’ve reached the bottom
+      useless_variable = useless_variable + 1
+      $("#logica").text(useless_variable)    
       
       setScrollPos(1); // Scroll down 1 pixel to allow upwards scrolling
-      
       disableScroll = true;
-    
     } else if (scrollPos <= 0) {
       // Scroll to the bottom when you reach the top
       setScrollPos(scrollHeight - clonesHeight);
@@ -68,9 +62,6 @@ function scrollUpdate () {
 
   if (disableScroll) {
     // Disable scroll-jumping for a short time to avoid flickering
-    useless_variable = useless_variable + 1
-    $("#logica").text(useless_variable)    
-
     window.setTimeout(function () {
       disableScroll = false;
     }, 400);
