@@ -43,12 +43,12 @@ function reCalc () {
   }
 }
 
-function scrollUpdate () {
-  
+function scrollUpdate () {  
   if (!disableScroll) {
     scrollPos = getScrollPos();
-
+    console.log("scrollPos",scrollPos)
     if (clonesHeight + scrollPos >= scrollHeight) {
+    //if(scrollPos == 1239){
       // Scroll to the top when you’ve reached the bottom      
       setScrollPos(1); // Scroll down 1 pixel to allow upwards scrolling
       disableScroll = true;
