@@ -101,26 +101,35 @@ window.requestAnimationFrame(reCalc);
 function init(){
   var os = getMobileOperatingSystem()
   if(os == "iOS")  {
-    setInterval(function() {
-        if ( didScroll ) {
-            $("#logic").text(getScrollPos())
-            windows.requestAnimationFrame(scrollIOSUpdate)  
-            didScroll = false;
-        }
-    }, 10);
+    handleIOS()
   }else{
+    handleAndroid()
+  }
+}
+function handleIOS(){
+  setInterval(function() {
+   
+    if ( didScroll ) {
+       
+        $("#logic").text(getScrollPos())
+        window.requestAnimationFrame(scrollIOSUpdate)  
+        didScroll = false;
+    }
+  }, 100);
+}
+
+function handleAndroid(){
     context.addEventListener('scroll', function (pos) {  
       logic = logic + 1
       $("#logic").text(logic)
       window.requestAnimationFrame(scrollUpdate);  
     }, false);        
-    
-  }
 }
 
-$(window).scroll(function() {
+context.onscroll = function() {
   didScroll = true;
-});
+  console.log("didScroll",didScroll)
+};
 
 
 // Just for this demo: Center the middle block on page load
