@@ -6,7 +6,29 @@ var doc = window.document,
   scrollPos = 0,
   clonesHeight = 0,
   logic = 0,
+  didScroll = false,
   i = 0;
+
+function getMobileOperatingSystem() {
+  var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+      // Windows Phone must come first because its UA also contains "Android"
+    if (/windows phone/i.test(userAgent)) {
+        return "Windows Phone";
+    }
+
+    if (/android/i.test(userAgent)) {
+        return "Android";
+    }
+
+    // iOS detection from: http://stackoverflow.com/a/9039885/177710
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        return "iOS";
+    }
+
+    return "unknown";
+}
+
 
 function getScrollPos () {
   return (context.pageYOffset || context.scrollTop) - (context.clientTop || 0);
@@ -61,16 +83,35 @@ function scrollUpdate () {
 
 window.requestAnimationFrame(reCalc);
 
-context.addEventListener('scroll', function (pos) {
-  if(!disableScroll){
-    logic = logic + 1
-    $("#logic").text(logic)
-    window.requestAnimationFrame(scrollUpdate);  
+function init(){
+  var os = getMobileOperatingSystem()
+  if(os == "Android")  {
+    context.addEventListener('scroll', function (pos) {
+      if(!disableScroll){
+        logic = logic + 1
+        $("#logic").text(logic)
+        window.requestAnimationFrame(scrollUpdate);  
+      }else{
+        logic = 0;
+      }
+      
+    }, false);    
   }else{
-    logic = 0;
+    $(window).scroll(function() {
+      didScroll = true;
+    });
+    setInterval(function() {
+        if ( didScroll ) {
+            didScroll = false;
+            logic = logic + 1
+            $("#logic").text(logic)
+        }
+    }, 250);    
+
   }
-  
-}, false);
+}
+
+
 
 // Just for this demo: Center the middle block on page load
 window.onload = function () {
