@@ -56,16 +56,11 @@ function scrollUpdate () {
       setScrollPos(scrollHeight - clonesHeight);
       disableScroll = true;
     }
-  }
-
-  if (disableScroll) {
-    // Disable scroll-jumping for a short time to avoid flickering
-    if(useless_variable == 1){
+  }else{
+    // Disable scroll-jumping for a short time to avoid flickering 
       window.setTimeout(function () {
         disableScroll = false;
-        useless_variable = 0;
       }, 40);
-    }
   }
 }
 
