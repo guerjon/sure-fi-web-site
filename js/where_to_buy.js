@@ -96,10 +96,10 @@ function init(){
     
     setInterval(function() {
         if ( didScroll ) {
+            scrollUpdate()  
             didScroll = false;
             logic = logic + 1
             $("#logic").text(logic)
-            scrollUpdate()
         }
     }, 40);    
 
