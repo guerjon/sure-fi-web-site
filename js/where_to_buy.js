@@ -73,7 +73,7 @@ function scrollUpdate () {
 
     window.setTimeout(function () {
       disableScroll = false;
-    }, 500);
+    }, 400);
   }
 }
 
