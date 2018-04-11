@@ -5,10 +5,41 @@ var doc = window.document,
   scrollHeight = 0,
   scrollPos = 0,
   clonesHeight = 0,
-  useless_variable = 0,
+  keys = {37: 1, 38: 1, 39: 1, 40: 1},
   i = 0;
+  
 
+function preventDefault(e) {
+  e = e || window.event;
+  if (e.preventDefault)
+      e.preventDefault();
+  e.returnValue = false;  
+}
 
+function preventDefaultForScrollKeys(e) {
+    if (keys[e.keyCode]) {
+        preventDefault(e);
+        return false;
+    }
+}
+
+function disableScrollFunction() {
+  if (window.addEventListener) // older FF
+      window.addEventListener('DOMMouseScroll', preventDefault, false);
+  window.onwheel = preventDefault; // modern standard
+  window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
+  window.ontouchmove  = preventDefault; // mobile
+  document.onkeydown  = preventDefaultForScrollKeys;
+}
+
+function enableScrollFunction() {
+    if (window.removeEventListener)
+        window.removeEventListener('DOMMouseScroll', preventDefault, false);
+    window.onmousewheel = document.onmousewheel = null; 
+    window.onwheel = null; 
+    window.ontouchmove = null;  
+    document.onkeydown = null;  
+}
 
 
 function getScrollPos () {
@@ -43,29 +74,31 @@ function reCalc () {
   }
 }
 
+
 function scrollUpdate () {  
   if (!disableScroll) {
     scrollPos = getScrollPos();
     console.log("scrollPos",scrollPos)
     if (clonesHeight + scrollPos >= scrollHeight) {
     //if(scrollPos == 1239){
-      // Scroll to the top when you’ve reached the bottom      
-      setScrollPos(1); // Scroll down 1 pixel to allow upwards scrolling
+      setScrollPos(1); 
       disableScroll = true;
+      disableScrollFunction()
     } else if (scrollPos <= 0) {
-      // Scroll to the bottom when you reach the top
       setScrollPos(scrollHeight - clonesHeight);
       disableScroll = true;
+      disableScrollFunction()
     }
   }
 
   if (disableScroll) {
-    // Disable scroll-jumping for a short time to avoid flickering
     window.setTimeout(function () {
+      enableScrollFunction()
       disableScroll = false;
     }, 40);
   }
 }
+
 
 window.requestAnimationFrame(reCalc);
 
