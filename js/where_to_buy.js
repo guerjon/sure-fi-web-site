@@ -7,6 +7,7 @@ var doc = window.document,
   clonesHeight = 0,
   flag = true,
   didScroll = false,
+  logica = 0,
   i = 0;
 
 function getMobileOperatingSystem() {
@@ -76,15 +77,17 @@ function scrollUpdate () {
 
 
 function scrollIOSUpdate(){
-  console.log("scrollIOSUpdate",scrollPos,scrollHeight)
+  console.log("scrollIOSUpdate",scrollPos,scrollHeight,clonesHeight)
   if(flag){
     flag = false
     scrollPos = getScrollPos();
-
-    if (scrollPos > scrollHeight -1) {
+    var real_value = scrollPos + clonesHeight
+    
+    if ( real_value >= scrollHeight ) {
       //var elements = getElements()
       if(scrollPos != 0){
-        console.log("entra")
+        logica = logica + 1
+        $("#logica").text(logica)
         setScrollPos(1)  
       }
       
@@ -123,9 +126,13 @@ function init(){
 function handleIOS(){
   console.log("handleIOS()")
   var clonesHeight = getClonesHeight()
-  scrollHeight = context.scrollHeight - clonesHeight;
+  deleteClones()
+  scrollHeight = context.scrollHeight;
 
-  context.addEventListener('scroll', function (pos) {    
+  context.addEventListener('scroll', function (pos) {  
+    
+    scrollPos = getScrollPos();
+    console.log("scrollPos",scrollPos)
     window.requestAnimationFrame(scrollIOSUpdate)
   })
 }
