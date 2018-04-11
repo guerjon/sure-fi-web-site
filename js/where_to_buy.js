@@ -119,9 +119,6 @@ function init(){
 }
 function handleIOS(){
   console.log("handleIOS()")
-  var clonesHeight = getClonesHeight()
-  deleteClones()
-  scrollHeight = context.scrollHeight - clonesHeight;
 
   context.addEventListener('touchmove', function (pos) {    
     window.requestAnimationFrame(scrollIOSUpdate)
