@@ -93,9 +93,7 @@ function init(){
       window.requestAnimationFrame(scrollUpdate);  
     }, false);    
   }else{
-    $(window).scroll(function() {
-      didScroll = true;
-    });
+    
     setInterval(function() {
         if ( didScroll ) {
             didScroll = false;
@@ -108,6 +106,9 @@ function init(){
   }
 }
 
+$(window).scroll(function() {
+  didScroll = true;
+});
 
 
 // Just for this demo: Center the middle block on page load
