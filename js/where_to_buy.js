@@ -112,7 +112,7 @@ function handleIOS(){
         window.requestAnimationFrame(scrollIOSUpdate)    
         didScroll = false;
     }
-  }, 500);
+  }, 700);
 }
 
 function handleAndroid(){
