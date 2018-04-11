@@ -115,5 +115,5 @@ function init(){
 
 // Just for this demo: Center the middle block on page load
 window.onload = function () {
-
+  init()
 };
