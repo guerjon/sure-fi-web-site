@@ -64,7 +64,7 @@ function scrollUpdate () {
       window.setTimeout(function () {
         disableScroll = false;
         useless_variable = 0;
-      }, 80);
+      }, 40);
     }
   }
 }
