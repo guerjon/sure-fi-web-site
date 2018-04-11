@@ -101,7 +101,7 @@ function init(){
             logic = logic + 1
             $("#logic").text(logic)
         }
-    }, 40);    
+    }, 10);    
 
   }
 }
