@@ -5,6 +5,7 @@ var doc = window.document,
   scrollHeight = 0,
   scrollPos = 0,
   clonesHeight = 0,
+  logic = 0,
   i = 0;
 
 function getScrollPos () {
@@ -62,7 +63,11 @@ window.requestAnimationFrame(reCalc);
 
 context.addEventListener('scroll', function (pos) {
   if(!disableScroll){
+    logic = logic + 1
+    $("#logic").text(logic)
     window.requestAnimationFrame(scrollUpdate);  
+  }else{
+    logic = 0;
   }
   
 }, false);
