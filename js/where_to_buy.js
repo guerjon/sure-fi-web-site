@@ -67,7 +67,7 @@ function scrollUpdate () {
 window.requestAnimationFrame(reCalc);
 
 context.addEventListener('scroll', function () {
-  if(!disableScroll){
+  if(disableScroll){
     window.requestAnimationFrame(scrollUpdate);  
   }
 
