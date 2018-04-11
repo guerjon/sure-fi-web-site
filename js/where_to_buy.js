@@ -77,7 +77,7 @@ function scrollUpdate () {
 
 function scrollIOSUpdate(timestamp){
   console.log("scrollIOSUpdate",scrollPos,scrollHeight,timestamp)
-  $("#logica").text(timestamp)
+  
   if(flag){
     flag = false
     scrollPos = getScrollPos();
@@ -86,8 +86,7 @@ function scrollIOSUpdate(timestamp){
       //var elements = getElements()
       if(scrollPos != 0){
         console.log("entra")
-        setScrollPos(1) 
-        requestAnimationFrame(scrollIOSUpdate)  
+        setScrollPos(1)  
       }
       
       flag = true
@@ -128,7 +127,7 @@ function handleIOS(){
   deleteClones()
   scrollHeight = context.scrollHeight - clonesHeight;
 
-  context.addEventListener('scroll', function (pos) {    
+  context.addEventListener('touchmove', function (pos) {    
     window.requestAnimationFrame(scrollIOSUpdate)
   })
 }
