@@ -47,8 +47,7 @@ function scrollUpdate () {
     scrollPos = getScrollPos();
 
     if (clonesHeight + scrollPos >= scrollHeight) {
-      // Scroll to the top when you’ve reached the bottom
-      
+      // Scroll to the top when you’ve reached the bottom      
       setScrollPos(1); // Scroll down 1 pixel to allow upwards scrolling
       disableScroll = true;
     } else if (scrollPos <= 0) {
@@ -56,20 +55,21 @@ function scrollUpdate () {
       setScrollPos(scrollHeight - clonesHeight);
       disableScroll = true;
     }
-  }else{
-    // Disable scroll-jumping for a short time to avoid flickering 
-      window.setTimeout(function () {
-        disableScroll = false;
-      }, 40);
+  }
+
+  if (disableScroll) {
+    // Disable scroll-jumping for a short time to avoid flickering
+    window.setTimeout(function () {
+      disableScroll = false;
+    }, 40);
   }
 }
 
 window.requestAnimationFrame(reCalc);
 
 context.addEventListener('scroll', function () {
-  if(disableScroll){
-    window.requestAnimationFrame(scrollUpdate);  
-  }
+  
+  window.requestAnimationFrame(scrollUpdate);
 
 }, false);
 
