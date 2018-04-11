@@ -77,6 +77,7 @@ function scrollUpdate () {
     // Disable scroll-jumping for a short time to avoid flickering
     window.setTimeout(function () {
       disableScroll = false;
+      logic = 0
     }, 300);
   }
 }
@@ -86,15 +87,10 @@ window.requestAnimationFrame(reCalc);
 function init(){
   var os = getMobileOperatingSystem()
   if(os == "Android")  {
-    context.addEventListener('scroll', function (pos) {
-      if(!disableScroll){
-        logic = logic + 1
-        $("#logic").text(logic)
-        window.requestAnimationFrame(scrollUpdate);  
-      }else{
-        logic = 0;
-      }
-      
+    context.addEventListener('scroll', function (pos) {  
+      logic = logic + 1
+      $("#logic").text(logic)
+      window.requestAnimationFrame(scrollUpdate);  
     }, false);    
   }else{
     $(window).scroll(function() {
@@ -105,6 +101,7 @@ function init(){
             didScroll = false;
             logic = logic + 1
             $("#logic").text(logic)
+            scrollUpdate
         }
     }, 250);    
 
