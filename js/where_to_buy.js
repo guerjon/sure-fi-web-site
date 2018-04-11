@@ -101,7 +101,7 @@ function init(){
             didScroll = false;
             logic = logic + 1
             $("#logic").text(logic)
-            scrollUpdate
+            scrollUpdate()
         }
     }, 250);    
 
