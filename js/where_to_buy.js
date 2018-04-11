@@ -7,9 +7,7 @@ var doc = window.document,
   clonesHeight = 0,
   flag = true,
   didScroll = false,
-  logica = 0,
   i = 0;
-
 
 function getMobileOperatingSystem() {
   var userAgent = navigator.userAgent || navigator.vendor || window.opera;
@@ -77,23 +75,33 @@ function scrollUpdate () {
 
 
 
-function scrollIOSUpdate(){
-  console.log("scrollIOSUpdate",scrollPos,scrollHeight,clonesHeight)
+function scrollIOSUpdate(timestamp){
+  console.log("scrollIOSUpdate",scrollPos,scrollHeight,timestamp)
+  $("#logica").text(timestamp)
+  if(flag){
+    flag = false
     scrollPos = getScrollPos();
-    var real_value = scrollPos + clonesHeight
-    if ( real_value >= scrollHeight ) {
+
+    if (scrollPos > scrollHeight -100) {
       //var elements = getElements()
       if(scrollPos != 0){
-        logica = logica + 1
-        $("#logica").text(logica)
+        console.log("entra")
         setScrollPos(1)  
       }
       
-      scrollEnabled = true;
+      flag = true
+     /* for(var i = elements.length; i >= 0; i--){
+          var element = elements[i]
+          context.appendChild(element)
+      }**/
 
     } else if (scrollPos <= 0) {
-
+      //flag = true
+      //setScrollPos(scrollHeight - clonesHeight);
+    }else{
+      flag =true
     }
+  }
 }
 
 function getClonesHeight () {
@@ -117,17 +125,10 @@ function handleIOS(){
   console.log("handleIOS()")
   var clonesHeight = getClonesHeight()
   deleteClones()
-  scrollHeight = context.scrollHeight;
+  scrollHeight = context.scrollHeight - clonesHeight;
 
-  context.addEventListener('scroll', function (event) {  
-    if (!scrollEnabled) {
-      return;
-    }
-    scrollEnabled = false; 
-    return setTimeout((function() {
-      console.log('scroll enabled now');
-      window.requestAnimationFrame(scrollIOSUpdate)
-    }), 250);
+  context.addEventListener('scroll', function (pos) {    
+    window.requestAnimationFrame(scrollIOSUpdate)
   })
 }
 
