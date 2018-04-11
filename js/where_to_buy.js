@@ -32,7 +32,7 @@ function reCalc () {
 
   console.log("scrollPos",scrollPos)
   console.log("scrollHeight",scrollHeight)
-  
+
   if (scrollPos <= 0) {
     setScrollPos(1); // Scroll 1 pixel to allow upwards scrolling
   }
@@ -57,7 +57,7 @@ function scrollUpdate () {
     // Disable scroll-jumping for a short time to avoid flickering
     window.setTimeout(function () {
       disableScroll = false;
-    }, 40);
+    }, 400);
   }
 }
 
