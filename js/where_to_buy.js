@@ -87,7 +87,7 @@ function scrollIOSUpdate(timestamp){
       if(scrollPos != 0){
         console.log("entra")
         setScrollPos(1) 
-        requestAnimationFrame()  
+        requestAnimationFrame(scrollIOSUpdate)  
       }
       
       flag = true
