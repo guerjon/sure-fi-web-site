@@ -47,7 +47,6 @@ function getScrollPos () {
 }
 
 function setScrollPos (pos) {
-  console.log("setScrollPos",pos)
   $("#logic").text(pos)
   context.scrollTop = pos;
   scrollPos = pos;
@@ -77,7 +76,7 @@ function reCalc () {
 function scrollUpdate () {  
   //if (!disableScroll) {
     scrollPos = getScrollPos();
-    console.log("scrollPos",scrollPos)
+    $("#logic").text(scrollPos)
     //if (clonesHeight + scrollPos >= scrollHeight) {
     if(scrollPos > 1239){
       setScrollPos(1); 
