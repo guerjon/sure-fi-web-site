@@ -30,9 +30,6 @@ function reCalc () {
   scrollHeight = context.scrollHeight;
   clonesHeight = getClonesHeight();
 
-  console.log("scrollPos",scrollPos)
-  console.log("scrollHeight",scrollHeight)
-
   if (scrollPos <= 0) {
     setScrollPos(1); // Scroll 1 pixel to allow upwards scrolling
   }
@@ -46,10 +43,17 @@ function scrollUpdate () {
       // Scroll to the top when you’ve reached the bottom
       setScrollPos(1); // Scroll down 1 pixel to allow upwards scrolling
       disableScroll = true;
+      document.ontouchmove = function (e) {
+        e.preventDefault();
+      }
     } else if (scrollPos <= 0) {
       // Scroll to the bottom when you reach the top
       setScrollPos(scrollHeight - clonesHeight);
       disableScroll = true;
+      document.ontouchmove = function (e) {
+        e.preventDefault();
+      }
+
     }
   }
 
@@ -57,6 +61,9 @@ function scrollUpdate () {
     // Disable scroll-jumping for a short time to avoid flickering
     window.setTimeout(function () {
       disableScroll = false;
+      document.ontouchmove = function (e) {
+        return true;
+      }
     }, 450);
   }
 }
