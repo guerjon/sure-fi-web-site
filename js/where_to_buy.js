@@ -109,11 +109,10 @@ function init(){
 function handleIOS(){
   setInterval(function() {
     if ( didScroll ) {
-        $("#logic").text(getScrollPos())
-          window.requestAnimationFrame(scrollIOSUpdate)    
+        window.requestAnimationFrame(scrollIOSUpdate)    
         didScroll = false;
     }
-  }, 250);
+  }, 300);
 }
 
 function handleAndroid(){
@@ -128,7 +127,6 @@ context.onscroll = function() {
   if(getScrollPos() > 1){
     didScroll = true;  
   }
-  
 };
 
 
