@@ -47,7 +47,10 @@ function getScrollPos () {
 }
 
 function setScrollPos (pos) {
+  console.log("setScrollPos",pos)
+  $("#logic").text(pos)
   context.scrollTop = pos;
+  scrollPos = pos;
 }
 
 function getClonesHeight () {
@@ -65,10 +68,6 @@ function reCalc () {
   scrollHeight = context.scrollHeight;
   clonesHeight = getClonesHeight();
 
-  console.log("scrollPos",scrollPos)
-  console.log("scrollHeight",scrollHeight)
-  console.log("clonesHeight",clonesHeight)
-
   if (scrollPos <= 0) {
     setScrollPos(1); // Scroll 1 pixel to allow upwards scrolling
   }
@@ -76,11 +75,11 @@ function reCalc () {
 
 
 function scrollUpdate () {  
-  if (!disableScroll) {
+  //if (!disableScroll) {
     scrollPos = getScrollPos();
     console.log("scrollPos",scrollPos)
     //if (clonesHeight + scrollPos >= scrollHeight) {
-    if(scrollPos == 1239){
+    if(scrollPos > 1239){
       setScrollPos(1); 
       //disableScroll = true;
       //disableScrollFunction()
@@ -89,7 +88,7 @@ function scrollUpdate () {
       //disableScroll = true;
       //disableScrollFunction()
     }
-  }
+ // }
 /*
   if (disableScroll) {
     window.setTimeout(function () {
@@ -105,9 +104,9 @@ function scrollUpdate () {
 window.requestAnimationFrame(reCalc);
 
 context.addEventListener('scroll', function () {
-  
-  window.requestAnimationFrame(scrollUpdate);
-
+    if(scrollPos < 1239){
+      window.requestAnimationFrame(scrollUpdate);    
+    }
 }, false);
 
 // Just for this demo: Center the middle block on page load
