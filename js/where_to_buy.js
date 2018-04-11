@@ -60,11 +60,16 @@ function scrollUpdate () {
 
   if (disableScroll) {
     // Disable scroll-jumping for a short time to avoid flickering
-    useless_variable = useless_variable + 1
-    $("#logica").text(useless_variable)    
-    window.setTimeout(function () {
-      disableScroll = false;
-    }, 400);
+      useless_variable = useless_variable + 1
+      $("#logica").text(useless_variable)
+
+    if(useless_variable == 1){
+      
+      window.setTimeout(function () {
+        disableScroll = false;
+        useless_variable = 0;
+      }, 400);
+    }
   }
 }
 
