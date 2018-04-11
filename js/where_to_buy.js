@@ -79,24 +79,26 @@ function scrollUpdate () {
   if (!disableScroll) {
     scrollPos = getScrollPos();
     console.log("scrollPos",scrollPos)
-    if (clonesHeight + scrollPos >= scrollHeight) {
-    //if(scrollPos == 1239){
+    //if (clonesHeight + scrollPos >= scrollHeight) {
+    if(scrollPos == 1239){
       setScrollPos(1); 
-      disableScroll = true;
-      disableScrollFunction()
+      //disableScroll = true;
+      //disableScrollFunction()
     } else if (scrollPos <= 0) {
       setScrollPos(scrollHeight - clonesHeight);
-      disableScroll = true;
-      disableScrollFunction()
+      //disableScroll = true;
+      //disableScrollFunction()
     }
   }
-
+/*
   if (disableScroll) {
     window.setTimeout(function () {
-      enableScrollFunction()
+
+      //enableScrollFunction()
       disableScroll = false;
     }, 40);
   }
+  */
 }
 
 
