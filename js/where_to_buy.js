@@ -81,10 +81,11 @@ function scrollIOSUpdate(){
     flag = false
     scrollPos = getScrollPos();
 
-    if (scrollPos > scrollHeight -100) {
+    if (scrollPos > scrollHeight -1) {
       //var elements = getElements()
       if(scrollPos != 0){
-        setScrollPos(0)  
+        console.log("entra")
+        setScrollPos(1)  
       }
       
       flag = true
@@ -94,8 +95,8 @@ function scrollIOSUpdate(){
       }**/
 
     } else if (scrollPos <= 0) {
-      flag = true
-      setScrollPos(scrollHeight - clonesHeight);
+      //flag = true
+      //setScrollPos(scrollHeight - clonesHeight);
     }else{
       flag =true
     }
@@ -122,7 +123,6 @@ function init(){
 function handleIOS(){
   console.log("handleIOS()")
   var clonesHeight = getClonesHeight()
-  deleteClones()
   scrollHeight = context.scrollHeight - clonesHeight;
 
   context.addEventListener('scroll', function (pos) {    
