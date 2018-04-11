@@ -88,7 +88,7 @@ function scrollIOSUpdate(){
     if (clonesHeight + scrollPos >= scrollHeight) {
       // Scroll to the top when you’ve reached the bottom
       setScrollPos(1); // Scroll down 1 pixel to allow upwards scrolling
-      
+      $("#logic").text("Touch the bottom")
     } else if (scrollPos <= 0) {
       
       setScrollPos(scrollHeight - clonesHeight);
