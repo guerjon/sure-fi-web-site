@@ -73,30 +73,17 @@ function scrollUpdate () {
   }
 }
 
-
+function goToTheTop(){
+  console.log("work")
+  requestAnimationFrame(function (){
+    setScrollPos(0)
+  })
+}
 
 function scrollIOSUpdate(timestamp){
   console.log("scrollIOSUpdate")
-  if (!disableScroll) {
-    scrollPos = getScrollPos();
-
-    if (clonesHeight + scrollPos >= scrollHeight) {
-      // Scroll to the top when you’ve reached the bottom
-      setScrollPos(1); // Scroll down 1 pixel to allow upwards scrolling
-      disableScroll = true;
-    } else if (scrollPos <= 0) {
-      // Scroll to the bottom when you reach the top
-      setScrollPos(scrollHeight - clonesHeight);
-      disableScroll = true;
-    }
-  }
-
-  if (disableScroll) {
-    // Disable scroll-jumping for a short time to avoid flickering
-    window.setTimeout(function () {
-      disableScroll = false;
-      logic = 0
-    }, 40);
+  if( (scrollPos + 200) > scrollHeight){
+    $("#go-to-the-top-button").removeAttr('hidden')  
   }
 }
 
@@ -119,6 +106,8 @@ function init(){
 }
 function handleIOS(){
   console.log("handleIOS()")
+  
+  deleteClones()
 
   context.addEventListener('touchmove', function (pos) {    
     window.requestAnimationFrame(scrollIOSUpdate)
