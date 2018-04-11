@@ -112,7 +112,9 @@ function handleIOS(){
     if ( didScroll ) {
        
         $("#logic").text(getScrollPos())
-        window.requestAnimationFrame(scrollIOSUpdate)  
+        if(getScrollPos() > 1){
+          window.requestAnimationFrame(scrollIOSUpdate)    
+        }
         didScroll = false;
     }
   }, 100);
