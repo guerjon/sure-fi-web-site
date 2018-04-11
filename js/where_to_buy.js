@@ -82,6 +82,19 @@ function scrollUpdate () {
   }
 }
 
+function scrollIOSUpdate(){
+    scrollPos = getScrollPos();
+
+    if (clonesHeight + scrollPos >= scrollHeight) {
+      // Scroll to the top when you’ve reached the bottom
+      setScrollPos(1); // Scroll down 1 pixel to allow upwards scrolling
+      
+    } else if (scrollPos <= 0) {
+      
+      setScrollPos(scrollHeight - clonesHeight);
+    }
+}
+
 window.requestAnimationFrame(reCalc);
 
 function init(){
@@ -96,13 +109,12 @@ function init(){
     
     setInterval(function() {
         if ( didScroll ) {
-            scrollUpdate()  
+            scrollIOSUpdate()  
             didScroll = false;
             logic = logic + 1
             $("#logic").text(logic)
         }
     }, 10);    
-
   }
 }
 
