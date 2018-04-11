@@ -59,6 +59,7 @@ function reCalc () {
 }
 
 function scrollUpdate () {
+  console.log("scrollUpdate")
   if (!disableScroll) {
     scrollPos = getScrollPos();
 
@@ -99,21 +100,21 @@ window.requestAnimationFrame(reCalc);
 
 function init(){
   var os = getMobileOperatingSystem()
-  if(os == "Android")  {
-    context.addEventListener('scroll', function (pos) {  
-      logic = logic + 1
-      $("#logic").text(logic)
-      window.requestAnimationFrame(scrollUpdate);  
-    }, false);    
-  }else{
-    
+  if(os == "iOS")  {
     setInterval(function() {
         if ( didScroll ) {
             $("#logic").text(getScrollPos())
             windows.requestAnimationFrame(scrollIOSUpdate)  
             didScroll = false;
         }
-    }, 10);    
+    }, 10);
+  }else{
+    context.addEventListener('scroll', function (pos) {  
+      logic = logic + 1
+      $("#logic").text(logic)
+      window.requestAnimationFrame(scrollUpdate);  
+    }, false);        
+    
   }
 }
 
