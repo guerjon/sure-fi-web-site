@@ -96,7 +96,7 @@ function scrollIOSUpdate(timestamp){
     window.setTimeout(function () {
       disableScroll = false;
       logic = 0
-    }, 300);
+    }, 40);
   }
 }
 
