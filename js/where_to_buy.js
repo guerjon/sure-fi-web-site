@@ -8,6 +8,8 @@ var doc = window.document,
   flag = true,
   didScroll = false,
   i = 0;
+var myArray = [0, 250, 500,750];   
+var rand = myArray[Math.floor(Math.random() * myArray.length)];
 
 function getMobileOperatingSystem() {
   var userAgent = navigator.userAgent || navigator.vendor || window.opera;
@@ -44,7 +46,7 @@ function reCalc () {
   clonesHeight = getClonesHeight();
 
   if (scrollPos <= 0) {
-    setScrollPos(1); // Scroll 1 pixel to allow upwards scrolling
+    setScrollPos(rand); // Scroll 1 pixel to allow upwards scrolling
   }
 }
 
@@ -81,7 +83,7 @@ function goToTheTop(){
 }
 
 function scrollIOSUpdate(timestamp){
-  console.log("scrollIOSUpdate")
+  console.log("scrollIOSUpdate",scrollPos,scrollHeight)
   if( (scrollPos + 200) > scrollHeight){
     $("#go-to-the-top-button").removeAttr('hidden')  
   }
@@ -98,6 +100,7 @@ function getClonesHeight () {
 function init(){
   var os = getMobileOperatingSystem()
   if(os == "iOS")  {
+    window.requestAnimationFrame(reCalc);
     handleIOS()
   }else{
     window.requestAnimationFrame(reCalc);
