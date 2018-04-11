@@ -8,6 +8,8 @@ var doc = window.document,
   useless_variable = 0,
   i = 0;
 
+var myArray = [0, 1, 2];   
+var rand = myArray[Math.floor(Math.random() * myArray.length)];
 
 function getMobileOperatingSystem() {
   var userAgent = navigator.userAgent || navigator.vendor || window.opera;
@@ -65,7 +67,7 @@ function scrollUpdate () {
   
   if (!disableScroll) {
     scrollPos = getScrollPos();
-
+    console.log("type",text)
     if (clonesHeight + scrollPos >= scrollHeight) {
       // Scroll to the top when you’ve reached the bottom      
       setScrollPos(1); // Scroll down 1 pixel to allow upwards scrolling
@@ -85,6 +87,7 @@ function scrollUpdate () {
   }
 }
 
+
 window.requestAnimationFrame(reCalc);
 
 context.addEventListener('scroll', function () {
@@ -92,9 +95,9 @@ context.addEventListener('scroll', function () {
     window.requestAnimationFrame(scrollUpdate);  
   }else{
     clones.remove()
-  }
-  
+    
 
+  }
 }, false);
 
 // Just for this demo: Center the middle block on page load
