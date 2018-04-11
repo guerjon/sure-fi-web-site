@@ -53,7 +53,6 @@ function scrollUpdate () {
       document.ontouchmove = function (e) {
         e.preventDefault();
       }
-
     }
   }
 
