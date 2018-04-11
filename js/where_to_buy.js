@@ -112,7 +112,7 @@ function handleIOS(){
   
   deleteClones()
 
-  context.addEventListener('touchmove', function (pos) {    
+  context.addEventListener('scroll', function (pos) {    
     window.requestAnimationFrame(scrollIOSUpdate)
   })
 }
