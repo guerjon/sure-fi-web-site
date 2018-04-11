@@ -103,7 +103,7 @@ function init(){
             $("#logic").text(logic)
             scrollUpdate()
         }
-    }, 250);    
+    }, 40);    
 
   }
 }
