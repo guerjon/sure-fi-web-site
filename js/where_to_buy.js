@@ -109,7 +109,7 @@ function init(){
     
     setInterval(function() {
         if ( didScroll ) {
-            scrollIOSUpdate()  
+            windows.requestAnimationFrame(scrollIOSUpdate)  
             didScroll = false;
             logic = logic + 1
             $("#logic").text(logic)
