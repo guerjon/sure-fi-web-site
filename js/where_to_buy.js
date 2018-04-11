@@ -76,31 +76,27 @@ function scrollUpdate () {
 
 
 function scrollIOSUpdate(timestamp){
-  console.log("scrollIOSUpdate",scrollPos,scrollHeight,timestamp)
-  
-  if(flag){
-    flag = false
+  console.log("scrollIOSUpdate")
+  if (!disableScroll) {
     scrollPos = getScrollPos();
 
-    if (scrollPos > scrollHeight -100) {
-      //var elements = getElements()
-      if(scrollPos != 0){
-        console.log("entra")
-        setScrollPos(1)  
-      }
-      
-      flag = true
-     /* for(var i = elements.length; i >= 0; i--){
-          var element = elements[i]
-          context.appendChild(element)
-      }**/
-
+    if (clonesHeight + scrollPos >= scrollHeight) {
+      // Scroll to the top when you’ve reached the bottom
+      setScrollPos(1); // Scroll down 1 pixel to allow upwards scrolling
+      disableScroll = true;
     } else if (scrollPos <= 0) {
-      //flag = true
-      //setScrollPos(scrollHeight - clonesHeight);
-    }else{
-      flag =true
+      // Scroll to the bottom when you reach the top
+      setScrollPos(scrollHeight - clonesHeight);
+      disableScroll = true;
     }
+  }
+
+  if (disableScroll) {
+    // Disable scroll-jumping for a short time to avoid flickering
+    window.setTimeout(function () {
+      disableScroll = false;
+      logic = 0
+    }, 300);
   }
 }
 
