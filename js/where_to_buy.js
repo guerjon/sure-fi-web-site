@@ -116,6 +116,12 @@ function handleIOS(){
 }
 
 function handleAndroid(){
+    context.onscroll = function() {
+      if(getScrollPos() > 1){
+        didScroll = true;  
+      }
+    };
+  
     context.addEventListener('scroll', function (pos) {  
       logic = logic + 1
       $("#logic").text(logic)
@@ -123,11 +129,6 @@ function handleAndroid(){
     }, false);        
 }
 
-context.onscroll = function() {
-  if(getScrollPos() > 1){
-    didScroll = true;  
-  }
-};
 
 
 // Just for this demo: Center the middle block on page load
