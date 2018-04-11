@@ -43,16 +43,10 @@ function scrollUpdate () {
       // Scroll to the top when you’ve reached the bottom
       setScrollPos(1); // Scroll down 1 pixel to allow upwards scrolling
       disableScroll = true;
-      document.ontouchmove = function (e) {
-        e.preventDefault();
-      }
     } else if (scrollPos <= 0) {
       // Scroll to the bottom when you reach the top
       setScrollPos(scrollHeight - clonesHeight);
       disableScroll = true;
-      document.ontouchmove = function (e) {
-        e.preventDefault();
-      }
     }
   }
 
@@ -60,17 +54,17 @@ function scrollUpdate () {
     // Disable scroll-jumping for a short time to avoid flickering
     window.setTimeout(function () {
       disableScroll = false;
-      document.ontouchmove = function (e) {
-        return true;
-      }
     }, 450);
   }
 }
 
 window.requestAnimationFrame(reCalc);
 
-context.addEventListener('scroll', function () {
-  window.requestAnimationFrame(scrollUpdate);
+context.addEventListener('scroll', function (pos) {
+  if(!disableScroll){
+    window.requestAnimationFrame(scrollUpdate);  
+  }
+  
 }, false);
 
 // Just for this demo: Center the middle block on page load
