@@ -33,6 +33,14 @@
     max-height: 400px;
     height: 250px;
   }
+
+
+  .where-to-buy-logo{
+    width: 200px;
+    height: 150px;
+    margin: 20px;
+  }
+
 }
 
 @media screen and (min-width: 576px){
@@ -54,6 +62,13 @@
       height: 70%;
     }
 
+  .where-to-buy-logo{
+    width: 150px;
+    height: 100px;
+    margin: 20px;
+    margin-top: 50px;
+  }
+
     ::scrollbar {
       display: none;
     }
@@ -63,11 +78,23 @@
   #where-to-buy-movil-section{
     display: none;
   }
+
+  .where-to-buy-logo{
+    width: 150px;
+    height: 100px;
+    margin: 20px;
+    margin-top: 55px;
+  }
 }
 
 @media screen and (min-width: 992px){
   #where-to-buy-movil-section{
     display: none;
+  }  
+  .where-to-buy-logo{
+    width: 150px;
+    height: 100px;
+    margin: 20px;
   }  
 }
 
@@ -75,4 +102,11 @@
   #where-to-buy-movil-section{
     display: none;
   }  
+
+  .where-to-buy-logo{
+    width: 150px;
+    height: 100px;
+    margin: 20px;
+    margin-top: 50px;
+  }
 }

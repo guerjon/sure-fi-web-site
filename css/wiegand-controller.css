@@ -1,0 +1,86 @@
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+@media screen and (min-width: 0px) and (max-width: 768px){
+	.where-to-buy-container{
+		background-color: black;
+		padding: 15px;
+		text-align: center;
+	}
+
+	.where-to-buy-container p{
+		color: white;
+		font-size: 32px;
+		margin-top: 10px;
+	}
+	/* mouse over link */
+	.where-to-buy-container a:hover {
+	    color: hotpink;
+	}
+}
+
+/* Small devices (tablets,  and up) */
+@media (min-width: 768px) { 
+
+	.where-to-buy-container{
+		background-color: black;
+		padding: 15px;
+		text-align: center;
+	}
+
+	.where-to-buy-container p{
+		color: white;
+		font-size: 40px;
+		margin-top: 10px;
+	}
+
+}
+
+/* Medium devices (desktops,  and up) */
+@media (min-width: 992px) { 
+	.where-to-buy-container{
+		background-color: black;
+		padding: 15px;
+		text-align: center;
+	}
+
+	.where-to-buy-container p{
+		color: white;
+		font-size: 32px;
+		margin-top: 10px;
+	}
+}
+
+@media only screen and  (min-width: 1024px){
+	.shadow-container{
+		margin-top: 0px !important;
+	}
+	.where-to-buy-container{
+		margin-top: 90px;
+	}
+
+	.where-to-buy-container p{
+		color: white;
+		font-size: 42px;
+		margin-top: 10px;
+	}
+}
+
+
+/* Large devices (large desktops,  and up) */
+@media (min-width: 1200px) { 
+	.where-to-buy-container{
+		background-color: black;
+		padding: 15px;
+		text-align: center;
+	}
+
+	.where-to-buy-container p{
+		color: white;
+		font-size: 42px;
+		margin-top: 10px;
+	}
+		/* mouse over link */
+	.where-to-buy-container a {
+	    text-decoration: underline;
+	}
+}
