@@ -69,13 +69,27 @@
     margin-top: 50px;
   }
 
-    ::scrollbar {
-      display: none;
-    }
+  .company-logo-container{
+      width: 150px;
+      height: 150px;    
+      background-color: black;
+      padding: 10px;
+      border-radius: 50%;
+  }
+
+  .company-logo-container img{
+      width: 120px;
+      margin-top: 30px; 
+  }
+
+  ::scrollbar {
+    display: none;
+  }
 }
 
+
 @media screen and (min-width: 768px){
-  #where-to-buy-movil-section{
+  .body-symulator{
     display: none;
   }
 
@@ -96,6 +110,10 @@
     height: 100px;
     margin: 20px;
   }  
+
+  .body-symulator{
+    display: none;
+  }
 }
 
 @media screen and (min-width: 1200px){
@@ -108,5 +126,8 @@
     height: 100px;
     margin: 20px;
     margin-top: 50px;
+  }
+  .body-symulator{
+    display: none;
   }
 }
