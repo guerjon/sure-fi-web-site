@@ -41,7 +41,6 @@
   .black-logo-background{
     text-align: center;
     background-color: black;
-    border-radius: 50px;
     height: 200px;
     width: 250px;
   }
@@ -99,7 +98,6 @@
   .black-logo-background{
     text-align: center;
     background-color: black;
-    border-radius: 50px;
     height: 200px;
     width: 250px;
   }
@@ -150,8 +148,6 @@
     display: none;
   }
 
-
-
   .text-logo-container{
     text-align: left;
   }
@@ -164,7 +160,6 @@
   .black-logo-background{
     text-align: center;
     background-color: black;
-    border-radius: 50px;
     height: 200px;
     width: 250px;
     margin-bottom: 20px;
