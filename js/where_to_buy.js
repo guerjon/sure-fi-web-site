@@ -10,6 +10,7 @@ var doc = window.document,
   i = 0;
 var myArray = [0, 250, 500,750];   
 var rand = myArray[Math.floor(Math.random() * myArray.length)];
+var width = $( window ).width();
 
 function getMobileOperatingSystem() {
   var userAgent = navigator.userAgent || navigator.vendor || window.opera;
@@ -152,6 +153,9 @@ function handleAndroid(){
 // Just for this demo: Center the middle block on page load
 window.onload = function () {
   $("#go-to-the-top-button").hide()
+  if(width > 575){
+    $("#where-to-buy-section").hide()
+  }
   init()
 
 };
