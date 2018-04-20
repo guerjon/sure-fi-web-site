@@ -104,8 +104,7 @@ function init(){
 }
 function handleIOS(){
   console.log("handleIOS()")
-  
-  deleteClones()
+  $("#android-and-web-section").hide()
 
   window.requestAnimationFrame(function(){
     setScrollPos(rand); // Scroll 1 pixel to allow upwards scrolling
@@ -130,10 +129,6 @@ function handleIOS(){
   })
 }
 
-function deleteClones(){
-  $('.is-clone').remove()
-}
-
 function getElements(){
   var elements = $(".no-clone")
   var clone_elements = []
@@ -145,6 +140,7 @@ function getElements(){
 }
 
 function handleAndroid(){
+    $("#ios-section").hide()
     context.addEventListener('scroll', function (pos) {  
       window.requestAnimationFrame(scrollUpdate);  
     }, false);        

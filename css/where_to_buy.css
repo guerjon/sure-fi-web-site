@@ -1,3 +1,5 @@
+
+
 @media screen and (min-width: 0px) and (max-width: 575px){
   .text-logo-movil-container a{
     font-size: 12px ;
@@ -33,13 +35,16 @@
     height: 250px;
   }
 
-
   .where-to-buy-logo{
     width: 200px;
     height: 150px;
     margin: 20px;
   }
 
+  #ios-section{
+    overflow: scroll;
+    height: 600px;
+  }
 }
 
 @media screen and (min-width: 576px){
@@ -83,6 +88,8 @@
   ::scrollbar {
     display: none;
   }
+
+
 }
 
 
