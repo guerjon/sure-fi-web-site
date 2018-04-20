@@ -105,6 +105,7 @@ function init(){
 function handleIOS(){
   console.log("handleIOS()")
   $("#android-and-web-section").hide()
+  $("#where-to-buy-section").hide()
 
   window.requestAnimationFrame(function(){
     setScrollPos(rand); // Scroll 1 pixel to allow upwards scrolling
