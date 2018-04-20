@@ -16,6 +16,9 @@
 	.where-to-buy-container a:hover {
 	    color: hotpink;
 	}
+	.where-to-buy-container a {
+	    text-decoration: underline;
+	}
 }
 
 /* Small devices (tablets,  and up) */
@@ -31,6 +34,9 @@
 		color: white;
 		font-size: 40px;
 		margin-top: 10px;
+	}
+	.where-to-buy-container a {
+	    text-decoration: underline;
 	}
 
 }

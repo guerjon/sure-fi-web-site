@@ -96,6 +96,7 @@ function getClonesHeight () {
 
 function init(){
   var os = getMobileOperatingSystem()
+  $("#debug").text(os)
   if(os == "iOS")  {
     handleIOS()
   }else{
