@@ -88,7 +88,11 @@
   ::scrollbar {
     display: none;
   }
-
+  
+  #ios-section{
+    overflow: scroll;
+    height: 600px;
+  }
 
 }
 
