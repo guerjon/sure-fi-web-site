@@ -115,7 +115,6 @@
     display: none;
   }  
   .where-to-buy-logo{
-    width: 150px;
     height: 100px;
     margin: 20px;
   }  
@@ -131,8 +130,8 @@
   }  
 
   .where-to-buy-logo{
-    width: 150px;
-    height: 100px;
+    width: auto;
+    height: 85px;
     margin: 20px;
     margin-top: 50px;
   }
