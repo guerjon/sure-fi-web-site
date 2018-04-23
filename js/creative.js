@@ -90,6 +90,7 @@ function shuffle(array) {
     duration: 1000,
     delay: 200
   });
+  
   sr.reveal('.sr-contact', {
     duration: 600,
     scale: 0.3,
@@ -143,6 +144,29 @@ function shuffle(array) {
       // Parameters has to be in square bracket '[]'
       owl.trigger('prev.owl.carousel', [300]);
   })
+
+
+
+var owl_logo_container = $(".owl-logo-container").owlCarousel({      
+        startPosition: rand,
+        nav : true,
+        navText: ['<span class="fa fa-angle-left"></span>','<span class="fa fa-angle-right"></span>'],
+        autoplay : true,
+        autoplayTimeout:10000,
+        autoplaySpeed: 200,
+        loop: true,
+        responsive:{
+            0:{
+                items:1,
+            },
+            768:{
+                items:3, 
+            },
+            992:{
+                items:6,
+            }
+        }
+});
 
 })(jQuery); // End of use strict
 

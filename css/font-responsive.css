@@ -33,6 +33,31 @@
   #front-button{
     display: block;
   }
+
+  .logo-row-container{
+    padding: 15px;
+  }
+
+  .black-logo-background{
+    text-align: center;
+    background-color: black;
+    height: 200px;
+    width: 250px;
+  }
+  .text-logo-container{
+    text-align: center;
+  }
+
+  .text-logo-container h2{
+    padding-top: 10px;
+  }
+  .text-logo-container a {
+    font-size: 12px;
+  }
+  #where-to-buy-section{
+    margin-top: 20px;
+    display: none;
+  }
 }
 
 @media screen and (min-width: 576px){
@@ -68,6 +93,33 @@
   #parterns-images-container{
     display: run-in;
   }
+
+
+  .black-logo-background{
+    text-align: center;
+    background-color: black;
+    height: 200px;
+    width: 250px;
+  }
+
+  .text-logo-container{
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .text-logo-container h2{
+    padding: 10px;
+  }  
+
+  .text-logo-container a {
+    font-size: 18px;
+  }
+
+  #where-to-buy-section{
+    margin-top: 20px;
+    display: none;
+  }
+
 }
 
 @media screen and (min-width: 768px){
@@ -95,6 +147,29 @@
   #front-button{
     display: none;
   }
+
+  .text-logo-container{
+    text-align: left;
+  }
+
+  .text-logo-container h2{
+    padding: 0px;
+    padding-top: 60px;
+  }  
+
+  .black-logo-background{
+    text-align: center;
+    background-color: black;
+    
+    width: 250px;
+    margin-bottom: 20px;
+    float: right;
+  }
+  #where-to-buy-section{
+    margin-top: 20px;
+    display: block;
+  }
+
 }
 
 @media screen and (min-width: 992px){
@@ -102,7 +177,7 @@
     font-size: 24px;
   }
   #carousel-container{
-    display: none;
+    display: run-in;
   }  
 
 
@@ -116,6 +191,11 @@
 
   #front-button{
     display: none;
+  }
+
+  #where-to-buy-section{
+    margin-top: 40px;
+    display: block;
   }
 }
 
@@ -150,6 +230,19 @@
     display: run-in;
   }
 
+  .text-logo-container h2{
 
-   
+  }
+
+  .text-logo-container a{
+    font-size: 18px;
+  }
+
+
+  #where-to-buy-section{
+    margin-top: 120px;
+    display: block;
+  }
+
 }
+

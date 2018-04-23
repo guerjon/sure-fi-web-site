@@ -1,0 +1,140 @@
+
+
+@media screen and (min-width: 0px) and (max-width: 575px){
+  .text-logo-movil-container a{
+    font-size: 12px ;
+  }
+  .company-logo-container{
+      width: 150px;
+      height: 150px;    
+      background-color: black;
+      padding: 10px;
+  }
+
+  .company-logo-container img{
+      width: 120px;
+      margin-top: 30px; 
+  }
+
+  .body-symulator{
+    height: 500px;
+    overflow: hidden;
+  }
+  .loop {
+    position: relative;
+    height: 500px;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .company-image-movil-container {
+    position: relative;
+    text-align: center;
+    min-height: 200px;
+    max-height: 400px;
+    height: 250px;
+  }
+
+  .where-to-buy-logo{
+    width: 200px;
+    height: 150px;
+    margin: 20px;
+  }
+
+  #ios-section{
+    overflow: scroll;
+    height: 600px;
+  }
+}
+
+@media screen and (min-width: 576px){
+  .body-symulator{
+      height: 500px;
+    }
+    .loop {
+      position: relative;
+      height: 500px;
+      overflow: auto;
+      -webkit-overflow-scrolling: auto;
+    }
+
+    .company-image-movil-container {
+      position: relative;
+      text-align: center;
+      min-height: 200px;
+      max-height: 400px;
+      height: 70%;
+    }
+
+  .where-to-buy-logo{
+    width: 150px;
+    height: 100px;
+    margin: 20px;
+    margin-top: 50px;
+  }
+
+  .company-logo-container{
+      width: 150px;
+      height: 150px;    
+      background-color: black;
+      padding: 10px;
+  }
+
+  .company-logo-container img{
+      width: 120px;
+      margin-top: 30px; 
+  }
+
+  ::scrollbar {
+    display: none;
+  }
+  
+  #ios-section{
+    overflow: scroll;
+    height: 600px;
+  }
+
+}
+
+@media screen and (min-width: 768px){
+  .body-symulator{
+    display: none;
+  }
+
+  .where-to-buy-logo{
+    width: 150px;
+    height: 100px;
+    margin: 20px;
+    margin-top: 55px;
+  }
+}
+
+@media screen and (min-width: 992px){
+  #where-to-buy-movil-section{
+    display: none;
+  }  
+  .where-to-buy-logo{
+    height: 100px;
+    margin: 20px;
+  }  
+
+  .body-symulator{
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px){
+  #where-to-buy-movil-section{
+    display: none;
+  }  
+
+  .where-to-buy-logo{
+    width: auto;
+    height: 90px;
+    margin: 20px;
+    margin-top: 55px;
+  }
+  .body-symulator{
+    display: none;
+  }
+}
