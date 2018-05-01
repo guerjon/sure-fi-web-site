@@ -25,7 +25,14 @@
 	}
 
 	.documentation-image{
-		width: 80%;
+		width: 50%;
+		padding:20px;
+	}
+
+	.bridge-image{
+		width: 100%;
+		height: auto;
+		padding: 20px;
 	}
 }
 
@@ -55,6 +62,16 @@
 		width: 90%;
 	}
 
+	.documentation-image{
+		width: 80%;
+	}
+
+	.bridge-image{
+		width: 100%;
+		height: auto;
+		padding: 20px;
+	}
+
 }
 
 /* Medium devices (desktops,  and up) */
@@ -77,6 +94,12 @@
 
 	.documentation-image{
 		width: 90%;
+	}	
+
+	.bridge-image{
+		width: 100%;
+		height: auto;
+		padding: 60px;
 	}
 }
 
@@ -98,7 +121,7 @@
 	}
 
 	.documentation-image{
-		width: 90%;
+		width: 60%;
 	}
 }
 
@@ -126,6 +149,12 @@
 	}
 
 	.documentation-image{
-		width: 90%;
+		width: 50%;
+	}
+
+	.bridge-image{
+		width: 100%;
+		height: auto;
+		padding: 80px;
 	}
 }
