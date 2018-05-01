@@ -19,16 +19,20 @@
 	.documentation-title{
 		font-size: 40px;
 	}
-	
+
 	.documentation-image{
-		width: 50%;
+		width: 80%;
 		padding:20px;
 	}
 
 	.bridge-image{
 		width: 100%;
 		height: auto;
-		padding: 20px;		
+		padding: 20px;
+	}
+	
+	.image-documentation-container{
+		width: 50%;
 	}
 }
 
