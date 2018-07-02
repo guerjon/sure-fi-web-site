@@ -35,7 +35,7 @@
   }
 
   .logo-row-container{
-    padding: 15px;
+    padding: 20px;
   }
 
   .black-logo-background{
@@ -120,6 +120,10 @@
     display: none;
   }
 
+ .logo-row-container{
+    padding: 20px;
+  }
+
 }
 
 @media screen and (min-width: 768px){
@@ -160,19 +164,41 @@
   .black-logo-background{
     text-align: center;
     background-color: black;
-    
     width: 250px;
-    margin-bottom: 20px;
-    float: right;
+    margin: 0 auto;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
   }
+
+  .company-info-col{
+    width: 250px;
+    height: 200px;
+    margin: 0 auto;
+    padding:25px;
+    border-style: solid;
+    border-width: 2px;
+    border-bottom-width: 4px;
+    border-bottom-color: black;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+  }
+
+  .company-info-col a{
+    font-size: 10px;
+  }
+
   #where-to-buy-section{
     margin-top: 20px;
     display: block;
   }
 
+  .logo-row-container{
+    padding: 20px;
+  }
 }
 
-@media screen and (min-width: 992px){
+
+@media screen and (min-width: 992px) and (max-width: 1200px){
   .contact-font {
     font-size: 24px;
   }
@@ -197,6 +223,29 @@
     margin-top: 40px;
     display: block;
   }
+  .logo-row-container{
+    padding: 20px;
+  }
+
+  .black-logo-background{
+    text-align: center;
+    background-color: black;
+    height: 200px;
+    width: 250px;
+  }
+
+  .company-info-col{
+    width: 250px;
+    height: 200px;
+    margin: 0 auto;
+    padding:25px;
+    border-style: solid;
+    border-width: 2px;
+    border-bottom-width: 4px;
+    border-bottom-color: black;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+  }  
 }
 
 @media screen and (min-width: 1200px){
@@ -238,11 +287,35 @@
     font-size: 18px;
   }
 
+  .logo-row-container{
+    padding: 20px;
+    margin-right: 150px;
+    margin-left: 150px;
+  }
 
   #where-to-buy-section{
     margin-top: 120px;
     display: block;
   }
 
+  .black-logo-background{
+    text-align: center;
+    background-color: black;
+    height: 200px;
+    width: 250px;
+  }
+
+  .company-info-col{
+    width: 250px;
+    height: 200px;
+    margin: 0 auto;
+    padding:25px;
+    border-style: solid;
+    border-width: 2px;
+    border-bottom-width: 4px;
+    border-bottom-color: black;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+  }    
 }
 
