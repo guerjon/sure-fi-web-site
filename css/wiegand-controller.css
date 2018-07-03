@@ -105,6 +105,10 @@
 		height: auto;
 		padding: 60px;
 	}
+
+	.relay-container{
+		margin-top: 75px;
+	}	
 }
 
 @media only screen and  (min-width: 1024px){
@@ -127,6 +131,9 @@
 	.documentation-image{
 		width: 60%;
 	}
+	.relay-container{
+		margin-top: 75px;
+	}	
 }
 
 
@@ -160,5 +167,8 @@
 		width: 100%;
 		height: auto;
 		padding: 80px;
+	}
+	.relay-container{
+		margin-top: 70px;
 	}
 }
