@@ -218,36 +218,33 @@
 }
 
 
-
-
 /* phones */
 @media screen and (min-width: 100px) and (max-width: 799px){
  
- 
-  #services {
-    padding-top: 3em;
-    padding-bottom: 0em;
-  }
+    #services {
+        padding-top: 3em;
+        padding-bottom: 0em;
+    }
 
-  .product-link{
-    margin: 0px; 
-  }  
+    .product-link{
+        margin: 0px; 
+    }  
 
-  .product-link img{
-   margin: 50px 0px 80px 0px;
-  }
+    .product-link img{
+        margin: 50px 0px 80px 0px;
+    }
 
-  #contact {
-    padding-top: 1.5em;
-    padding-bottom: 1.5em;
-  }
+    #contact {
+        padding-top: 1.5em;
+        padding-bottom: 1.5em;
+    }
 
-  #about{
-    padding: 5rem 0;
-  }
+    #about{
+        padding: 5rem 0;
+    }
 
     .masthead {
-        height: 85vh;
+        height: 60vh;
         background-color: #2e2c2f;
         display: flex;
         align-items: center;
@@ -257,29 +254,33 @@
     }
 
     .masthead-son{
-        flex-basis: 25vh;
         align-self: center;
         text-align: center;
     }
 
     .child-1{
-        flex-basis: 25vh;
+        width: 40%;
         color: white !important;
-        font-size: 35px;
+        font-size: 2rem;
+        
+    }
+
+    .child-2{
+        flex-basis: 20vh;
+        
     }
 
     .child-3{
         flex-basis: 50vh;
         color: white !important;
         font-size: 14px;
+        
     }
 
     .img-responsive-header{
         max-width: 100%;
         height: auto; 
     }
-
-
 }
 
 
