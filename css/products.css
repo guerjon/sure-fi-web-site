@@ -1,0 +1,31 @@
+.first-container{
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 100px;
+}
+
+.flex-parent{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.flex-son{
+	width: 50vh;
+	padding: 30px;
+}
+
+.flex-son img{
+	width: 100%;
+}
+
+.flex-son-text-container{
+	height: 10vh;
+	justify-content: center;
+	display: flex;
+	align-items: center;
+}
+
+.flex-son-text{
+	text-align: center;
+}
