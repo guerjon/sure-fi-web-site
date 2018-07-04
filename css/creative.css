@@ -217,14 +217,7 @@
      box-shadow: 0 0 0 0.2rem rgba(240, 95, 64, 0.5) !important;
 }
 
-.masthead {
-    height: 80vh;
-    background-color: #2e2c2f;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-}
+
 
 .img-responsive-header{
     max-width: 100%;
@@ -255,7 +248,15 @@
     #about{
         padding: 5rem 0;
     }
-
+    
+    .masthead {
+        height: 80vh;
+        background-color: #2e2c2f;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 
 
     .masthead-son{
@@ -293,6 +294,14 @@
     padding: 5rem 0;
   }
 
+    .masthead {
+        height: 80vh;
+        background-color: #2e2c2f;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 
     .masthead-son{
         align-self: center;
@@ -322,6 +331,37 @@
         padding-right: 0px;
         padding-left: 0px;
     }
+
+
+    .masthead {
+        height: 100vh;
+        background-color: #2e2c2f;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .masthead-son{
+        align-self: center;
+        text-align: center;
+    }
+
+    .child-1{
+        flex-basis: 45vh;
+        color: white !important;
+        font-size: 3rem;
+    }
+
+    .child-2{
+        flex-basis: 35vh;
+    }
+
+    .child-3{
+        flex-basis: 35vh;
+        color: white !important;
+        font-size: 20px;
+    }    
 }
 
 
