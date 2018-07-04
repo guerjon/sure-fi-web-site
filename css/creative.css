@@ -135,38 +135,6 @@
     }
 }
 
-
- header.masthead hr {
-     margin-top: 30px;
-     margin-bottom: 30px;
-}
- header.masthead h1 {
-     font-size: 2rem;
-}
- header.masthead p {
-     font-weight: 300;
-}
- @media (min-width: 768px) {
-     header.masthead p {
-         font-size: 1.15rem;
-    }
-}
- @media (min-width: 992px) {
-     header.masthead {
-         height: 100vh;
-         min-height: 650px;
-         padding-top: 0;
-         padding-bottom: 0;
-    }
-     header.masthead h1 {
-         font-size: 3rem;
-    }
-}
- @media (min-width: 1200px) {
-     header.masthead h1 {
-         font-size: 4rem;
-    }
-}
  .service-box {
      max-width: 400px;
 }
@@ -240,6 +208,7 @@
      background-color: #1E95D5;
      border-color: #1E95D5;
 }
+
  .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
      color: #fff;
      background-color: #1E95FF !important;
@@ -248,22 +217,45 @@
      box-shadow: 0 0 0 0.2rem rgba(240, 95, 64, 0.5) !important;
 }
 
+.masthead {
+    height: 100vh;
+    background-color: #2e2c2f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.masthead-son{
+    flex-basis: 30vh;
+    align-self: center;
+    text-align: center;
+}
+
+.child-1{
+    flex-basis: 50vh;
+    color: white !important;
+    font-size: 35px;
+}
+
+.child-3{
+    flex-basis: 50vh;
+    
+    color: white !important;
+    font-size: 14px;
+}
+
+.img-responsive-header{
+    max-width: 100%;
+    height: auto; 
+}
 
 
 /* phones */
 @media screen and (min-width: 100px) and (max-width: 799px){
  
- header.masthead {
-     padding-top: 3rem !important;
-     padding-bottom: calc(10rem - 56px);
-     background-image: url("../images/master.png");
-     background-position: center center;
-     -webkit-background-size: cover;
-     -moz-background-size: cover;
-     -o-background-size: cover;
-     background-size: cover;
-  }
-
+ 
   #services {
     padding-top: 3em;
     padding-bottom: 0em;
@@ -291,17 +283,7 @@
 
  /*tablets*/
 @media screen and (min-width: 800px) and (max-width: 1024px){
-  header.masthead {
-     padding-top: 5rem !important;
-     padding-bottom: calc(10rem - 56px);
-     background-image: url("../images/master.png");
-     background-position: center center;
-     -webkit-background-size: cover;
-     -moz-background-size: cover;
-     -o-background-size: cover;
-     background-size: cover;
-  }
-
+  
   #services {
     padding: 5rem 0;
   }
@@ -309,23 +291,10 @@
 }
 /*pc desktops */
 @media screen and (min-width: 1024px){
-  header.masthead {
-    padding-top: 10rem !important;
-    padding-bottom: calc(10rem - 56px);
-    background-image: url("../images/master.png");
-    background-position: center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-
     .product-link .container-fluid{
         padding-right: 0px;
         padding-left: 0px;
     }
-
-
 }
 
 
