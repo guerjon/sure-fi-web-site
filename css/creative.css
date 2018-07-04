@@ -244,7 +244,7 @@
     }
 
     .masthead {
-        height: 60vh;
+        height: 80vh;
         background-color: #2e2c2f;
         display: flex;
         align-items: center;
@@ -266,7 +266,7 @@
     }
 
     .child-2{
-        flex-basis: 20vh;
+        flex-basis: 25vh;
         
     }
 
@@ -274,7 +274,7 @@
         flex-basis: 50vh;
         color: white !important;
         font-size: 14px;
-        
+
     }
 
     .img-responsive-header{
