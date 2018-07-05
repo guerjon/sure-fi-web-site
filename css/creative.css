@@ -283,6 +283,9 @@
 
     }
 
+    .masthead-desktop{
+        display: none;
+    }
 
 }
 
@@ -324,6 +327,10 @@
         font-size: 20px;
     }
 
+    .masthead-desktop{
+        display: none;
+    }
+
 }
 /*pc desktops */
 @media screen and (min-width: 1024px){
@@ -333,35 +340,22 @@
     }
 
 
-    .masthead {
+    .masthead{
+        display: none;
+    }
+
+
+    header.masthead-desktop{
         height: 100vh;
-        background-color: #2e2c2f;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        flex-wrap: wrap;
-    }
-
-    .masthead-son{
-        align-self: center;
-        text-align: center;
-    }
-
-    .child-1{
-        flex-basis: 45vh;
-        color: white !important;
-        font-size: 3rem;
-    }
-
-    .child-2{
-        flex-basis: 35vh;
-    }
-
-    .child-3{
-        flex-basis: 35vh;
-        color: white !important;
-        font-size: 20px;
+        background-color: #2e2c2f; 
     }    
+
+    .header-container{
+        z-index: 0;
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+    }
 }
 
 
