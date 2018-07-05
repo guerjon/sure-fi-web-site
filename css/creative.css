@@ -272,19 +272,20 @@
     }
 
     .child-2{
-        flex-basis: 25vh;
+        flex-basis: 20vh;
         
     }
 
     .child-3{
-        flex-basis: 50vh;
+        width: 100%;
+        padding-left:10%;
+        padding-right: 10%;
         color: white !important;
         font-size: 14px;
-
     }
 
     .masthead-desktop{
-        display: none;
+        display: none !important;
     }
 
 }
@@ -293,9 +294,9 @@
  /*tablets*/
 @media screen and (min-width: 800px) and (max-width: 1024px){
   
-  #services {
-    padding: 5rem 0;
-  }
+    #services {
+        padding: 5rem 0;
+    }
 
     .masthead {
         height: 80vh;
@@ -322,13 +323,17 @@
     }
 
     .child-3{
-        flex-basis: 80vh;
+        width: 100%;
         color: white !important;
         font-size: 20px;
+        padding-right: 40px;
+        padding-left: 40px;
+        display: flex;
+        justify-content: center;
     }
 
     .masthead-desktop{
-        display: none;
+        display: none !important;
     }
 
 }
@@ -341,7 +346,7 @@
 
 
     .masthead{
-        display: none;
+        display: none !important;
     }
 
 
