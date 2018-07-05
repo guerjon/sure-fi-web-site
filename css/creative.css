@@ -272,8 +272,7 @@
     }
 
     .child-2{
-        flex-basis: 20vh;
-        
+        width: 50%;
     }
 
     .child-3{
