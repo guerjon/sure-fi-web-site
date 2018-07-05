@@ -33,17 +33,7 @@
   #front-button{
     display: block;
   }
-
-  .logo-row-container{
-    padding: 20px;
-  }
-
-  .black-logo-background{
-    text-align: center;
-    background-color: black;
-    height: 200px;
-    width: 250px;
-  }
+  
   .text-logo-container{
     text-align: center;
   }
@@ -51,14 +41,20 @@
   .text-logo-container h2{
     padding-top: 10px;
   }
+
   .text-logo-container a {
     font-size: 12px;
   }
+
+
   #where-to-buy-section{
     margin-top: 20px;
     display: none;
   }
 }
+
+
+
 
 @media screen and (min-width: 576px){
   .contact-font {
@@ -70,8 +66,7 @@
   }
 
   #jamieson_fence{
-    padding: 20px; 
-    
+    padding: 20px;   
   }
   
   #where_to_buy{
@@ -94,14 +89,6 @@
     display: run-in;
   }
 
-
-  .black-logo-background{
-    text-align: center;
-    background-color: black;
-    height: 200px;
-    width: 250px;
-  }
-
   .text-logo-container{
     text-align: center;
     margin-bottom: 40px;
@@ -120,10 +107,12 @@
     display: none;
   }
 
- .logo-row-container{
-    padding: 20px;
-  }
 
+  .logo-row-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
 
 @media screen and (min-width: 768px){
@@ -161,27 +150,8 @@
     padding-top: 60px;
   }  
 
-  .black-logo-background{
-    text-align: center;
-    background-color: black;
-    width: 250px;
-    margin: 0 auto;
-    border-top-right-radius: 30px;
-    border-top-left-radius: 30px;
-  }
+  
 
-  .company-info-col{
-    width: 250px;
-    height: 200px;
-    margin: 0 auto;
-    padding:25px;
-    border-style: solid;
-    border-width: 2px;
-    border-bottom-width: 4px;
-    border-bottom-color: black;
-    border-bottom-right-radius: 30px;
-    border-bottom-left-radius: 30px;
-  }
 
   .company-info-col a{
     font-size: 10px;
@@ -192,9 +162,34 @@
     display: block;
   }
 
+
   .logo-row-container{
-    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
   }
+
+  .black-logo-background{
+    width: 16%;
+    padding: 3vh;
+  }
+
+  .black-logo-background div {
+    background: black;
+    width: 10vh;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .black-logo-background h3{
+    color:black;
+    font-size: 18px;
+  }
+
+
 }
 
 
@@ -223,29 +218,33 @@
     margin-top: 40px;
     display: block;
   }
+
   .logo-row-container{
-    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   .black-logo-background{
-    text-align: center;
-    background-color: black;
-    height: 200px;
-    width: 250px;
+    width: 16%;
+    padding: 3vh;
   }
 
-  .company-info-col{
-    width: 250px;
-    height: 200px;
-    margin: 0 auto;
-    padding:25px;
-    border-style: solid;
-    border-width: 2px;
-    border-bottom-width: 4px;
-    border-bottom-color: black;
-    border-bottom-right-radius: 30px;
-    border-bottom-left-radius: 30px;
-  }  
+  .black-logo-background div {
+    background: black;
+    width: 15vh;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .black-logo-background h3{
+    color:black;
+    font-size: 18px;
+  }
+
 }
 
 @media screen and (min-width: 1200px){
@@ -287,35 +286,50 @@
     font-size: 18px;
   }
 
-  .logo-row-container{
-    padding: 20px;
-    margin-right: 150px;
-    margin-left: 150px;
-  }
 
   #where-to-buy-section{
     margin-top: 120px;
     display: block;
   }
 
-  .black-logo-background{
-    text-align: center;
-    background-color: black;
-    height: 200px;
-    width: 250px;
+  .logo-row-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
-  .company-info-col{
-    width: 250px;
-    height: 200px;
-    margin: 0 auto;
-    padding:25px;
-    border-style: solid;
-    border-width: 2px;
-    border-bottom-width: 4px;
-    border-bottom-color: black;
-    border-bottom-right-radius: 30px;
-    border-bottom-left-radius: 30px;
-  }    
+  .black-logo-background{
+    width: 16%;
+    padding: 3vh;
+  }
+
+  .black-logo-background div {
+    background: black;
+    width: 15vh;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .black-logo-background h3{
+    color:black;
+    font-size: 18px;
+  }
+
+  .principal-container{
+    margin-top: 91px;
+  }
+
+  .buy-title{
+    margin-top: 10vh;
+  }
 }
 
+
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+  .principal-container{
+    margin-top: 91px;
+  }  
+}
