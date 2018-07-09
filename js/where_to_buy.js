@@ -1,6 +1,6 @@
 var doc = window.document,
   context = doc.querySelector('.js-loop'),
-  clones = context.querySelectorAll('.is-clone'),
+  
   disableScroll = false,
   scrollHeight = 0,
   scrollPos = 0,
@@ -157,6 +157,6 @@ window.onload = function () {
   if(width > 575){
     $("#where-to-buy-section").hide()
   }
-  init()
+  //init()
 
 };

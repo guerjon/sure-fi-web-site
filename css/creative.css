@@ -356,39 +356,6 @@
     .simple-text{
         font-size: 14px;
     }
-
-    .logo-row-container{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-
-    .black-logo-background{
-        flex-basis: 45%;
-        background: black;
-        width: 80%;
-        margin:5px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .black-logo-background div {
-        height: 15vh;
-        width: 150px;
-        height: 150px;
-        
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .black-logo-background h3{
-        color:black;
-        font-size: 18px;
-        display: none;
-    }
 }
 
 
