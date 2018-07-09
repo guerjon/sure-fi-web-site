@@ -83,12 +83,6 @@ ul{
 
 
 
-.big-blue-title{
-	font-weight : bold;
-  	font-size : 54px;
-  	color : rgb(0,140,228);		
-}
-
 .red-green-title{
   font-weight : bold;
   font-size : 54px;
@@ -394,6 +388,307 @@ ul{
 	padding:20px;
 }
 
+.wiegand-title p{
+	color: rgb(109,110,113);
+}
+
+.img-responsive-header{
+    max-width: 100%;
+    height: auto; 
+}
+
+
+/* phones */
+@media screen and (min-width: 100px) and (max-width: 799px){
+
+	.black-div{
+		background-color:#000;
+		padding:20px;
+	}
+
+	.title{
+		font-weight : bold;
+	  	font-size : 24px;
+	  	letter-spacing: 2px;
+	  	display: inline;	
+	}
+		
+	.mini-green-list-fat{
+		font-size: 22px;
+		font-weight:bold;
+	}
+
+	#devices-container {
+		width: 500px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	#sheets-container{
+		margin-left: auto;
+		margin-right: auto;
+		width: 1080px;
+		display: -webkit-flex;
+	    display: flex;
+	}
+
+
+	.device-container{
+		width: 25%;
+		height: 260px;
+		align-items: center;
+		float: left;
+		text-align: center;
+	}
+
+	.device{
+		background: #DDDDDD;
+		border-radius: 50%;
+		text-align: center;
+		height: 100%;
+		width: 100%;
+		margin: 10px;
+	}
+
+	.device-container p {
+		margin: 5px;
+		font-size: 25px;
+	}
+
+	#carousel-container {
+		margin:0px auto;
+		width: 90%;
+	}
+
+	#contact_container{
+		width: 80%;
+		margin-top: 80px;
+		margin-left: auto;
+		margin-right: auto;
+		border-style: solid;
+		border-left-width: 0;
+		border-right-width: 0;
+		border-top: 0;
+		border-bottom-color: rgb(219,219,219);
+	}
+
+	#fotter-container{
+		margin-top: 40px;
+	}
+
+	#fotter{
+		margin-top: 20px;
+	}
+
+	#navbarResponsive{
+		background-color: white;
+	}
+
+	#mainNav{
+		background-color: black;
+		position: relative;
+	}
+
+	#pinger-container{
+		padding: 50px;
+	}
+
+	.black-title{
+		font-size: 40px;
+	}
+
+	h2{
+		font-size: 30px !important;	
+	}
+
+	.green-with-sizes{
+		width: 70vw;
+		height: 80vw;
+	}
+
+	.blue-with-sizes{
+		width: 100%;
+	}
+
+	.product-container{
+		height: 85px;
+	}
+
+	.product-title-container{
+		height: 50px;
+	}
+
+	.product-text-container{
+		height: 40px;
+	}
+
+	.logo-link{
+		padding: 0px;
+	}
+
+	.logo-link img{
+		width: 100px;
+		height: 25px;
+		margin: 15px;
+	}
+
+	#hall-bottom-foot{
+		height: 70px;
+	}	
+
+	.big-blue-title{
+		font-weight : bold;
+	  	font-size : 24px;
+	  	color : rgb(0,140,228);		
+	}	
+
+	.wiegand-images-section{
+
+	}
+
+	.wiegand-title{
+		padding: 10px;
+	}
+
+	.wiegand-title p{
+		font-size: 20px;
+	}	
+
+}
+
+/*tablets*/
+@media  screen and (min-width: 800px) and (max-width: 1024px){
+	.title{
+		font-weight : bold;
+	  	font-size : 24px;
+	  	letter-spacing: 2px;
+	  	display: inline;	
+	}
+
+	.mini-green-list-fat{
+		font-size: 22px;
+		font-weight:bold;
+	}
+
+	#devices-container {
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	#sheets-container{
+		width: 100%;
+		display: -webkit-flex;
+	    display: flex;
+	}
+
+	
+	.device-container{
+		width: 25%;
+		height: 250px;
+		align-items: center;
+		float: left;
+		text-align: center;
+	}
+
+	.device{
+		background: #DDDDDD;
+		border-radius: 50%;
+		text-align: center;
+		margin: 10px;
+		width: 95%;
+		height: 95%;
+	}
+
+	.device-container p {
+		margin: 5px;
+		font-size: 25px;
+
+	}
+
+	#carousel-container {
+		margin:0px auto;
+		width: 90%;
+	}
+	#contact_container {
+		width: 80%;
+		margin-top: 40px;
+		margin-left: auto;
+		margin-right: auto;
+		border-style: solid;
+		border-left-width: 0;
+		border-right-width: 0;
+		border-top: 0;
+		border-bottom-color: rgb(219,219,219);
+	}
+
+	#contact_text_container{
+		margin: 40px 0px 0px 0px;
+	}
+
+	#fotter-container{
+		margin:40px 0 0 0;
+	}
+
+	#video-text{
+		font-size: 8vw;
+	}
+	#navbarResponsive{
+		background-color: white;
+	}
+
+	#mainNav{
+		background-color: black;
+		position: relative;
+	}
+
+	#pinger-container{
+		margin-top: 300px;
+	}
+	.green-with-sizes{
+		width: 70vw;
+		height: 80vw;
+	}
+
+	.blue-with-sizes{
+		width: 70vw;
+	}
+
+
+	.logo-link img{
+		width: 150px;
+		height: 40px;
+		margin: 15px;
+	}
+	
+	#hall-bottom-foot{
+		height: 90px;
+	}	
+	.black-div{
+		background-color:#000;
+		padding:20px;
+		margin:0px -20px 0px -70px;	
+	}
+	.product-title-container{
+		height: 70px;
+	}
+
+	.big-blue-title{
+		font-weight : bold;
+	  	font-size : 35px;
+	  	color : rgb(0,140,228);		
+	}	
+	
+	.wiegand-title{
+		padding: 10px;
+	}
+
+	.wiegand-title p{
+		font-size: 40px;
+	}
+
+}
+
 
 /*
  THIS SIZE IS FOR A MAC O PC WITH HIGH RESOUTION
@@ -520,269 +815,28 @@ ul{
 	.product-title-container{
 		height: 40px;
 	}
-}
 
-/*tablets*/
-@media  screen and (min-width: 800px) and (max-width: 1024px){
-	.title{
+	.big-blue-title{
 		font-weight : bold;
-	  	font-size : 24px;
-	  	letter-spacing: 2px;
-	  	display: inline;	
-	}
-
-	.mini-green-list-fat{
-		font-size: 22px;
-		font-weight:bold;
-	}
-
-	#devices-container {
-		width: 100%;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	#sheets-container{
-		width: 100%;
-		display: -webkit-flex;
-	    display: flex;
-	}
-
-	
-	.device-container{
-		width: 25%;
-		height: 250px;
-		align-items: center;
-		float: left;
-		text-align: center;
-	}
-
-	.device{
-		background: #DDDDDD;
-		border-radius: 50%;
-		text-align: center;
-		margin: 10px;
-		width: 95%;
-		height: 95%;
-	}
-
-	.device-container p {
-		margin: 5px;
-		font-size: 25px;
-
-	}
-
-	#carousel-container {
-		margin:0px auto;
-		width: 90%;
-	}
-	#contact_container {
-		width: 80%;
-		margin-top: 40px;
-		margin-left: auto;
-		margin-right: auto;
-		border-style: solid;
-		border-left-width: 0;
-		border-right-width: 0;
-		border-top: 0;
-		border-bottom-color: rgb(219,219,219);
-	}
-
-	#contact_text_container{
-		margin: 40px 0px 0px 0px;
-	}
-
-	#fotter-container{
-		margin:40px 0 0 0;
-	}
-
-	#video-text{
-		font-size: 8vw;
-	}
-	#navbarResponsive{
-		background-color: white;
-	}
-
-	#mainNav{
-		background-color: black;
-		position: relative;
-	}
-
-	#pinger-container{
-		margin-top: 300px;
-	}
-	.green-with-sizes{
-		width: 70vw;
-		height: 80vw;
-	}
-
-	.blue-with-sizes{
-		width: 70vw;
-	}
-
-
-	.logo-link img{
-		width: 150px;
-		height: 40px;
-		margin: 15px;
-	}
-	
-	#hall-bottom-foot{
-		height: 90px;
+	  	font-size : 50px;
+	  	color : rgb(0,140,228);		
 	}	
-	.black-div{
-		background-color:#000;
-		padding:20px;
-		margin:0px -20px 0px -70px;	
-	}
-	.product-title-container{
-		height: 70px;
-	}
-}
 
-/* phones */
-@media screen and (min-width: 100px) and (max-width: 799px){
-
-
-
-	.black-div{
-		background-color:#000;
-		padding:20px;
+	.wiegand-images-section{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;	
 	}
 
-	.title{
-		font-weight : bold;
-	  	font-size : 24px;
-	  	letter-spacing: 2px;
-	  	display: inline;	
-	}
-		
-	.mini-green-list-fat{
-		font-size: 22px;
-		font-weight:bold;
+	.wiegand-title{
+		padding: 20px;
 	}
 
-	#devices-container {
-		width: 500px;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	#sheets-container{
-		margin-left: auto;
-		margin-right: auto;
-		width: 1080px;
-		display: -webkit-flex;
-	    display: flex;
-	}
-
-
-	.device-container{
-		width: 25%;
-		height: 260px;
-		align-items: center;
-		float: left;
-		text-align: center;
-	}
-
-	.device{
-		background: #DDDDDD;
-		border-radius: 50%;
-		text-align: center;
-		height: 100%;
-		width: 100%;
-		margin: 10px;
-	}
-
-	.device-container p {
-		margin: 5px;
-		font-size: 25px;
-	}
-
-	#carousel-container {
-		margin:0px auto;
-		width: 90%;
-	}
-
-	#contact_container{
-		width: 80%;
-		margin-top: 80px;
-		margin-left: auto;
-		margin-right: auto;
-		border-style: solid;
-		border-left-width: 0;
-		border-right-width: 0;
-		border-top: 0;
-		border-bottom-color: rgb(219,219,219);
-	}
-
-	#fotter-container{
-		margin-top: 40px;
-	}
-
-	#fotter{
-		margin-top: 20px;
-	}
-
-	#navbarResponsive{
-		background-color: white;
-	}
-
-	#mainNav{
-		background-color: black;
-		position: relative;
-	}
-
-	#pinger-container{
-		padding: 50px;
-	}
-
-	.black-title{
+	.wiegand-title p{
 		font-size: 40px;
 	}
-
-	h2{
-		font-size: 30px !important;	
-	}
-
-	.green-with-sizes{
-		width: 70vw;
-		height: 80vw;
-	}
-
-	.blue-with-sizes{
-		width: 70vw;
-	}
-
-
-	.product-container{
-		height: 85px;
-	}
-
-	.product-title-container{
-		height: 50px;
-	}
-
-	.product-text-container{
-		height: 40px;
-	}
-
-	.logo-link{
-		padding: 0px;
-	}
-
-	.logo-link img{
-		width: 100px;
-		height: 25px;
-		margin: 15px;
-	}
-
-	#hall-bottom-foot{
-		height: 70px;
-	}	
-
 }
-
 
 
 @media screen and (min-width: 990px) and (max-width: 1024px){
@@ -823,6 +877,15 @@ ul{
 	}
 
 }
+
+
+
+
+
+
+
+
+
 
 
 /* -------------------- animation ---------------------------- */
