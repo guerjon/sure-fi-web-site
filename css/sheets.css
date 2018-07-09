@@ -485,6 +485,10 @@ ul{
 		height: 55vw;
 	}
 
+	.blue-with-sizes{
+		width: 50vw;
+	}
+
 	.product-container{
 		height: 120px;
 	}
@@ -611,6 +615,11 @@ ul{
 		width: 70vw;
 		height: 80vw;
 	}
+
+	.blue-with-sizes{
+		width: 70vw;
+	}
+
 
 	.logo-link img{
 		width: 150px;
@@ -741,6 +750,11 @@ ul{
 		height: 80vw;
 	}
 
+	.blue-with-sizes{
+		width: 70vw;
+	}
+
+
 	.product-container{
 		height: 85px;
 	}
@@ -785,6 +799,11 @@ ul{
 		height: 55vw;
 	}
 
+	.blue-with-sizes{
+		width: 50vw;
+	}
+
+
 	#shadow-container{
 		margin-top: 90px;
 	}
@@ -798,6 +817,11 @@ ul{
 		width: 500px;
 		height: 550px;
 	}
+
+	.blue-with-sizes{
+		width: 500px;
+	}
+
 }
 
 
