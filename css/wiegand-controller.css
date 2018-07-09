@@ -106,15 +106,15 @@
 		padding: 60px;
 	}
 
-	.relay-container{
-		margin-top: 75px;
-	}	
+
 }
 
 @media only screen and  (min-width: 1024px){
+	
 	.shadow-container{
 		margin-top: 0px !important;
 	}
+
 	.where-to-buy-container{
 		margin-top: 90px;
 	}
@@ -131,9 +131,7 @@
 	.documentation-image{
 		width: 60%;
 	}
-	.relay-container{
-		margin-top: 75px;
-	}	
+
 }
 
 
@@ -168,7 +166,5 @@
 		height: auto;
 		padding: 80px;
 	}
-	.relay-container{
-		margin-top: 70px;
-	}
+	
 }
