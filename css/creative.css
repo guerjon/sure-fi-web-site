@@ -537,5 +537,21 @@
 
 
 
+@media (min-width: 800px) and (max-width: 991px){
+        .dropdown-list-item{
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: black;
+        text-align: center;
+        font-weight: 600;
+    }
+
+    .dropdown-menu{
+        background: white;
+    }
+}
 
  

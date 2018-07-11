@@ -264,6 +264,10 @@
       justify-content: center;
   }
 
+  .nav-item.dropdown:hover > ul.dropdown-menu {
+      display: block;    
+  }
+
 }
 
 
@@ -319,6 +323,10 @@
   .black-logo-background h3{
     color:black;
     font-size: 18px;
+  }
+
+  .nav-item.dropdown:hover > ul.dropdown-menu {
+      display: block;    
   }
 
 }
@@ -412,6 +420,10 @@
 
   .buy-title{
     margin-top: 10vh;
+  }
+
+  .nav-item.dropdown:hover > ul.dropdown-menu {
+      display: block;    
   }
 }
 
