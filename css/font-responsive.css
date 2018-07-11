@@ -77,6 +77,12 @@
       font-size: 18px;
       display: none;
   }
+
+  .logo-row-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 
