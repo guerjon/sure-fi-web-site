@@ -24,6 +24,7 @@
     <link href="css/creative.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/font-responsive.css">
     <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/variables.css">
     <link rel="stylesheet" href="js/OwlCarousel2-2.2.0/dist/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="js/OwlCarousel2-2.2.0/dist/assets/owl.theme.default.min.css">
     <link rel="shortcut icon" type="image/x-icon" href="images/logo-icon.png" />
@@ -46,18 +47,40 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger " href="index.html">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="relay.html">Relay Bridge</a>
-            </li>            
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="development-kit.html">Evaluation Kit</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="hvac.html">HVAC Bridge</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="wiegand-controller.html">Wiegand Bridge</a>
-            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="products.html">PRODUCTS
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li>
+                    <a  href="development-kit.html">
+                      <div class="dropdown-list-item">
+                        Development kit
+                      </div>
+                    </a>  
+                </li>
+                <li>
+                  <a  href="relay.html">
+                    <div class="dropdown-list-item">
+                        Relay Bridge
+                    </div>
+                  </a>
+                </li>
+                <li> 
+                    <a href="hvac.html">
+                      <div class="dropdown-list-item">
+                        HVAC Bridge
+                      </div>
+                    </a>
+                </li>
+                <li>
+                  <a href="wiegand-controller.html">
+                    <div class="dropdown-list-item">
+                      Wiegand Bridge
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </li>  
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="contact.html">Contact</a>
             </li>            
@@ -66,60 +89,75 @@
       </div>
     </nav>
     
-    <div class="container-fluid first-container" >
-      <div style="text-align: center;padding: 20px;margin: 20px;">
-        <h1>
-          Products
-        </h1>
+    <div class="container first-container">
+      <div class="first-container-title-container">
+        <p class="first-container-title">
+            Products
+        </p>
         <hr>
-      </div>
-      <div class="flex-parent">
-          <div class="flex-son">
-              <img src="images/heavy-green.png" class="img-responsive">
-              <div class="flex-son-text-container">
-                <div class="flex-son-text">
-                    <h4>
-                      WIEGAND BRIDGE
-                    </h4>
+        <div class="products-container">
+            <div class="product-container">
+              <a href="where-to-buy-wiegand.html">
+                <div class="product">  
+                  <div class="product-image">
+                    <img src="images/heavy-green-clean.png" class="img-responsive-header">  
+                  </div>
+                  <div class="product-text">
+                      <p>
+                        WIEGAND BRIDGE
+                      </p>
+                  </div>
                 </div>
-              </div>
-          </div>
-          <div class="flex-son">
-            <img src="images/heavy-red.png" class="img-responsive">
-              <div class="flex-son-text-container">
-                <div class="flex-son-text">
-                    <h4>
-                      HVAC BRIDGE
-                    </h4>
-                </div>            
-              </div>
-          </div>
-      </div>
-      <div class="flex-parent">
-          <div class="flex-son">
-              <img src="images/heavy-blue.png" class="img-responsive">
-              <div class="flex-son-text-container">
-                <div class="flex-son-text">
-                    <h4>
+              </a>
+            </div>
+            <div class="product-container">
+              <a href="where-to-buy-hvac.html">
+                <div class="product">
+                  <div class="product-image">
+                    <img src="images/heavy-red.png" class="img-responsive-header">
+                  </div>
+                  <div class="product-text">
+                      <p>
+                        HVAC BRIDGE
+                      </p>
+                  </div>                    
+                </div>
+              </a>
+            </div>
+          <div class="product-container">
+            <a href="where-to-buy-relay.html">
+              <div class="product">
+
+                <div class="product-image">
+                  <img src="images/heavy-blue.png" class="img-responsive-header">
+                </div>
+                <div class="product-text">
+                    <p>
                       RELAY BRIDGE
-                    </h4>
-                </div>
+                    </p>
+                </div>                 
               </div>
+            </a>
           </div>
-          <div class="flex-son">
-              <img src="images/heavy-blue.png" class="img-responsive">
-              <div class="flex-son-text-container">
-                <div class="flex-son-text">
-                    <h4>
-                      RELAY BRIDGE
-                    </h4>
+          <div class="product-container">
+            <a href="where-to-buy-development-kit.html">
+              <div class="product">
+                <div class="product-image">
+                  <img src="images/box_image.png" class="img-responsive-header">
                 </div>
+                <div class="product-text">  
+                    <p>
+                      DEVELOPMENT KIT
+                    </p>
+                </div>                
               </div>
+            </a>
           </div>
+        </div>        
       </div>
-      <hr>      
     </div>
-    <section style="background-color: black;height: auto;">
+
+    <section style="background-color: black;height: auto;margin-top: 20px;">
         <div class="container">      
           <div class="row" >
             <div class="col-6 col-lg-6" >

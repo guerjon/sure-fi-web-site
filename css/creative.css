@@ -332,8 +332,9 @@
         height: 10vh;
         display: flex;
         flex-wrap: wrap;
-        background: #7BC143;
     }
+
+
 
     .where-to-buy-header-child-1{
         flex-basis: 100%;
@@ -350,6 +351,7 @@
     .where-to-buy-header.child-2{
         display: none;
     }
+
     .buy-title h1{
         font-size: 22px;
     }
@@ -394,6 +396,8 @@
         align-items: center;
     }
 
+    
+
     .masthead-son{
         align-self: center;
         text-align: center;
@@ -433,6 +437,7 @@
         background: #7BC143;
     }
 
+    
     .child-2-child {
         width: 60%;
         margin-top: 30%;
@@ -488,7 +493,7 @@
         display: flex;
         background: #7BC143;
     }
-
+    
     .where-to-buy-header-child-1{
         flex-basis: 70%;
         display: flex;
@@ -506,6 +511,7 @@
         justify-content: center;
         align-items: center;
     }
+
 
     .child-2-child {
         width: 60%;
