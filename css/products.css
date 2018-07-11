@@ -55,6 +55,7 @@
 		height: 5vh;	
 		font-size: 22px;
 	}	
+
 }
 
 @media screen and (min-width: 575px) and (max-width: 768px){
@@ -207,6 +208,10 @@
 	.first-container-title{
 		font-size: 44px;
 		text-align: center;
+	}
+
+	.nav-item.dropdown:hover > ul.dropdown-menu {
+    	display: block;    
 	}
 }
 
