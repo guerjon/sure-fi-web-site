@@ -124,7 +124,7 @@ function shuffle(array) {
       owl.trigger('prev.owl.carousel', [300]);
   })
 
-  $(".dropdown-toggle").click(function(event) {
+  $(".dropdown-toggle-products").click(function(event) {
       const width = window.innerWidth;
       const height = window.innerHeight;
 
