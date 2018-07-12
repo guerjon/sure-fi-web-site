@@ -329,6 +329,10 @@
       display: block;    
   }
 
+  .main-container-1{
+    margin-top: 91px;
+  }
+
 }
 
 @media screen and (min-width: 1200px){
@@ -424,6 +428,10 @@
 
   .nav-item.dropdown:hover > ul.dropdown-menu {
       display: block;    
+  }
+
+  .main-container-1{
+    margin-top: 91px;
   }
 }
 
