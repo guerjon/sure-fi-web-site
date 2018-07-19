@@ -59,6 +59,7 @@ function shuffle(array) {
 
 
   // Collapse Navbar
+  /*
   var navbarCollapse = function() {
     if ($("#mainNav").offset().top > 100) {
       $("#mainNav").addClass("navbar-shrink");
@@ -71,7 +72,7 @@ function shuffle(array) {
   // Collapse the navbar when page is scrolled
   $(window).scroll(navbarCollapse);
 
-
+*/
 
   // Scroll reveal calls
   var sr_icons = {

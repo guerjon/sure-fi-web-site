@@ -25,8 +25,6 @@ function createCORSRequest(method, url) {
 
 (function($) {
  
-
-
   "use strict"; // Start of use strict
     
     $(".dropdown-toggle-products").click(function(event) {
