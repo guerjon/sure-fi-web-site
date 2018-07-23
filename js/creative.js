@@ -126,8 +126,8 @@ function shuffle(array) {
   })
 
 
-  console.log("width:" + window.width)
-  console.log("height:" + window.height)
+  console.log("width:" + window.innerWidth)
+  console.log("height:" + window.innerHeight)
 
 })(jQuery); // End of use strict
 
