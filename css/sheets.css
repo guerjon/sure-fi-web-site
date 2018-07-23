@@ -81,11 +81,7 @@ ul{
   color : rgb(123, 193, 67);
 }
 
-.big-blue-title{
-	font-weight : bold;
-  	font-size : 54px;
-  	color : rgb(51,153,204);		
-}
+
 
 .red-green-title{
   font-weight : bold;
@@ -392,247 +388,18 @@ ul{
 	padding:20px;
 }
 
-
-/*
- THIS SIZE IS FOR A MAC O PC WITH HIGH RESOUTION
-*/
-@media only screen and  (min-width: 1024px){
-	#header_container {
-		width:1080px;
-		margin:0px auto;
-	}
-	
-	#devices-container {
-		width: 1040px;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	#sheets-container{
-		margin-left: auto;
-		margin-right: auto;
-		width: 1080px;
-		display: -webkit-flex; /* Safari */
-	    display: flex;
-	}
-
-	.device-container{
-		width: 256px;
-		height: 256px;
-		text-align: center;
-	    display:inline-block;
-	}
-
-	.device{
-		background: #DDDDDD;
-		border-radius: 50%;
-		margin: 10px;
-		width: 95%;
-		height: 95%;
-	}
-
-	.device-container p {
-		margin: 5px;
-		font-size: 25px;
-	}
-	
-	#contact_container {
-		width: 1080px;
-		margin-left: auto;
-		margin-right: auto;
-		border-style: solid;
-		border-left-width: 0;
-		border-right-width: 0;
-		border-top: 0;
-		border-bottom-color: rgb(219,219,219);
-	}
-	
-	#carousel-container {
-		margin:40px auto;
-		width: 1080px;
-	}
-	
-	.company-image-container, .owl-item {
-		height:180px;
-		width:430px;
-		margin-bottom: 40px;
-	}
-
-	#contact_text_container{
-		margin: 40px 0px 0px 0px;
-	}
-
-	#fotter-container{
-		margin:40px 0 0 0;
-	}
-
-	.fotter-font{
-		min-height: 100px;
-	}
-
-	#video-text{
-		font-size: 5vw;
-	}
-
-	#pinger-container{
-		margin-top: 200px;
-	}
-
-	.green-with-sizes{
-		width: 50vw;
-		height: 55vw;
-	}
-
-	.product-container{
-		height: 120px;
-	}
-
-	.product-text-container{
-		height: 50px;
-	}
-
-	.logo-link img{
-		width: 200px;
-		height: 50px;
-		margin: 15px;
-	}
-
-	#hall-bottom-foot{
-		height: 130px;
-	}
-
-	.shadow-container{
-		margin-top: 90px;
-	}
-
-	.black-div{
-		background-color:#000;
-		padding:20px;
-		margin:0px -20px 0px -70px;	
-	}
-
-	.product-title-container{
-		height: 40px;
-	}
+.wiegand-title p{
+	color: rgb(109,110,113);
 }
 
-/*tablets*/
-@media  screen and (min-width: 800px) and (max-width: 1024px){
-	.title{
-		font-weight : bold;
-	  	font-size : 24px;
-	  	letter-spacing: 2px;
-	  	display: inline;	
-	}
-
-	.mini-green-list-fat{
-		font-size: 22px;
-		font-weight:bold;
-	}
-
-	#devices-container {
-		width: 100%;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	#sheets-container{
-		width: 100%;
-		display: -webkit-flex;
-	    display: flex;
-	}
-
-	
-	.device-container{
-		width: 25%;
-		height: 250px;
-		align-items: center;
-		float: left;
-		text-align: center;
-	}
-
-	.device{
-		background: #DDDDDD;
-		border-radius: 50%;
-		text-align: center;
-		margin: 10px;
-		width: 95%;
-		height: 95%;
-	}
-
-	.device-container p {
-		margin: 5px;
-		font-size: 25px;
-
-	}
-
-	#carousel-container {
-		margin:0px auto;
-		width: 90%;
-	}
-	#contact_container {
-		width: 80%;
-		margin-top: 40px;
-		margin-left: auto;
-		margin-right: auto;
-		border-style: solid;
-		border-left-width: 0;
-		border-right-width: 0;
-		border-top: 0;
-		border-bottom-color: rgb(219,219,219);
-	}
-
-	#contact_text_container{
-		margin: 40px 0px 0px 0px;
-	}
-
-	#fotter-container{
-		margin:40px 0 0 0;
-	}
-
-	#video-text{
-		font-size: 8vw;
-	}
-	#navbarResponsive{
-		background-color: white;
-	}
-
-	#mainNav{
-		background-color: black;
-		position: relative;
-	}
-
-	#pinger-container{
-		margin-top: 300px;
-	}
-	.green-with-sizes{
-		width: 70vw;
-		height: 80vw;
-	}
-
-	.logo-link img{
-		width: 150px;
-		height: 40px;
-		margin: 15px;
-	}
-	
-	#hall-bottom-foot{
-		height: 90px;
-	}	
-	.black-div{
-		background-color:#000;
-		padding:20px;
-		margin:0px -20px 0px -70px;	
-	}
-	.product-title-container{
-		height: 70px;
-	}
+.img-responsive-header{
+    max-width: 100%;
+    height: auto; 
 }
+
 
 /* phones */
 @media screen and (min-width: 100px) and (max-width: 799px){
-
-
 
 	.black-div{
 		background-color:#000;
@@ -739,6 +506,10 @@ ul{
 		height: 80vw;
 	}
 
+	.blue-with-sizes{
+		width: 100%;
+	}
+
 	.product-container{
 		height: 85px;
 	}
@@ -765,8 +536,307 @@ ul{
 		height: 70px;
 	}	
 
+	.big-blue-title{
+		font-weight : bold;
+	  	font-size : 24px;
+	  	color : var(--relay-color);		
+	}	
+
+	.wiegand-images-section{
+
+	}
+
+	.wiegand-title{
+		padding: 10px;
+	}
+
+	.wiegand-title p{
+		font-size: 20px;
+	}	
+
 }
 
+/*tablets*/
+@media  screen and (min-width: 800px) and (max-width: 1024px){
+	.title{
+		font-weight : bold;
+	  	font-size : 24px;
+	  	letter-spacing: 2px;
+	  	display: inline;	
+	}
+
+	.mini-green-list-fat{
+		font-size: 22px;
+		font-weight:bold;
+	}
+
+	#devices-container {
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	#sheets-container{
+		width: 100%;
+		display: -webkit-flex;
+	    display: flex;
+	}
+
+	
+	.device-container{
+		width: 25%;
+		height: 250px;
+		align-items: center;
+		float: left;
+		text-align: center;
+	}
+
+	.device{
+		background: #DDDDDD;
+		border-radius: 50%;
+		text-align: center;
+		margin: 10px;
+		width: 95%;
+		height: 95%;
+	}
+
+	.device-container p {
+		margin: 5px;
+		font-size: 25px;
+
+	}
+
+	#carousel-container {
+		margin:0px auto;
+		width: 90%;
+	}
+	#contact_container {
+		width: 80%;
+		margin-top: 40px;
+		margin-left: auto;
+		margin-right: auto;
+		border-style: solid;
+		border-left-width: 0;
+		border-right-width: 0;
+		border-top: 0;
+		border-bottom-color: rgb(219,219,219);
+	}
+
+	#contact_text_container{
+		margin: 40px 0px 0px 0px;
+	}
+
+	#fotter-container{
+		margin:40px 0 0 0;
+	}
+
+	#video-text{
+		font-size: 8vw;
+	}
+	#navbarResponsive{
+		background-color: white;
+	}
+
+	#mainNav{
+		background-color: black;
+		position: relative;
+	}
+
+	#pinger-container{
+		margin-top: 300px;
+	}
+	.green-with-sizes{
+		width: 70vw;
+		height: 80vw;
+	}
+
+	.blue-with-sizes{
+		width: 70vw;
+	}
+
+
+	.logo-link img{
+		width: 150px;
+		height: 40px;
+		margin: 15px;
+	}
+	
+	#hall-bottom-foot{
+		height: 90px;
+	}	
+	.black-div{
+		background-color:#000;
+		padding:20px;
+		margin:0px -20px 0px -70px;	
+	}
+	.product-title-container{
+		height: 70px;
+	}
+
+	.big-blue-title{
+		font-weight : bold;
+	  	font-size : 35px;
+	  	color : var(--relay-color);
+	}	
+	
+	.wiegand-title{
+		padding: 10px;
+	}
+
+	.wiegand-title p{
+		font-size: 40px;
+	}
+
+}
+
+
+/*
+ THIS SIZE IS FOR A MAC O PC WITH HIGH RESOUTION
+*/
+@media only screen and  (min-width: 1024px){
+	#header_container {
+		width:1080px;
+		margin:0px auto;
+	}
+	
+	#devices-container {
+		width: 1040px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	#sheets-container{
+		margin-left: auto;
+		margin-right: auto;
+		width: 1080px;
+		display: -webkit-flex; /* Safari */
+	    display: flex;
+	}
+
+	.device-container{
+		width: 256px;
+		height: 256px;
+		text-align: center;
+	    display:inline-block;
+	}
+
+	.device{
+		background: #DDDDDD;
+		border-radius: 50%;
+		margin: 10px;
+		width: 95%;
+		height: 95%;
+	}
+
+	.device-container p {
+		margin: 5px;
+		font-size: 25px;
+	}
+	
+	#contact_container {
+		width: 1080px;
+		margin-left: auto;
+		margin-right: auto;
+		border-style: solid;
+		border-left-width: 0;
+		border-right-width: 0;
+		border-top: 0;
+		border-bottom-color: rgb(219,219,219);
+	}
+	
+	#carousel-container {
+		margin:40px auto;
+		width: 1080px;
+	}
+	
+	.company-image-container, .owl-item {
+		height:180px;
+		width:430px;
+		margin-bottom: 40px;
+	}
+
+	#contact_text_container{
+		margin: 40px 0px 0px 0px;
+	}
+
+	#fotter-container{
+		margin:40px 0 0 0;
+	}
+
+	.fotter-font{
+		min-height: 100px;
+	}
+
+	#video-text{
+		font-size: 5vw;
+	}
+
+	#pinger-container{
+		margin-top: 200px;
+	}
+
+	.green-with-sizes{
+		width: 50vw;
+		height: 55vw;
+	}
+
+	.blue-with-sizes{
+		width: 50vw;
+	}
+
+	.product-container{
+		height: 120px;
+	}
+
+	.product-text-container{
+		height: 50px;
+	}
+
+	.logo-link img{
+		width: 200px;
+		height: 50px;
+		margin: 15px;
+	}
+
+	#hall-bottom-foot{
+		height: 130px;
+	}
+
+	.shadow-container{
+		margin-top: 90px;
+	}
+
+	.black-div{
+		background-color:#000;
+		padding:20px;
+		margin:0px -20px 0px -70px;	
+	}
+
+	.product-title-container{
+		height: 40px;
+	}
+
+	.big-blue-title{
+		font-weight : bold;
+	  	font-size : 50px;
+	  	color : var(--relay-color);
+	}	
+
+	.wiegand-images-section{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;	
+	}
+
+	.wiegand-title{
+		padding: 20px;
+	}
+
+	.wiegand-title p{
+		font-size: 40px;
+	}
+}
 
 
 @media screen and (min-width: 990px) and (max-width: 1024px){
@@ -783,6 +853,10 @@ ul{
 		height: 55vw;
 	}
 
+	.blue-with-sizes{
+		width: 50vw;
+	}
+
 	#shadow-container{
 		margin-top: 90px;
 	}
@@ -796,6 +870,11 @@ ul{
 		width: 500px;
 		height: 550px;
 	}
+
+	.blue-with-sizes{
+		width: 500px;
+	}
+
 }
 
 
@@ -809,3 +888,44 @@ ul{
 
 
 
+.dad{
+	width: 100%;
+	background: rgb(244,244,244);
+	height: 100vh;
+	margin:50px;
+	padding: 30px;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.middle-man{
+	display: flex;	
+	align-items: stretch;
+	height: 100vh;
+	width: 100%;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-content: center;
+}
+
+.child{
+	width: 200px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background: rgb(250,250,250);
+	border-radius:10px;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+.child p{
+	text-align: center;
+}
+
+.img-responsive-header{
+    max-width: 100%;
+    height: auto;
+}

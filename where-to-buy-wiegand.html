@@ -32,10 +32,13 @@
 
     <link rel="stylesheet" href="css/where_to_buy.css">
     <link rel="stylesheet" type="text/css" href="css/animate.css">
-
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <!-- This add React -->
+    <script src="index.js"></script>  
   </head>
 
-  <body id="page-top" >
+  <body id="page-top">
     
     <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-dark" id="mainNav" style="padding: 0px;">
       <div class="container">
@@ -52,279 +55,165 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger " href="index.html">Home</a>
             </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle dropdown-toggle-products" data-toggle="dropdown" href="products.html">PRODUCTS
+              <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="wiegand-controller.html">
+                      <div class="dropdown-list-item">
+                        Wiegand Bridge
+                      </div>
+                    </a>
+                  </li>
+                  <li> 
+                      <a href="hvac.html">
+                        <div class="dropdown-list-item">
+                          HVAC Bridge
+                        </div>
+                      </a>
+                  </li> 
+                  <li>
+                    <a  href="relay.html">
+                      <div class="dropdown-list-item">
+                          Relay Bridge
+                      </div>
+                    </a>
+                  </li>   
+                  <li>
+                      <a  href="development-kit.html">
+                        <div class="dropdown-list-item">
+                          Development kit
+                        </div>
+                      </a>  
+                  </li>                                               
+                </ul>
+            </li>   
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#">WHERE TO BUY
+              <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="where-to-buy-wiegand.html">
+                        <div class="dropdown-list-item">
+                          Wiegand Bridge
+                        </div>
+                      </a>
+                    </li>
+                    <li> 
+                        <a href="where-to-buy-hvac.html">
+                          <div class="dropdown-list-item">
+                            HVAC Bridge
+                          </div>
+                        </a>
+                    </li>
+                    <li>
+                      <a  href="where-to-buy-relay.html">
+                        <div class="dropdown-list-item">
+                            Relay Bridge
+                        </div>
+                      </a>
+                    </li>                   
+                    <li>
+                        <a  href="where-to-buy-development-kit.html">
+                          <div class="dropdown-list-item">
+                            Development kit
+                          </div>
+                        </a>  
+                    </li>                                   
+                  </ul>
+            </li>              
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="module.html">Module</a>
-            </li>            
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="development-kit.html">Evaluation Kit</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="hvac.html">HVAC Bridge</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger active" href="wiegand-controller.html">Wiegand Bridge</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger " href="contact.html">Contact</a>
+              <a class="nav-link js-scroll-trigger" href="contact.html">Contact</a>
             </li>            
           </ul>
         </div>
       </div>
     </nav>
-    <div id="where-to-buy-section" style="margin-bottom: 20px;">
-        <div class="container-fluid visible-md visible-lg" style="align-items: center;">
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align: center;margin-bottom: 20px;">
-                    <h1 style="margin-bottom: 5px;">
-                        WHERE TO BUY
-                        <br>
-                        <h3>
-                            Wiegand Bridge    
-                        </h3>
-                    </h1>
-                    <hr>
-                </div>
-            </div>
-            <div class="row logo-row-container" >
-                <div class="col-xs-12 col-xs-12 col-md-6">
-                    <center>
-                        <div class="black-logo-background">                    
-                            <a href="http://www.accessdistributioncentre.com/home.php">
-                                <div>    
-                                    <img src="images/adc_logo.png"  class="img-responsive where-to-buy-logo">    
-                                </div>
-                            </a>
-                        </div>                    
-                    </center>
-                </div>
-                <div class="col-xs-12 col-xs-12 col-md-6 text-logo-container">
-                    <h2>
-                        Access Distribution Centre
-                    </h2>
-                    <a href="http://www.accessdistributioncentre.com/home.php">
-                        http://www.accessdistributioncentre.com    
-                    </a>
-                </div>
-            </div>
-            <div class="row logo-row-container" >
-                <div class="col-xs-12 col-xs-12 col-md-6">
-                    <center>
-                        <div class="black-logo-background">                    
-                            <a href="https://www.controlledproducts.com/">
-                                <div>    
-                                    <div>
-                                        <img src="images/controlled_product_systems.png"  class="img-responsive where-to-buy-logo">    
-                                    </div>
-                                </div>
-                            </a>
-                        </div>                    
-                    </center>
-                </div>
-                <div class="col-xs-12 col-xs-12 col-md-6 text-logo-container">
-                    <h2>
-                        Controlled Product Systems
-                    </h2>
-                    <a href="https://www.controlledproducts.com/">
-                        https://www.controlledproducts.com/    
-                    </a>
-                </div>
-            </div>
-            <div class="row logo-row-container" >
-                <div class="col-xs-12 col-xs-12 col-md-6">
-                    <center>
-                        <div class="black-logo-background">                    
-                            <a href="https://enconelectronics.com/">
-                                <div>    
-                                    <div>
-                                        <img src="images/encon_logo.png"  class="img-responsive where-to-buy-logo">    
-                                    </div>
-                                </div>
-                            </a>
-                        </div>                    
-                    </center>
-                </div>
-                <div class="col-xs-12 col-xs-12 col-md-6 text-logo-container">
-                    <h2>
-                        Encon Electronics
-                    </h2>
-                    <a href="https://enconelectronics.com/">
-                        https://enconelectronics.com/   
-                    </a>
-                </div>
-            </div>    
-            <div class="row logo-row-container" >
-                <div class="col-xs-12 col-xs-12 col-md-6">
-                    <center>
-                        <div class="black-logo-background">                    
-                            <a href="https://jamiesonfence.com/">
-                                <div>    
-                                    <div>
-                                        <img src="images/jamieson_fence.png"  class="where-to-buy-logo">    
-                                    </div>
-                                </div>
-                            </a>
-                        </div>                    
-                    </center>
-                </div>
-                <div class="col-xs-12 col-xs-12 col-md-6 text-logo-container">
-                    <h2>
-                        JAMIESON Fence Supply
-                    </h2>
-                    <a href="https://jamiesonfence.com/">
-                        https://jamiesonfence.com/   
-                    </a>
-                </div>
-            </div>
-            <div class="row logo-row-container" >
-                <div class="col-xs-12 col-xs-12 col-md-6">
-                    <center>
-                        <div class="black-logo-background">                    
-                            <a href="http://ldi.com/index.html">
-                                <div>    
-                                    <div>
-                                        <img src="images/ldi.png"  class="img-responsive where-to-buy-logo">    
-                                    </div>
-                                </div>
-                            </a>
-                        </div>                    
-                    </center>
-                </div>
-                <div class="col-xs-12 col-xs-12 col-md-6 text-logo-container">
-                    <h2>
-                        Logical Decisions, Inc.
-                    </h2>
-                    <a href="http://ldi.com/index.html">
-                        http://ldi.com/index.html
-                    </a>
-                </div>
-            </div>             
-            <div class="row logo-row-container" >
-                <div class="col-xs-12 col-xs-12 col-md-6">
-                    <center>
-                        <div class="black-logo-background">                    
-                            <a href="http://www.southwestautomated.com/">
-                                <div>    
-                                    <div>
-                                        <img src="images/southwest_automated.png"  class="img-responsive where-to-buy-logo">    
-                                    </div>
-                                </div>
-                            </a>
-                        </div>                    
-                    </center>
-                </div>
-                <div class="col-xs-12 col-xs-12 col-md-6 text-logo-container">
-                    <h2>
-                        Southwest Automated Security
-                    </h2>
-                    <a href="http://www.southwestautomated.com/">
-                        http://www.southwestautomated.com/    
-                    </a>
-                </div>
-            </div>                                            
-        </div>  
-    </div> 
-
-  
-    <div class="body-symulator" id="ios-section">
-        <div class="container" > 
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align: center;margin-top: 10px">
-                    <h4>
-                        WHERE TO BUY
-                    </h4>
-                    <h6>
-                        Wiegand Bridge
-                    </h6>
-                    <hr>
-                </div>
-            </div>            
-            <div class="row">
-                <div style="width: 50%">
-                    <div style="height: 150px;background-color: black;padding: 10px;margin-left: 10px;margin-top: 10px;margin-right: 10px;">
-                        <center>                    
-                            <a href="http://www.accessdistributioncentre.com/home.php">    
-                                <img src="images/adc_logo.png"  class="img-responsive" style="width: 120px;margin-top: 20px;">    
-                            </a>
-                        </center>
-                    </div>                                                
-                </div>
-                <div style="width: 50%">
-                    <div style="height: 150px;background-color: black;padding: 10px;margin-top: 10px;margin-right: 10px;">
-                        <center>
-                            <a href="https://www.controlledproducts.com/">    
-                                <img src="images/controlled_product_systems.png"  style="width: 120px;margin-top: 35px;">    
-                            </a>
-                        </center>
-                    </div>                                                
-                </div>
-            </div>
-            <div class="row">
-                <div style="width: 50%">
-                    <div style="height: 150px;background-color: black;padding: 10px;margin-left: 10px;margin-top: 10px;margin-right: 10px;">
-                        <center>
-                            <a href="https://enconelectronics.com/">    
-                                <img src="images/encon_logo.png"  class="img-responsive" style="width: 120px;margin-top: 35px;">    
-                            </a>
-                        </center>
-                    </div>                                
-                </div>
-                <div style="width: 50%">
-                    <div style="height: 150px;background-color: black;padding: 10px;margin-top: 10px;margin-right: 10px;">
-                        <center>
-                            <a href="https://jamiesonfence.com/">    
-                                <img src="images/jamieson_fence.png"  class="img-responsive" style="width: 120px;margin-top: 40px;">    
-                            </a>
-                        </center>
-                    </div>                                                
-                </div>
-            </div>            
-            <div class="row">
-                <div style="width: 50%">
-                    <div style="height: 150px;background-color: black;padding: 10px;margin-left: 10px;margin-top: 10px;margin-right: 10px;">
-                        <center>
-                            <a href="http://www.southwestautomated.com/">    
-                                <img src="images/southwest_automated.png"  class="img-responsive" style="width: 120px;margin-top: 35px;">    
-                            </a>
-                        </center>
-                    </div>                
-                </div>
-            
-                <div style="width: 50%">
-                    <div style="height: 150px;background-color: black;padding: 10px;margin-left: 10px;margin-top: 10px;margin-right: 10px;">
-                        <center>
-                            <a href="http://ldi.com/index.html">    
-                                <img src="images/ldi.png"  class="img-responsive" style="width: 120px;margin-top: 10px;">    
-                            </a>
-                        </center>
-                    </div>                
-                </div>
-            </div>            
-        </div>
-    </div>    
-   
-    <section style="background-color: black;height: auto;">
-      <div class="container">      
-        <div class="row" >
-          <div class="col-6 col-lg-6" >
-            <a href="https://itunes.apple.com/us/app/sure-fi/id1259963492?mt=8" target="_blank" style="float: right;">
-              <img src="images/app_store.png" class="img-fluid">  
-            </a>                                          
+    <div class="container-container">
+      <div class="principal-container">
+          <div class="where-to-buy-header" style="background: #7BC143;">
+              <div class="where-to-buy-header-child-1">
+                  <div>
+                      <h1>
+                          Wiegand Bridge 
+                      </h1>
+                  </div>
+              </div>
+              <div class="where-to-buy-header child-2">
+                  <div class="child-2-child">
+                      <img src="images/heavy-green-clean.png" class="img-responsive-header">        
+                  </div>
+              </div>
           </div>
-          <div class="col-6 col-lg-6">
-            <a href="https://play.google.com/store/apps/details?id=com.surefi&hl=en" target="_blank" >
-              <img src="images/play_store.png" class="img-fluid">
-            </a>                                          
+          <div class="parterns-container">
+              <div class="buy-title">
+                  <h1>
+                      Buy the Wiegand Bridge.
+                  </h1>
+                  <div style="width: 100%;display: flex;justify-content: center;">
+                      <div class="simple-text">            
+                          <p>
+                              Shop our Wire Replacement for Access Controll and achive up to 1 mile range throught obstructions and 50+ miles line of sight.
+                          </p>
+                      </div>
+                  </div>
+              </div>
+              <div class="row logo-row-container">
+                  <a href="http://www.accessdistributioncentre.com/product.php?productid=19520&cat=0&page=&featured=Y" class="black-logo-background">
+                      <div>
+                          <img src="images/adc_logo.png"  class="img-responsive-header">        
+                      </div>
+                      <h3>
+                          Access Distribution Centre
+                      </h3>
+                  </a>
+                  <a href="https://www.controlledproducts.com/"  class="black-logo-background">
+                      <div>
+                          <img src="images/controlled_product_systems.png"  class="img-responsive-header">    
+                      </div>
+                      <h3>
+                          Controlled Product Systems
+                      </h3>                            
+                  </a>
+                  <a href="https://enconelectronics.com/" class="black-logo-background">
+                      <div>
+                          <img src="images/encon_logo.png"  class="img-responsive-header">    
+                      </div>    
+                      <h3>
+                          Encon Electronics
+                      </h3>
+                  </a>
+                  <a href="https://jamiesonfence.com/" class="black-logo-background">
+                      <div>
+                          <img src="images/jamieson_fence.png"  class="img-responsive-header">     
+                      </div>    
+                      <h3>
+                          JAMIESON Fence Supply
+                      </h3>            
+                  </a>
+                  <a href="http://ldi.com/index.html" class="black-logo-background">
+                      <div>
+                          <img src="images/ldi.png"  class="img-responsive-header"> 
+                      </div>    
+                      <h3>
+                          Logical Decisions, Inc.
+                      </h3>            
+                  </a>
+                  <a href="http://www.southwestautomated.com/" class="black-logo-background">
+                      <div>
+                          <img src="images/southwest_automated.png"  class="img-responsive-header">     
+                      </div>    
+                      <h3>
+                          Southwest Automated Security
+                      </h3>
+                  </a>
+              </div>
+              
           </div>
-        </div>
-        <div class="row">
-          <div class="col col-lg-12" style="text-align: center;padding: 60px">
-          <h4 style="color: white;">
-            Sure-Fi Inc. © 2017
-          </h4>                  
-          </div>
-        </div>
       </div>
-    </section>    
+    </div>
+    <div id="footer"></div>   
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -335,5 +224,6 @@
     <script type="text/javascript" src="js/slick-1.8.0/slick/slick.min.js"></script>
     <script type="text/javascript" src="js/ticker/javascripts/jquery.carouselTicker.min.js"></script>
     <script src="js/where_to_buy.js"></script>
+    <script type="text/javascript" src="js/navbar.js"></script>
   </body>
 </html>

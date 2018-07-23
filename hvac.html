@@ -28,6 +28,10 @@
 	<link rel="stylesheet" href="js/OwlCarousel2-2.2.0/dist/assets/owl.theme.default.min.css">
 	<link rel="shortcut icon" type="image/x-icon" href="images/logo-icon.png" />
 	<link rel="stylesheet" type="text/css" href="css/hvac.css">
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <!-- This add React -->
+    <script src="index.js"></script>		
   </head>
 
   <body id="page-top" >
@@ -47,18 +51,74 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger " href="index.html">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="module.html">Module</a>
-            </li>            
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="development-kit.html">Evaluation Kit</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger active" href="hvac.html">HVAC Bridge</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="wiegand-controller.html">Wiegand Bridge</a>
-            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle dropdown-toggle-products active" data-toggle="dropdown" href="products.html">PRODUCTS
+              <span class="caret"></span></a>
+	              <ul class="dropdown-menu">
+	                <li>
+	                  <a href="wiegand-controller.html">
+	                    <div class="dropdown-list-item" >
+	                      Wiegand Bridge
+	                    </div>
+	                  </a>
+	                </li>
+	                <li> 
+	                    <a href="hvac.html">
+	                      <div class="dropdown-list-item">
+	                        HVAC Bridge
+	                      </div>
+	                    </a>
+	                </li>	
+	                <li>
+	                  <a  href="relay.html">
+	                    <div class="dropdown-list-item">
+	                        Relay Bridge
+	                    </div>
+	                  </a>
+	                </li>	  
+	                <li>
+	                    <a  href="development-kit.html">
+	                      <div class="dropdown-list-item">
+	                        Development kit
+	                      </div>
+	                    </a>  
+	                </li>	                                              
+	              </ul>
+            </li>   
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">WHERE TO BUY
+              <span class="caret"></span></a>
+	              	<ul class="dropdown-menu">
+		                <li>
+		                  <a href="where-to-buy-wiegand.html">
+		                    <div class="dropdown-list-item">
+		                      Wiegand Bridge
+		                    </div>
+		                  </a>
+		                </li>
+		                <li> 
+		                    <a href="where-to-buy-hvac.html">
+		                      <div class="dropdown-list-item">
+		                        HVAC Bridge
+		                      </div>
+		                    </a>
+		                </li>
+		                <li>
+		                  <a  href="where-to-buy-relay.html">
+		                    <div class="dropdown-list-item">
+		                        Relay Bridge
+		                    </div>
+		                  </a>
+		                </li>		                
+		                <li>
+		                    <a  href="where-to-buy-development-kit.html">
+		                      <div class="dropdown-list-item">
+		                        Development kit
+		                      </div>
+		                    </a>  
+		                </li>	                	                
+	              	</ul>
+            </li>              
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="contact.html">Contact</a>
             </li>            
@@ -66,19 +126,9 @@
         </div>
       </div>
     </nav>
-  		<div class="container-fluid shadow-container" >
-		    <div class="row">
-		    	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 where-to-buy-container" >
-		    		<div>
-			    		<a href="#">
-			    			<p >COMING SOON</p>		
-			    		</a>		    				    			
-		    		</div>
-		    	</div>
-		    </div>
-
+  		<div class="container-fluid main-container-1" >
   			<div class="row" id="body">
-  				<div class="container">
+  				<div class="container" style="box-shadow: 0px 10px 12px 4px rgba(0,0,0,0.49);">
 					<div class="row">
 						<div class=" col-sm-12 col-md-8 col-lg-8" >
 							<center>
@@ -117,9 +167,9 @@
 								</div>
 								<div class="row" >
 										<div class=" col-sm-12 col-md-6 col-lg-6 col-xl-6" >								
-											<ul class="red-ball-list">
+											<ul class="red-list">
 											  	<li> 
-											  		<img src="images/red-ball.png" width="25px" height="25px"> 
+											  		 
 											  		Installs in minutes 
 											  		<br>
 											  	</li>
@@ -127,9 +177,9 @@
 											</ul> 								
 										</div>
 										<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6" >								
-											<ul class="red-ball-list">
+											<ul class="red-list">
 												<li> 
-											  		<img src="images/red-ball.png" width="25px" height="25px"> 
+											  		
 											  			Sure-as-a-wire  
 											  		<br>
 											  	</li>
@@ -137,14 +187,12 @@
 
 										</div>		
 										<div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-											<ul class="red-ball-list">
+											<ul class="red-list">
 											  	<li> 
-											  		<img src="images/red-ball.png" width="25px" height="25px"> 
 											  		Competitive with true cost of wiring for all job types (easy and difficult wire pulls) 
 											  		<br>
 											  	</li>
 											  	<li> 
-											  		<img src="images/red-ball.png" width="25px" height="25px"> 
 											  			General purpose relays suitable for multiple applications
 											  		<br>
 											  	</li>									  	
@@ -353,77 +401,9 @@
 						</div>					
 					</div>  			
   		</div>	 
+  		</div>
   	</div>
-  </div>
-   <section id="contact" style="background-color: rgb(240,240,240)">
-      <div class="container">
-        <div class="row" style="text-align: center;">
-          <div class="col-lg-12">
-            <h1>Contact</h1>    
-            <hr>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-12 mx-auto text-center">
-           <img src="images/hall-labs.jpg" alt="hall-labls-image" style="border-top-right-radius: 5px;border-top-left-radius: 5px;width: 100%;" > 
-            <div id="hall-bottom-foot">
-              <div style="width: 20%;float: right;margin-top: 20px;margin-right: 20px;">
-                <img src="http://halllabs.com/wp-content/uploads/2017/06/HallLabs-Logo-2.png" class="img-responsive" style="margin-top: 5%;margin-bottom: 5%;width: 100%;"> 
-              </div>
-            </div>
-            <div id="contact_text_container" style="text-align: left;">
-              <div style="width: 50%;float: left; font-size: 1rem;">
-                <p class="contact-font">
-                  Contact : Sure-Fi Inc.
-                </p>
-                <p class="contact-font">
-                  3000 SIERRA VISTA WAY  
-                </p>
-                <p class="contact-font">
-                  PROVO, UT 84606  
-                </p>
-              </div>
-              <div style="width:50%;float: left;font-size: 1rem;text-align: right">
-                <a href="mailto:support@sure-fi.com" target="_top" style="text-decoration:none;color: black;">
-                  <p class="contact-font">
-                    support@sure-fi.com <i style="font-size: 1rem;" class="fa fa-envelope-o fa-3x mb-1 sr-contact"></i>
-                  </p>
-                </a>
-                <a href="tel:1-844-787-3340">
-                  <p class="contact-font">
-                    1-844-787-3340  
-                    <i style="font-size: 1rem;color: green;" class="fa fa-phone fa-3x mb-3 sr-contact"></i>
-                  </p>
-                </a>
-              </div>              
-            </div>                      
-          </div>
-        </div>        
-      </div>
-    </section>  
-  <section style="background-color: black;height: auto;">
-      <div class="container">      
-        <div class="row" >
-          <div class="col-6 col-lg-6" >
-            <a href="https://itunes.apple.com/us/app/sure-fi/id1259963492?mt=8" target="_blank" style="float: right;">
-              <img src="images/app_store.png" class="img-fluid">  
-            </a>                                          
-          </div>
-          <div class="col-6 col-lg-6">
-            <a href="https://play.google.com/store/apps/details?id=com.surefi&hl=en" target="_blank" >
-              <img src="images/play_store.png" class="img-fluid">
-            </a>                                          
-          </div>
-        </div>
-        <div class="row">
-          <div class="col col-lg-12" style="text-align: center;padding: 60px">
-          <h4 style="color: white;">
-            Sure-Fi Inc. © 2017
-          </h4>                  
-          </div>
-        </div>
-      </div>
-    </section>
+	<div id="footer"></div>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
@@ -436,8 +416,8 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/OwlCarousel2-2.2.0/dist/owl.carousel.min.js"></script>
-    <script src="js/creative.js"></script>
-
+    <script type="text/javascript" src="js/navbar.js"></script>
+    
   </body>
 
 </html>

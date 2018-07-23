@@ -59,6 +59,7 @@ function shuffle(array) {
 
 
   // Collapse Navbar
+  /*
   var navbarCollapse = function() {
     if ($("#mainNav").offset().top > 100) {
       $("#mainNav").addClass("navbar-shrink");
@@ -71,7 +72,7 @@ function shuffle(array) {
   // Collapse the navbar when page is scrolled
   $(window).scroll(navbarCollapse);
 
-
+*/
 
   // Scroll reveal calls
   var sr_icons = {
@@ -113,27 +114,6 @@ function shuffle(array) {
   var myArray = [0, 1, 2];   
   var rand = myArray[Math.floor(Math.random() * myArray.length)];
 
-  var owl = $(".owl-carousel").owlCarousel(
-      {
-        startPosition: rand,
-        nav : true,
-        navText: ['<span class="fa fa-angle-left"></span>','<span class="fa fa-angle-right"></span>'],
-        autoplay : true,
-        autoplayTimeout:10000,
-        autoplaySpeed: 200,
-        loop: true,
-        responsive:{
-            0:{
-                items:1,
-            },
-            768:{
-                items:3, 
-            },
-            992:{
-                items:6,
-            }
-        }
-      });
 
   $('#back-button').click(function() {
       owl.trigger('next.owl.carousel');
@@ -144,29 +124,6 @@ function shuffle(array) {
       // Parameters has to be in square bracket '[]'
       owl.trigger('prev.owl.carousel', [300]);
   })
-
-
-
-var owl_logo_container = $(".owl-logo-container").owlCarousel({      
-        startPosition: rand,
-        nav : true,
-        navText: ['<span class="fa fa-angle-left"></span>','<span class="fa fa-angle-right"></span>'],
-        autoplay : true,
-        autoplayTimeout:10000,
-        autoplaySpeed: 200,
-        loop: true,
-        responsive:{
-            0:{
-                items:1,
-            },
-            768:{
-                items:3, 
-            },
-            992:{
-                items:6,
-            }
-        }
-});
 
 })(jQuery); // End of use strict
 

@@ -105,12 +105,16 @@
 		height: auto;
 		padding: 60px;
 	}
+
+
 }
 
 @media only screen and  (min-width: 1024px){
+	
 	.shadow-container{
 		margin-top: 0px !important;
 	}
+
 	.where-to-buy-container{
 		margin-top: 90px;
 	}
@@ -127,6 +131,7 @@
 	.documentation-image{
 		width: 60%;
 	}
+
 }
 
 
@@ -161,4 +166,5 @@
 		height: auto;
 		padding: 80px;
 	}
+	
 }

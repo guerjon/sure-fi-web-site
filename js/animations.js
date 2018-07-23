@@ -10,7 +10,6 @@ $(function() {
   $window.on('scroll', revealOnScroll);
 
   function revealOnScroll() {
-  	console.log("lol")
     var scrolled = $window.scrollTop(),
         win_height_padded = $window.height() * 1.1;
 

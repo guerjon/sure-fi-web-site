@@ -25,6 +25,10 @@
     <link rel="stylesheet" type="text/css" href="css/font-responsive.css">
     <link rel="stylesheet" type="text/css" href="css/animate.css">
     <link rel="shortcut icon" type="image/x-icon" href="images/logo-icon.png" />
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <!-- This add React -->
+    <script src="index.js"></script>     
   </head>
 
   <body id="page-top" >
@@ -44,18 +48,74 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger " href="index.html">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="module.html">Module</a>
-            </li>            
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger active" href="development-kit.html">Evaluation Kit</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="hvac.html">HVAC Bridge</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="wiegand-controller.html">Wiegand Bridge</a>
-            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle dropdown-toggle-products active" data-toggle="dropdown" href="products.html">PRODUCTS
+              <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="wiegand-controller.html">
+                      <div class="dropdown-list-item">
+                        Wiegand Bridge
+                      </div>
+                    </a>
+                  </li>
+                  <li> 
+                      <a href="hvac.html">
+                        <div class="dropdown-list-item">
+                          HVAC Bridge
+                        </div>
+                      </a>
+                  </li> 
+                  <li>
+                    <a  href="relay.html">
+                      <div class="dropdown-list-item">
+                          Relay Bridge
+                      </div>
+                    </a>
+                  </li>   
+                  <li>
+                      <a  href="development-kit.html">
+                        <div class="dropdown-list-item">
+                          Development kit
+                        </div>
+                      </a>  
+                  </li>                                               
+                </ul>
+            </li>   
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle " data-toggle="dropdown">WHERE TO BUY
+              <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="where-to-buy-wiegand.html">
+                        <div class="dropdown-list-item">
+                          Wiegand Bridge
+                        </div>
+                      </a>
+                    </li>
+                    <li> 
+                        <a href="where-to-buy-hvac.html">
+                          <div class="dropdown-list-item">
+                            HVAC Bridge
+                          </div>
+                        </a>
+                    </li>
+                    <li>
+                      <a  href="where-to-buy-relay.html">
+                        <div class="dropdown-list-item">
+                            Relay Bridge
+                        </div>
+                      </a>
+                    </li>                   
+                    <li>
+                        <a  href="where-to-buy-development-kit.html">
+                          <div class="dropdown-list-item">
+                            Development kit
+                          </div>
+                        </a>  
+                    </li>                                   
+                  </ul>
+            </li>              
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="contact.html">Contact</a>
             </li>            
@@ -75,7 +135,7 @@
 						<div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12" style="background-color: rgb(236,236,238);">
 							<div style="padding-left: 40px;padding-top: 40px;padding-right: 20px;">
 								<div>
-									<h1 class="black-title" >Evaluation Kit</h1>
+									<h1 class="black-title" >Development Kit</h1>
 								</div>
 								<div class="paragraph-text">
 									<p>Discover the power of the Sure-Fi Radio Module. Develop and test your own applications with the Sure-Fi Dev Kit.</p>
@@ -90,7 +150,7 @@
 									<p><b>SURE-FI MODULE - EVALUATION UNIT:</b></p>
 									<p>Fully featured Sure-Fi Radio Module contained in a simple enclosure and powered with 4 AA batteries. Can be used as a stand-alone range tester or used in connection with external application boards. Also has an onboard Bluetooth Module for application evaluation and/or interfacing.</p> 
 									<p><b>SURE-FI EVALUATION APPLICATION BOARD:</b></p>
-									<p>A evaluation board specifically designed to allow anyone to create applications using the Sure-Fi Radio Module. Comes with an onboard ARM microprocessor and a variety of I/O available, including: programming and debugging points and USB to PC connection. </p>
+									<p>An evaluation board specifically designed to allow anyone to create applications using the Sure-Fi Radio Module. Comes with an onboard ARM microprocessor and a variety of I/O available, including: programming and debugging points and USB to PC connection. </p>
 									<p><b>BATTERIES, CABLES and MORE:</b></p>
 									<p>Everything you need to get started with the Sure-Fi Module comes right in the box.</p>
 								</div>
@@ -105,6 +165,164 @@
 							</div>					
 						</div>
 					</div>
+          <div class="row">   
+            <div class="col-lg-7 col-md-12 col-sm-12 col-12" style="background-color: rgb(222,224,225);">
+              <div style="padding-top: 20px;padding-right: 50px;padding-left: 50px;">
+                <div>
+                  <h1 class="black-title" >Bunker Busting <br> 900 MHz</h1>
+                </div>
+                <center><img src="images/black-interfaz.png" class="img-fluid"/></center> 
+                <div class="paragraph-text">
+                  <p>The Sure-Fi Wireless Radio Module is a high performance modular solution available for the IOT/M2M markets.</p>
+                  <p>
+                    Easily integrate Bunker Busting technology into your product using our patented Sure-Fi Wireless Radio Module.
+                  </p>
+                </div>
+                <div style="margin-top: 20px">
+                  <div style="display: inline;">
+                    <h1 class="medio-title medio-black-title" ><img src="images/features-black-ball.png"  height="27" width="27" style='margin-top:-3px'/> FEATURES</h1>    
+                  </div>
+                  <br><br>
+                  <div class="row">
+                    <div class=" col-sm-12 col-md-6 col-lg-6 col-xl-6" >                
+                      <ul class="black-list">
+                        <li>Simple UART Interface</li>
+                        <li>Programmable Radio Settings and adjustable power output</li>
+                        <li>Configurable to obtain optimal balance between range and data rate</li>
+                      </ul>                 
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6" >               
+                      <ul class="black-list">
+                        <li>Integrated Bluetooth Module</li>
+                        <li>Receive signal through obstruction and interference</li>
+                        <li>Certified with FCC (USA) and IC (Canada)</li>
+                      </ul>                 
+                    </div>
+                  </div>            
+                
+                </div>                
+              </div>
+            </div>
+            <div class="col-lg-5 col-md-12 col-sm-12 col-12" style="background-color:white;align-items: center;text-align: center;margin-top: 20px;">   
+              <div class="row" style="margin-bottom: 20px;">
+                <div class="col-xs-2 col-lg-2 col-md-2 col-sm-2 col-2">
+                  <img src="images/specifications-black-ball.png"  height="27" width="27" style='margin-top:-3px;'/>  
+                </div>                      
+                <div class="col-xs-8 col-lg-8 col-md-8 col-sm-8 col-8">
+                  <h1 class="title black-title" style="font-size: 2em;">
+                    SPECIFICATIONS
+                  </h1>
+                </div>
+              </div>
+              <div >
+                <ul class="mini-green-list">
+                  <li>
+                    <span class="mini-green-list-fat"> OPERATING VOLTAGE: </span><br>
+                    <span class="mini-green-list-thin">  5 VDC +/- %5 </span>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <ul class="mini-green-list">
+                  <li>
+                    <span class="mini-green-list-fat">TRANSMIT POWER:</span><br>
+                    <span class="mini-green-list-thin"> 1 Watt (30dBm)</span>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <ul class="mini-green-list">
+                  <li>
+                    <span class="mini-green-list-fat">FREQUENCY BAND:</span><br>
+                    <span class="mini-green-list-thin">902 - 928 MHz</span>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <ul class="mini-green-list">
+                  <li>
+                    <span class="mini-green-list-fat">CHANNELS:</span><br>
+                    <span class="mini-green-list-thin"> 72 (Frequency Hopping)</span>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <ul class="mini-green-list">
+                  <li>
+                    <span class="mini-green-list-fat">RECEIVER SENSITIVITY:</span><br>
+                    <span class="mini-green-list-thin"> -133dBm</span>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <ul class="mini-green-list">
+                  <li>
+                    <span class="mini-green-list-fat">LINK BUDGET:</span><br>
+                    <span class="mini-green-list-thin"> 163dB</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="black-div">
+                <ul class="mini-green-list" style='color:#fff;'>
+                  <li>
+                    <span class="mini-green-list-fat">RANGE:</span><br>
+                    <span class="mini-green-list-thin"> Up to 1 mile through obstructions and 50+ miles line-of-sight</span>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <ul class="mini-green-list">
+                  <li>
+                    <span class="mini-green-list-fat">OPTIONAL ENCRYPTION:</span><br>
+                    <span class="mini-green-list-thin"> AES128</span>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <ul class="mini-green-list">
+                  <li>
+                    <span class="mini-green-list-fat">OPERATING TEMPERATURE:</span><br>
+                    <span class="mini-green-list-thin"> -40 C to +85 C (-40 F to +185 F)</span>
+                  </li>
+                </ul>
+              </div>                  
+              <div>
+                <ul class="mini-green-list">
+                  <li>
+                    <span class="mini-green-list-fat">STORAGE TEMPERATURE:</span><br>
+                    <span class="mini-green-list-thin"> -55 C to +125 C (-67 F to +257 F)</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <ul class="mini-green-list">
+                  <li>
+                    <span class="mini-green-list-fat">I/O:</span><br>
+                    <span class="mini-green-list-thin"> 2 UART Interfaces - Radio and Bluetooth module</span>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <ul class="mini-green-list">
+                  <li>
+                    <span class="mini-green-list-fat">BLUETOOTH MODULE:</span><br>
+                    <span class="mini-green-list-thin">Nordic nRF52 Series</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="row" style="background: rgb(236,236,238);">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="display: -webkit-flex;-webkit-align-items: center;display: flex;align-items: center;flex-direction: column;">
+                  <center>
+                    <p style="font-size: 2em;text-align: center;">Documentation</p>     
+                  </center> 
+                  <a href="https://admin.sure-fi.com/uploads/tools/Sure_Fi_Module_cutsheet.pdf" target="_blank">
+                    <img style="width: 50%;" src="https://admin.sure-fi.com/uploads/tools/thumbnail_module_spec_sheet.png" >
+                  </a>
+                </div>                      
+              </div>  
+            </div> 
+          </div>             
   					<div class="row">
 						<center>
 							<img src="images/open_box_image.png" class="rounded" style="width: 100%;height: auto;">				
@@ -113,76 +331,7 @@
   				</div>
   			</div>
   		</div>
-     <section id="contact" style="background-color: rgb(240,240,240)">
-        <div class="container">
-          <div class="row" style="text-align: center;">
-            <div class="col-lg-12">
-              <h1>Contact</h1>    
-              <hr>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-12 mx-auto text-center">
-             <img src="images/hall-labs.jpg" alt="hall-labls-image" style="border-top-right-radius: 5px;border-top-left-radius: 5px;width: 100%;" > 
-              <div id="hall-bottom-foot">
-                <div style="width: 20%;float: right;margin-top: 20px;margin-right: 20px;">
-                  <img src="http://halllabs.com/wp-content/uploads/2017/06/HallLabs-Logo-2.png" class="img-responsive" style="margin-top: 5%;margin-bottom: 5%;width: 100%;"> 
-                </div>
-              </div>
-              <div id="contact_text_container" style="text-align: left;">
-                <div style="width: 50%;float: left; font-size: 1rem;">
-                  <p class="contact-font">
-                    Contact : Sure-Fi Inc.
-                  </p>
-                  <p class="contact-font">
-                    3000 SIERRA VISTA WAY  
-                  </p>
-                  <p class="contact-font">
-                    PROVO, UT 84606  
-                  </p>
-                </div>
-                <div style="width:50%;float: left;font-size: 1rem;text-align: right">
-                  <a href="mailto:support@sure-fi.com" target="_top" style="text-decoration:none;color: black;">
-                    <p class="contact-font">
-                      support@sure-fi.com <i style="font-size: 1rem;" class="fa fa-envelope-o fa-3x mb-1 sr-contact"></i>
-                    </p>
-                  </a>
-                  <a href="tel:1-844-787-3340">
-                    <p class="contact-font">
-                      1-844-787-3340  
-                      <i style="font-size: 1rem;color: green;" class="fa fa-phone fa-3x mb-3 sr-contact"></i>
-                    </p>
-                  </a>
-                </div>              
-              </div>                      
-            </div>
-          </div>        
-        </div>
-      </section>      
-      <section style="background-color: black;height: auto;">
-        <div class="container">      
-          <div class="row" >
-            <div class="col-6 col-lg-6" >
-              <a href="https://itunes.apple.com/us/app/sure-fi/id1259963492?mt=8" target="_blank" style="float: right;">
-                <img src="images/app_store.png" class="img-fluid">  
-              </a>                                          
-            </div>
-            <div class="col-6 col-lg-6">
-              <a href="https://play.google.com/store/apps/details?id=com.surefi&hl=en" target="_blank" >
-                <img src="images/play_store.png" class="img-fluid">
-              </a>                                          
-            </div>
-          </div>       
-          <div class="row">
-            <div class="col col-lg-12" style="text-align: center;padding: 60px">
-              
-            <h4 style="color: white;">
-              Sure-Fi Inc. © 2017
-            </h4>                  
-            </div>
-          </div>
-        </div>
-      </section>
+      <div id="footer"></div>
 
 
 	    <!-- Bootstrap core JavaScript -->
@@ -193,9 +342,9 @@
 	    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 	    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
 	    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-
+      <script type="text/javascript" src="js/creative.js"></script>
 	    <!-- Custom scripts for this template -->
-	    <script src="js/creative.min.js"></script>
+	    <script type="text/javascript" src="js/navbar.js"></script>
 
   	</body>
 

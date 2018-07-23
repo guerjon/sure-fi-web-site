@@ -1,0 +1,2 @@
+box-sizing: border-box is the way of set a fix size of the box in the way that this should not change even if you add a padding or a border.
+box-sizing: content-box in this way you can define the width and height of the element but the real width and height will be the sum of this two and the length of the padding and border.
