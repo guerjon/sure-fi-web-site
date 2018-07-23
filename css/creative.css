@@ -1275,7 +1275,7 @@
     }
 
     .masthead {
-        height: 100vh;
+        height: 80vh;
         background-color: #2e2c2f;
         display: flex;
         align-items: center;
@@ -1311,11 +1311,11 @@
     .child-1{
         flex-basis: 100%;
         color: white !important;
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     .child-2{
-        flex-basis: 25%;
+        flex-basis: 40%;
     }
 
     .child-3{
@@ -1329,7 +1329,7 @@
     }
 
     .child-3 p{
-        font-size: 20px !important;
+        font-size: 12px !important;
     }
 
     .masthead-desktop{
