@@ -1348,16 +1348,7 @@
         margin-top: 30%;
     }
 
-    .parterns-container{
-        width: 100%;
-        height: 60vh;
-        text-align: center;
-        padding:5vh;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        
-    }
+
     .simple-text{
         width: 50%;
         align-self: center;
