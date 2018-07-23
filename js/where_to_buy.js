@@ -159,4 +159,10 @@ window.onload = function () {
   }
   //init()
 
+  $(".black-logo-background").click(function(){
+    var attr = $(this).attr("href")
+    window.location.replace(attr);
+    
+  });
+
 };
