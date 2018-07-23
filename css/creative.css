@@ -679,17 +679,15 @@
         width: 33%;
         color: white !important;
         font-size: 2rem;
-        
     }
 
     .child-2{
-       width: 20%;
+       width: 25%;
+       
     }
 
     .child-3{
         width: 40%;
-        padding-left:10%;
-        padding-right: 10%;
         color: white !important;
         font-size: 12px;
     }
@@ -791,7 +789,6 @@
         justify-content: center;
         align-items: center;
     }
-
     
 
     .masthead-son{
