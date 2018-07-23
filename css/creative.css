@@ -242,8 +242,15 @@
 
 
 /* phones */
-@media screen and (min-width: 100px) and (max-width: 799px){
- 
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+
     #services {
         padding-top: 3em;
         padding-bottom: 0em;
@@ -289,7 +296,7 @@
     }
 
     .child-2{
-        width: 50%;
+       width: 200px;
     }
 
     .child-3{
@@ -358,7 +365,396 @@
     .simple-text{
         font-size: 14px;
     }
+
 }
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+
+
+    #services {
+        padding-top: 3em;
+        padding-bottom: 0em;
+    }
+
+    .product-link{
+        margin: 0px; 
+    }  
+
+    .product-link img{
+        margin: 50px 0px 80px 0px;
+    }
+
+    #contact {
+        padding-top: 1.5em;
+        padding-bottom: 1.5em;
+    }
+
+    #about{
+        padding: 5rem 0;
+    }
+    
+    .masthead {
+        height: 85vh;
+        background-color: #2e2c2f;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+
+    .masthead-son{
+        align-self: center;
+        text-align: center;
+    }
+
+    .child-1{
+        width: 40%;
+        color: white !important;
+        font-size: 2rem;
+        
+    }
+
+    .child-2{
+       width: 100px;
+    }
+
+    .child-3{
+        width: 100%;
+        padding-left:10%;
+        padding-right: 10%;
+        color: white !important;
+        font-size: 14px;
+    }
+
+    .masthead-desktop{
+        display: none !important;
+    }
+
+    .dropdown-list-item{
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: black;
+        text-align: center;
+        font-weight: 600;
+    }
+
+    .dropdown-menu{
+        background: white;
+    }
+
+    .parterns-container{
+        width: 100%;
+        text-align: center;
+        padding:2vh;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .where-to-buy-header{
+        height: 10vh;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+
+
+    .where-to-buy-header-child-1{
+        flex-basis: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .where-to-buy-header-child-1 h1{
+        color:white;
+        font-size: 22px;
+    }
+
+    .where-to-buy-header.child-2{
+        display: none;
+    }
+
+    .buy-title h1{
+        font-size: 22px;
+    }
+    .simple-text{
+        font-size: 14px;
+    }
+
+}
+
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+
+ 
+    #services {
+        padding-top: 3em;
+        padding-bottom: 0em;
+    }
+
+    .product-link{
+        margin: 0px; 
+    }  
+
+    .product-link img{
+        margin: 50px 0px 80px 0px;
+    }
+
+    #contact {
+        padding-top: 1.5em;
+        padding-bottom: 1.5em;
+    }
+
+    #about{
+        padding: 5rem 0;
+    }
+    
+    .masthead {
+        height: 85vh;
+        background-color: #2e2c2f;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+
+    .masthead-son{
+        align-self: center;
+        text-align: center;
+    }
+
+    .child-1{
+        width: 40%;
+        color: white !important;
+        font-size: 2rem;
+        
+    }
+
+    .child-2{
+       width: 200px;
+    }
+
+    .child-3{
+        width: 100%;
+        padding-left:10%;
+        padding-right: 10%;
+        color: white !important;
+        font-size: 14px;
+    }
+
+    .masthead-desktop{
+        display: none !important;
+    }
+
+    .dropdown-list-item{
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: black;
+        text-align: center;
+        font-weight: 600;
+    }
+
+    .dropdown-menu{
+        background: white;
+    }
+
+    .parterns-container{
+        width: 100%;
+        text-align: center;
+        padding:2vh;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .where-to-buy-header{
+        height: 10vh;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+
+
+    .where-to-buy-header-child-1{
+        flex-basis: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .where-to-buy-header-child-1 h1{
+        color:white;
+        font-size: 22px;
+    }
+
+    .where-to-buy-header.child-2{
+        display: none;
+    }
+
+    .buy-title h1{
+        font-size: 22px;
+    }
+    .simple-text{
+        font-size: 14px;
+    }
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+
+
+    #services {
+        padding-top: 3em;
+        padding-bottom: 0em;
+    }
+
+    .product-link{
+        margin: 0px; 
+    }  
+
+    .product-link img{
+        margin: 50px 0px 80px 0px;
+    }
+
+    #contact {
+        padding-top: 1.5em;
+        padding-bottom: 1.5em;
+    }
+
+    #about{
+        padding: 5rem 0;
+    }
+    
+    .masthead {
+        height: 85vh;
+        background-color: #2e2c2f;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+
+    .masthead-son{
+        align-self: center;
+        text-align: center;
+    }
+
+    .child-1{
+        width: 33%;
+        color: white !important;
+        font-size: 2rem;
+        
+    }
+
+    .child-2{
+       width: 20%;
+    }
+
+    .child-3{
+        width: 40%;
+        padding-left:10%;
+        padding-right: 10%;
+        color: white !important;
+        font-size: 12px;
+    }
+
+    .masthead-desktop{
+        display: none !important;
+    }
+
+    .dropdown-list-item{
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: black;
+        text-align: center;
+        font-weight: 600;
+    }
+
+    .dropdown-menu{
+        background: white;
+    }
+
+    .parterns-container{
+        width: 100%;
+        text-align: center;
+        padding:2vh;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .where-to-buy-header{
+        height: 10vh;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+
+
+    .where-to-buy-header-child-1{
+        flex-basis: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .where-to-buy-header-child-1 h1{
+        color:white;
+        font-size: 22px;
+    }
+
+    .where-to-buy-header.child-2{
+        display: none;
+    }
+
+    .buy-title h1{
+        font-size: 22px;
+    }
+    .simple-text{
+        font-size: 14px;
+    }
+
+}
+
 
 
  /*tablets*/
