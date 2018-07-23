@@ -1347,7 +1347,15 @@
         width: 60%;
         margin-top: 30%;
     }
- 
+
+
+    .simple-text{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 80%;
+        align-self: center;
+        text-align: center;
+    }    
 }
 
 
