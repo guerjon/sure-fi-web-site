@@ -1073,10 +1073,6 @@
     }
 }
 
- 
-
-
-
 
 /* ----------- iPad 1, 2, Mini and Air ----------- */
 
@@ -1084,10 +1080,9 @@
 /* Portrait */
 @media only screen 
   and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
+  and (max-device-width: 1023px) 
   and (orientation: portrait) 
   and (-webkit-min-device-pixel-ratio: 1) {
-
 
  #services {
         padding: 5rem 0;
@@ -1192,7 +1187,7 @@
 /* Landscape */
 @media only screen 
   and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
+  and (max-device-width: 1023px) 
   and (orientation: landscape) 
   and (-webkit-min-device-pixel-ratio: 1) {
 
@@ -1202,11 +1197,11 @@
     }
 
     .masthead {
-        height: 80vh;
+        height: 100vh;
         background-color: #2e2c2f;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-evenly;
         flex-wrap: wrap;
     }
 
@@ -1236,27 +1231,25 @@
     }
 
     .child-1{
-        flex-basis: 45vh;
+        flex-basis: 20%;
         color: white !important;
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     .child-2{
-        flex-basis: 30vh;
+        flex-basis: 20%;
     }
 
     .child-3{
-        width: 100%;
+        width: 40%;
         color: white !important;
-        
-        padding-right: 40px;
-        padding-left: 40px;
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
     }
 
     .child-3 p{
-        font-size: 20px !important;
+        font-size: 12px !important;
     }
 
     .masthead-desktop{
