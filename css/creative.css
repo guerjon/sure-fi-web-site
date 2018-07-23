@@ -217,26 +217,11 @@
      box-shadow: 0 0 0 0.2rem rgba(240, 95, 64, 0.5) !important;
 }
 
-
-
 .img-responsive-header{
     max-width: 100%;
     height: auto; 
 }
 
-.dropdown-list-item{
-    padding-left: 10px;
-    padding-right: 10px;
-    width: 180px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.dropdown-list-item:hover{
-    background: white;
-    color:black;
-}
 
 
 /* phones */
@@ -309,21 +294,7 @@
         display: none !important;
     }
 
-    .dropdown-list-item{
-        padding-left: 10px;
-        padding-right: 10px;
-        width: 100%;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        color: black;
-        text-align: center;
-        font-weight: 600;
-    }
-
-    .dropdown-menu{
-        background: white;
-    }
-
+    
     .parterns-container{
         width: 100%;
         text-align: center;
@@ -338,8 +309,6 @@
         display: flex;
         flex-wrap: wrap;
     }
-
-
 
     .where-to-buy-header-child-1{
         flex-basis: 100%;
@@ -435,21 +404,7 @@
         display: none !important;
     }
 
-    .dropdown-list-item{
-        padding-left: 10px;
-        padding-right: 10px;
-        width: 100%;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        color: black;
-        text-align: center;
-        font-weight: 600;
-    }
-
-    .dropdown-menu{
-        background: white;
-    }
-
+    
     .parterns-container{
         width: 100%;
         text-align: center;
@@ -562,21 +517,7 @@
         display: none !important;
     }
 
-    .dropdown-list-item{
-        padding-left: 10px;
-        padding-right: 10px;
-        width: 100%;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        color: black;
-        text-align: center;
-        font-weight: 600;
-    }
-
-    .dropdown-menu{
-        background: white;
-    }
-
+    
     .parterns-container{
         width: 100%;
         text-align: center;
@@ -694,21 +635,7 @@
         display: none !important;
     }
 
-    .dropdown-list-item{
-        padding-left: 10px;
-        padding-right: 10px;
-        width: 100%;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        color: black;
-        text-align: center;
-        font-weight: 600;
-    }
-
-    .dropdown-menu{
-        background: white;
-    }
-
+    
     .parterns-container{
         width: 100%;
         text-align: center;
@@ -817,21 +744,7 @@
         display: none !important;
     }
 
-    .dropdown-list-item{
-        padding-left: 10px;
-        padding-right: 10px;
-        width: 100%;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        color: black;
-        text-align: center;
-        font-weight: 600;
-    }
-
-    .dropdown-menu{
-        background: white;
-    }
-
+    
     .parterns-container{
         width: 100%;
         text-align: center;
@@ -946,10 +859,6 @@
         display: none !important;
     }
 
-    .dropdown-menu{
-        background: black;
-    }
-
     .where-to-buy-header{
         height: 20vh;
         display: flex;
@@ -1004,9 +913,6 @@
         width: 100%;
     }
 
-    .dropdown-menu{
-        background: black;
-    }    
     .where-to-buy-header{
         height: 20vh;
         display: flex;
@@ -1051,24 +957,6 @@
         width: 50%;
         align-self: center;
         text-align: center;
-    }
-}
-
-
-@media (min-width: 800px) and (max-width: 991px){
-        .dropdown-list-item{
-        padding-left: 10px;
-        padding-right: 10px;
-        width: 100%;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        color: black;
-        text-align: center;
-        font-weight: 600;
-    }
-
-    .dropdown-menu{
-        background: white;
     }
 }
 
@@ -1147,10 +1035,6 @@
 
     .masthead-desktop{
         display: none !important;
-    }
-
-    .dropdown-menu{
-        background: black;
     }
 
     .where-to-buy-header{
@@ -1255,10 +1139,6 @@
         display: none !important;
     }
 
-    .dropdown-menu{
-        background: black;
-    }
-
     .where-to-buy-header{
         height: 20vh;
         display: flex;
@@ -1359,10 +1239,6 @@
         display: none !important;
     }
 
-    .dropdown-menu{
-        background: black;
-    }
-
     .where-to-buy-header{
         height: 20vh;
         display: flex;
@@ -1460,10 +1336,6 @@
         display: none !important;
     }
 
-    .dropdown-menu{
-        background: black;
-    }
-
     .where-to-buy-header{
         height: 20vh;
         display: flex;
@@ -1491,8 +1363,52 @@
         align-self: center;
         text-align: center;
     }    
-
 }
 
 
+
+/* this display the dropdown menu when the mouse is over*/
+@media only screen and (min-width: 768px){
+    .nav-item.dropdown:hover > ul.dropdown-menu {
+        display: block;    
+    }
+
+    .dropdown-menu{
+        background: black;
+    }
+
+    .dropdown-list-item{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        background: black;
+        box-sizing:  border-box;
+        color:white;
+    }    
+
+    .dropdown-list-item:hover{
+        background: gray;
+    }
+}
+
+
+@media only screen and (max-width: 768px){
+    .dropdown-list-item{    
+        width: 100%;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-weight: 500;
+        color: black;
+    }
+
+    .dropdown-list-item:hover{
+        background: white;
+        color:black;
+    }
+
+    .dropdown-menu{
+        background: white;
+    }
+}
 
