@@ -1392,14 +1392,9 @@
     }    
 }
 
+@media only screen and (min-width: 20px) and (max-width: 800px) {
 
-/* Portrait */
-@media only screen 
-  and (min-device-width: 20px) 
-  and (max-device-width: 800px) 
-  and (-webkit-min-device-pixel-ratio: 1) {
-
- #services {
+    #services {
         padding: 5rem 0;
     }
 
@@ -1444,7 +1439,7 @@
     }
 
     .child-2{
-        flex-basis: 35%;
+        flex-basis: 25%;
     }
 
     .child-3{
