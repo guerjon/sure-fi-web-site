@@ -1055,7 +1055,6 @@
 }
 
 
-
 @media (min-width: 800px) and (max-width: 991px){
         .dropdown-list-item{
         padding-left: 10px;
@@ -1292,11 +1291,7 @@
 
 
 /* Landscape */
-@media only screen 
-  and (min-device-width: 569px) 
-  and (max-device-width: 767px) 
-{
-
+@media only screen and (min-device-width: 569px) and (max-device-width: 767px) {
 
     #services {
         padding: 5rem 0;
@@ -1395,7 +1390,114 @@
         align-self: center;
         text-align: center;
     }    
+}
+
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 20px) 
+  and (max-device-width: 800px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+ #services {
+        padding: 5rem 0;
+    }
+
+    .masthead {
+        height: 100vh;
+        background-color: #2e2c2f;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .where-to-buy-header-child-1{
+        flex-basis: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .where-to-buy-header-child-1 h1{
+        color:white;
+    }
+
+    .where-to-buy-header.child-2{
+        flex-basis: 30%;   
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+
+    .masthead-son{
+        align-self: center;
+        text-align: center;
+    }
+
+    .child-1{
+        flex-basis: 100%;
+        color: white !important;
+        font-size: 3rem;
+    }
+
+    .child-2{
+        flex-basis: 35%;
+    }
+
+    .child-3{
+        width: 100%;
+        color: white !important;
+        padding-right: 40px;
+        padding-left: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .child-3 p{
+        font-size: 20px !important;
+    }
+
+    .masthead-desktop{
+        display: none !important;
+    }
+
+    .dropdown-menu{
+        background: black;
+    }
+
+    .where-to-buy-header{
+        height: 20vh;
+        display: flex;
+        background: #7BC143;
+    }
+
+    
+    .child-2-child {
+        width: 60%;
+        margin-top: 30%;
+    }
+
+    .parterns-container{
+        width: 100%;
+        height: 60vh;
+        text-align: center;
+        padding:5vh;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        
+    }
+    .simple-text{
+        width: 50%;
+        align-self: center;
+        text-align: center;
+    }    
 
 }
+
 
 
