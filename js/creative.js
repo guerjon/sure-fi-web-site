@@ -125,5 +125,9 @@ function shuffle(array) {
       owl.trigger('prev.owl.carousel', [300]);
   })
 
+
+  console.log("width:" + window.width)
+  console.log("height:" + window.height)
+
 })(jQuery); // End of use strict
 
