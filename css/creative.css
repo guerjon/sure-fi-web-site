@@ -1368,7 +1368,7 @@
 
 
 /* this display the dropdown menu when the mouse is over*/
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 769px){
     .nav-item.dropdown:hover > ul.dropdown-menu {
         display: block;    
     }
