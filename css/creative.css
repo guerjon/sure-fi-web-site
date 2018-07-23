@@ -1368,7 +1368,7 @@
 
 
 /* this display the dropdown menu when the mouse is over*/
-@media only screen and (min-width: 769px){
+@media only screen and (min-width: 992px){
     .nav-item.dropdown:hover > ul.dropdown-menu {
         display: block;    
     }
@@ -1392,7 +1392,7 @@
 }
 
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 991px){
     .dropdown-list-item{    
         width: 100%;
         text-align: center;
