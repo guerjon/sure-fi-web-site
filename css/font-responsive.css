@@ -264,9 +264,7 @@
       justify-content: center;
   }
 
-  .nav-item.dropdown:hover > ul.dropdown-menu {
-      display: block;    
-  }
+
 
 }
 
@@ -325,12 +323,10 @@
     font-size: 18px;
   }
 
-  .nav-item.dropdown:hover > ul.dropdown-menu {
-      display: block;    
-  }
-
+  
   .main-container-1{
     margin-top: 91px;
+
   }
 
 }
@@ -426,10 +422,6 @@
     margin-top: 10vh;
   }
 
-  .nav-item.dropdown:hover > ul.dropdown-menu {
-      display: block;    
-  }
-
   .main-container-1{
     margin-top: 91px;
   }
@@ -439,5 +431,7 @@
 @media screen  and (min-width: 992px)  and (max-width: 1024px){
   .main-container-1{
     margin-top: 0px !important;
+
   }
+  
 }
