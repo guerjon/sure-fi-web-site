@@ -31,9 +31,7 @@
 		padding: 20px;
 	}
 	
-	.image-documentation-container{
-		width: 50%;
-	}
+	
 }
 
 /* Small devices (tablets,  and up) */
@@ -55,7 +53,7 @@
 	}
 
 	.documentation-image{
-		width: 80%;
+		width: 50%;
 	}
 
 	.bridge-image{
@@ -84,7 +82,7 @@
 	}
 
 	.documentation-image{
-		width: 90%;
+		width: 50%;
 	}	
 
 	.bridge-image{
@@ -112,7 +110,7 @@
 	}
 
 	.documentation-image{
-		width: 60%;
+		width: 50%;
 	}
 }
 

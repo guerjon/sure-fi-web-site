@@ -24,10 +24,9 @@
 		font-size: 40px;
 	}
 
-	.documentation-image{
-		width: 80%;
-		padding:20px;
-	}
+
+
+	
 
 	.bridge-image{
 		width: 100%;
@@ -59,13 +58,7 @@
 		font-size: 25px;
 	}
 
-	.documentation-image{
-		width: 90%;
-	}
-
-	.documentation-image{
-		width: 80%;
-	}
+	
 
 	.bridge-image{
 		width: 100%;
@@ -93,10 +86,7 @@
 		font-size: 30px;
 	}
 
-	.documentation-image{
-		width: 90%;
-	}	
-
+	
 	.bridge-image{
 		width: 100%;
 		height: auto;
@@ -126,9 +116,7 @@
 		font-size: 35px;
 	}
 
-	.documentation-image{
-		width: 60%;
-	}
+	
 	.relay-container{
 		margin-top: 75px;
 	}	
@@ -155,10 +143,6 @@
 
 	.documentation-title{
 		font-size: 40px;
-	}
-
-	.documentation-image{
-		width: 50%;
 	}
 
 	.bridge-image{
