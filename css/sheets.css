@@ -552,6 +552,10 @@ ul{
 		font-size: 20px;
 	}	
 
+	.product-on-index{
+		margin-top: 20px;
+	}
+
 }
 
 /*tablets*/
@@ -685,6 +689,9 @@ ul{
 		font-size: 40px;
 	}
 
+	.product-on-index{
+		margin-top: 20px;
+	}
 }
 
 
@@ -811,7 +818,11 @@ ul{
 	}
 
 	.product-title-container{
-		height: 40px;
+		height: 60px;
+	}
+
+	.product-on-index{
+		margin-top: 20px;
 	}
 
 	.big-blue-title{
