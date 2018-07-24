@@ -21,8 +21,7 @@
 	}
 
 	.documentation-image{
-		width: 80%;
-		padding:20px;
+		width: 50%;
 	}
 
 	.bridge-image{
@@ -30,7 +29,6 @@
 		height: auto;
 		padding: 20px;
 	}
-	
 	
 }
 
