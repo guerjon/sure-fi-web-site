@@ -500,7 +500,7 @@ ul{
 	}
 
 	.green-with-sizes{
-		width: 70vw;
+		width: 100%;
 		
 	}
 
@@ -648,8 +648,8 @@ ul{
 		margin-top: 300px;
 	}
 	.green-with-sizes{
-		width: 70vw;
-		height: 80vw;
+		width: 100%;
+		
 	}
 
 	.blue-with-sizes{
@@ -781,8 +781,7 @@ ul{
 	}
 
 	.green-with-sizes{
-		width: 50vw;
-		height: 55vw;
+		width: 100%;
 	}
 
 	.blue-with-sizes{
@@ -858,8 +857,8 @@ ul{
 	}
 
 	.green-with-sizes{
-		width: 50vw;
-		height: 55vw;
+		width: 100%;
+		
 	}
 
 	.blue-with-sizes{
@@ -876,8 +875,8 @@ ul{
 
 @media screen and (min-width: 1461px){
 	.green-with-sizes{
-		width: 500px;
-		height: 550px;
+		width: 100%;
+
 	}
 
 	.blue-with-sizes{
