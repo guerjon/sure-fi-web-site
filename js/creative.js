@@ -126,8 +126,7 @@ function shuffle(array) {
   })
 
 
-  console.log("width:" + window.innerWidth)
-  console.log("height:" + window.innerHeight)
+  var scroll = new SmoothScroll('a[href*="#"]');
 
 })(jQuery); // End of use strict
 
