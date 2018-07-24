@@ -1153,7 +1153,7 @@
 
     .parterns-container{
         width: 100%;
-        height: 60vh;
+        height: auto;
         text-align: center;
         padding:5vh;
         display: flex;
@@ -1186,24 +1186,7 @@
         flex-wrap: wrap;
     }
 
-    .where-to-buy-header-child-1{
-        flex-basis: 70%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-
-    .where-to-buy-header-child-1 h1{
-        color:white;
-    }
-
-    .where-to-buy-header.child-2{
-        flex-basis: 30%;   
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+    
     
 
     .masthead-son{
@@ -1239,28 +1222,7 @@
         display: none !important;
     }
 
-    .where-to-buy-header{
-        height: 20vh;
-        display: flex;
-        background: #7BC143;
-    }
-
-    
-    .child-2-child {
-        width: 60%;
-        margin-top: 30%;
-    }
-
-    .parterns-container{
-        width: 100%;
-        height: 60vh;
-        text-align: center;
-        padding:5vh;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        
-    }
+   
     .simple-text{
         width: 50%;
         align-self: center;
@@ -1313,6 +1275,50 @@
         display: none !important;
     }
 
+    .where-to-buy-header-child-1{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .where-to-buy-header-child-1 h1{
+        color:white;
+        font-size: 28px;
+    }
+
+    .where-to-buy-header.child-2{
+        flex-basis: 0%;   
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: none;
+    }
+    
+    .where-to-buy-header{
+        height: 10vh;
+        display: flex;
+        background: #7BC143;
+    }
+
+    
+    .child-2-child {
+        width: 60%;
+        margin-top: 30%;
+    }
+
+    .parterns-container{
+        width: 100%;
+        height: auto;
+        text-align: center;
+        padding:5vh;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        
+    }
+
 }
 
 @media only screen and (min-width: 530px) and (max-width: 992px) {
@@ -1359,6 +1365,50 @@
         display: none !important;
     }
 
+
+    .where-to-buy-header-child-1{
+        flex-basis: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+     .where-to-buy-header-child-1 h1{
+        color:white;
+        font-size: 28px;
+    }
+
+    .where-to-buy-header.child-2{
+        flex-basis: 0%;   
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: none;
+    }
+    
+    .where-to-buy-header{
+        height: 10vh;
+        display: flex;
+        background: #7BC143;
+    }
+
+    
+    .child-2-child {
+        width: 60%;
+        margin-top: 30%;
+    }
+
+    .parterns-container{
+        width: 100%;
+        height: auto;
+        text-align: center;
+        padding:5vh;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        
+    }
+
 }
 
 
@@ -1369,7 +1419,6 @@
     }
 
     
-
     .simple-text{
         margin-top: 20px;
         margin-bottom: 20px;
