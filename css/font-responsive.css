@@ -87,21 +87,29 @@
 
 
 
-    .image-documentation-container{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
+  .image-documentation-container{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+  }
 
-    .image-documentation-container div{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 30%;
-        
-    }
+  .image-documentation-container div{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30%;
+      
+  }
+
+  .documentation-image{
+    width: 50%;
+  }
+
+  .documentation-title{
+    
+  }
 
 }
 
@@ -209,6 +217,10 @@
   .image-documentation-container img{
       width: 50%;
   }
+
+  .documentation-image{
+    width: 50%;
+  }  
 
 }
 
@@ -321,6 +333,10 @@
       
   }
 
+  .documentation-image{
+    width: 50%;
+  }
+
 }
 
 
@@ -397,6 +413,10 @@
       justify-content: center;
       width: 55%;
       
+  }
+
+  .documentation-image{
+    width: 50%;
   }
 
 }
@@ -510,6 +530,10 @@
       justify-content: center;
       width: 55%;
       
+  }
+
+  .documentation-image{
+    width: 50%;
   }
 
 }
