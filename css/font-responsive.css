@@ -83,6 +83,34 @@
     align-items: center;
     justify-content: center;
   }
+
+
+
+
+  .image-documentation-container{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+  }
+
+  .image-documentation-container div{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30%;
+      
+  }
+
+  .documentation-image{
+    width: 50%;
+  }
+
+  .documentation-title{
+    
+  }
+
 }
 
 
@@ -170,6 +198,30 @@
       font-size: 18px;
       display: none;
   }  
+
+  .image-documentation-container{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+  }
+
+  .image-documentation-container div{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30%;
+      
+  }
+  .image-documentation-container img{
+      width: 50%;
+  }
+
+  .documentation-image{
+    width: 50%;
+  }  
+
 }
 
 @media screen and (min-width: 768px) and (max-width: 1200px){
@@ -265,6 +317,25 @@
   }
 
 
+  .image-documentation-container{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+  }
+
+  .image-documentation-container div{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 60%;
+      
+  }
+
+  .documentation-image{
+    width: 50%;
+  }
 
 }
 
@@ -326,7 +397,26 @@
   
   .main-container-1{
     margin-top: 91px;
+  }
 
+  .image-documentation-container{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+  }
+
+  .image-documentation-container div{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 55%;
+      
+  }
+
+  .documentation-image{
+    width: 50%;
   }
 
 }
@@ -425,6 +515,27 @@
   .main-container-1{
     margin-top: 91px;
   }
+
+  .image-documentation-container{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+  }
+
+  .image-documentation-container div{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 55%;
+      
+  }
+
+  .documentation-image{
+    width: 50%;
+  }
+
 }
 
 

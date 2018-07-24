@@ -791,7 +791,7 @@
 
 
  /*tablets*/
-@media screen and (min-width: 800px) and (max-width: 1023px){
+@media screen and (min-width: 800px) and (max-width: 1024px){
   
     #services {
         padding: 5rem 0;
@@ -889,7 +889,7 @@
 
 }
 /*pc desktops */
-@media screen and (min-width: 1023px){
+@media screen and (min-width: 1025px){
     .product-link .container-fluid{
         padding-right: 0px;
         padding-left: 0px;
@@ -967,7 +967,7 @@
 /* Portrait */
 @media only screen 
   and (min-device-width: 768px) 
-  and (max-device-width: 1023px) 
+  and (max-device-width: 1024px) 
   and (orientation: portrait) 
   and (-webkit-min-device-pixel-ratio: 1) {
 
@@ -1268,14 +1268,11 @@
     }    
 }
 
-@media only screen and (min-width: 20px) and (max-width: 800px) {
 
-    #services {
-        padding: 5rem 0;
-    }
+@media only screen and (min-width: 20px) and (max-width: 530px) {
 
     .masthead {
-        height: 80vh;
+        height: 100vh;
         background-color: #2e2c2f;
         display: flex;
         align-items: center;
@@ -1295,7 +1292,7 @@
     }
 
     .child-2{
-        flex-basis: 40%;
+        flex-basis: 50%;
     }
 
     .child-3{
@@ -1316,13 +1313,70 @@
         display: none !important;
     }
 
+}
+
+@media only screen and (min-width: 530px) and (max-width: 992px) {
+
+   .masthead {
+        height: 100vh;
+        background-color: #2e2c2f;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .masthead-son{
+        align-self: center;
+        text-align: center;
+    }
+
+    .child-1{
+        flex-basis: 50%;
+        color: white !important;
+        font-size: 2rem;
+    }
+
+    .child-2{
+        flex-basis: 35%;
+    }
+
+    .child-3{
+        width: 100%;
+        color: white !important;
+        padding-right: 40px;
+        padding-left: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .child-3 p{
+        font-size: 12px !important;
+    }
+
+    .masthead-desktop{
+        display: none !important;
+    }
+
+}
+
+
+@media only screen and (min-width: 20px) and (max-width: 800px) {
+
+    #services {
+        padding: 5rem 0;
+    }
+
+    
+
     .simple-text{
         margin-top: 20px;
         margin-bottom: 20px;
         width: 80%;
         align-self: center;
         text-align: center;
-    }    
+    }   
 }
 
 
