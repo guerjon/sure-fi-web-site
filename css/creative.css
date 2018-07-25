@@ -911,22 +911,6 @@
         position: absolute;
         height: 100vh;
         width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .masthead-image-container{
-        width: 50%;
-        z-index: 2;
-        position: absolute;
-        display: flex;
-        justify-content:center;
-        align-items: center;
-    }
-
-    .masthead-image-container img{
-        width: 100%;
     }
 
     .where-to-buy-header{
@@ -973,57 +957,6 @@
         width: 50%;
         align-self: center;
         text-align: center;
-    }
-
-    .bunker-busting-container{
-        height: 100vh;
-        width: 100%;
-        position: absolute;
-        z-index: 3;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-    }
-}
-
-/*
-* 4k Desktop 
-*/
-
-@media screen and (min-width: 1440px){
-    .masthead-image-container{
-        height: 50vh;
-        width: 50%;
-        z-index: 2;
-        position: absolute;
-        display: flex;
-        justify-content:center;
-        align-items: center;
-    }
-
-    .masthead-image-container img{
-        width: 40%;
-    }
-}
-
-/*
-* 8K Desktop
-*/
-
-@media screen and (min-width: 2560px){
-    .masthead-image-container img{
-        width: 50%;
-    }
-}
-
-
-/*
-* bigger 
-*/
-
-@media screen and (min-width: 3052px){
-    .masthead-image-container img{
-        width: 40%;
     }
 }
 
