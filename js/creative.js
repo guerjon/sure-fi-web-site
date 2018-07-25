@@ -126,7 +126,7 @@ function shuffle(array) {
   })
 
   $('.testimonials-carouse').slick({
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 4000,
     arrows:true,
     dots:true
