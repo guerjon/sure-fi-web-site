@@ -68,6 +68,63 @@
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
 
+	#testimonials-section{
+		padding: 2rem 0;
+	}
+
+	.section-title{
+		padding:20px;
+	}
+
+	.section-title h1{
+		font-size: 40px;
+		font-weight: bold;
+	}
+	.testimonials-carouse-container{
+		width: 100%;
+		margin:0 auto;
+		text-align: center;
+		height: 400px;
+		padding:40px;
+		border-radius: 5px;
+	}
+	.testimonials-carouse-item{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+	.testimonials-image-container{
+		background: black;
+		width: 200px;
+		height: 200px;
+		border-radius: 100px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.testimonials-image-item{
+		width: 150px;
+	}
+
+	.testimonials-text{
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+
+	.testimonials-text p{
+		font-size: 22px;
+	}
+
+	.testimonial-people{
+		font-size: 18px;
+	}
+
+	.testimonial-people h6{
+		font-weight: 900;
+	}	
+
 } 
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -83,4 +140,67 @@
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
 
+	#testimonials-section{
+		padding: 4rem 0;
+	}
+
+	.section-title{
+		padding:20px;
+	}
+
+	.section-title h1{
+		font-size: 60px;
+		font-weight: bold;
+	}
+	.testimonials-carouse-container{
+		width: 100%;
+		margin:0 auto;
+		text-align: center;
+		height: 600px;
+		padding:80px;
+		border-radius: 5px;
+	}
+
+	.testimonials-carouse > div{
+		width: 50%;
+		margin : 0 auto;	
+	}
+
+	.testimonials-carouse-item{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	.testimonials-image-container{
+		background: black;
+		width: 300px;
+		height: 300px;
+		border-radius: 150px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.testimonials-image-item{
+		width: 150px;
+	}
+
+	.testimonials-text{
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+
+	.testimonials-text p{
+		font-size: 32px;
+	}
+
+	.testimonial-people{
+		font-size: 18px;
+	}
+
+	.testimonial-people h6{
+		font-weight: 900;
+	}	
 }
