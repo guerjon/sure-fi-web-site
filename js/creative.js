@@ -125,8 +125,12 @@ function shuffle(array) {
       owl.trigger('prev.owl.carousel', [300]);
   })
 
-
-  var scroll = new SmoothScroll('a[href*="#"]');
+  $('.testimonials-carouse').slick({
+    autoplay: false,
+    autoplaySpeed: 4000,
+    arrows:true,
+    dots:true
+  });
 
 })(jQuery); // End of use strict
 
