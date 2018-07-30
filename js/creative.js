@@ -57,23 +57,6 @@ function shuffle(array) {
   $("#jamieson_fence_container").append(shuffle_array[1]);
   $("#controller_product_systems_container").append(shuffle_array[2])
 
-
-  // Collapse Navbar
-  /*
-  var navbarCollapse = function() {
-    if ($("#mainNav").offset().top > 100) {
-      $("#mainNav").addClass("navbar-shrink");
-    } else {
-      $("#mainNav").removeClass("navbar-shrink");
-    }
-  };
-  // Collapse now if page is not at top
-  navbarCollapse();
-  // Collapse the navbar when page is scrolled
-  $(window).scroll(navbarCollapse);
-
-*/
-
   // Scroll reveal calls
   var sr_icons = {
     duration: 600,
@@ -125,8 +108,13 @@ function shuffle(array) {
       owl.trigger('prev.owl.carousel', [300]);
   })
 
+    $('.testimonials-carouse').slick({
+      autoplay: true,
+      autoplaySpeed: 4000,
+      arrows:false,
+      dots:true
+    });    
 
-  var scroll = new SmoothScroll('a[href*="#"]');
 
 })(jQuery); // End of use strict
 
