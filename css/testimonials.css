@@ -157,7 +157,7 @@
 	}
 
 	.section-title h1{
-		font-size: 60px;
+		font-size: 3em;
 		font-weight: bold;
 	}
 	.testimonials-carouse-container{
@@ -169,8 +169,7 @@
 		border-radius: 5px;
 	}
 
-	.testimonials-carouse > div{
-		width: 90%;
+	.testimonials-carouse > div{		
 		margin : 0 auto;	
 	}
 
@@ -199,6 +198,8 @@
 	.testimonials-text{
 		margin-top: 20px;
 		margin-bottom: 20px;
+		margin-right: 10%;
+		margin-left: 10%;
 
 	}
 
