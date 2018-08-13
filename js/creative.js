@@ -108,13 +108,6 @@ function shuffle(array) {
       owl.trigger('prev.owl.carousel', [300]);
   })
 
-    $('.testimonials-carouse').slick({
-      autoplay: true,
-      autoplaySpeed: 4000,
-      arrows:false,
-      dots:true
-    });    
-
 
 })(jQuery); // End of use strict
 
