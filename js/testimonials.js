@@ -1,5 +1,7 @@
 const proxyurl = "https://cors-anywhere.herokuapp.com/";
 const url = "http://admin.sure-fi.com/api/get_testimonials";
+
+
 function getTestimionals(type){
     let data = {
         method : "POST",
@@ -73,8 +75,8 @@ function getTestimionals(type){
 
 $(function() {
     'use strict';
-
-    const testimonials = getTestimionals();
+    var type = $('.testimonials-carouse').attr("type");
+    const testimonials = getTestimionals(type);
 
 	
 });
