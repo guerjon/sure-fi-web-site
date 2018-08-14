@@ -65,7 +65,11 @@
 	}
 
 	.testimonials-height{
-		height: 500px;
+		height: 600px;
+	}
+
+	.testimonials-index{
+		height: 600px;	
 	}
 } 
 
@@ -130,19 +134,23 @@
 	}	
 
 	.testimonials-height{
-		height: 600px;
+		height: 700px;
 	}
 
 } 
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-
+	.testimonials-index{
+		height: 700px;	
+	}
 } 
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-
+	.testimonials-index{
+		height: 800px;	
+	}
 } 
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -204,7 +212,7 @@
 	}
 
 	.testimonials-text p{
-		font-size: 32px;
+		font-size: 28px;
 	}
 
 	.testimonial-people{
@@ -216,7 +224,11 @@
 	}	
 
 	.testimonials-height{
-		height: 800px;
+		height: 1100px;
+	}
+
+	.testimonials-index{
+		height: 1000px;	
 	}
 
 }
