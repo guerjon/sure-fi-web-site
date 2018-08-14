@@ -65,11 +65,11 @@
 	}
 
 	.testimonials-height{
-		height: 600px;
+		height: 500px;
 	}
 
 	.testimonials-index{
-		height: 600px;	
+		height: 500px;	
 	}
 } 
 
@@ -134,7 +134,7 @@
 	}	
 
 	.testimonials-height{
-		height: 700px;
+		height: 500px;
 	}
 
 } 
@@ -142,14 +142,14 @@
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
 	.testimonials-index{
-		height: 700px;	
+		height: 500px;	
 	}
 } 
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
 	.testimonials-index{
-		height: 800px;	
+		height: 500px;	
 	}
 } 
 
@@ -224,11 +224,11 @@
 	}	
 
 	.testimonials-height{
-		height: 1100px;
+		height: 600px;
 	}
 
 	.testimonials-index{
-		height: 1000px;	
+		height: 600px;	
 	}
 
 }

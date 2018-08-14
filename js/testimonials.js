@@ -30,18 +30,20 @@ function getTestimionals(type){
 
     function appendTestimonials(testimonials){
         var container = $('.testimonials-carouse');
-
+        /*
+                        "<div class='testimonials-image-container'>" +
+                            "<div class='testimonials-image-item'>" +
+                                "<img src='images/Long.png' class='img-responsive-header'/>" +
+                            "</div>" +
+                        "</div>" +
+        */
         for(let i = testimonials.length; i--;){
             const testimonial =  testimonials[i]
 
             container.append(
                 "<div>" +
                     "<div class='testimonials-carouse-item'>" + 
-                        "<div class='testimonials-image-container'>" +
-                            "<div class='testimonials-image-item'>" +
-                                "<img src='images/Long.png' class='img-responsive-header'/>" +
-                            "</div>" +
-                        "</div>" +
+                        
                         "<div class='testimonials-text'>" +
                             "<p>" + 
                                 testimonial.testimonial_text +
