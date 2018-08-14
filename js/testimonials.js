@@ -7,12 +7,32 @@
 })(jQuery);
 */
 
+
+function getTestimionals(type){
+    let data = {
+        method : "POST",
+        headers :{
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',             
+        },
+        body : JSON.stringify({
+            type : type
+        })
+    }
+    fetch("http://admin.sure-fi.com/api/get_testimonials",data)
+    .then(response => {
+        console.log(response);
+    }).catch(error => {
+        console.error(error)
+    })
+}
+
 $(function() {
-    
+    'use strict';
 	var container = $('.testimonials-carouse');
 	var testimonials = ["string 1", "string 2", "string 3"];
 	var testimonials_objects = []
-
+    getTestimionals();
 	for(let i = testimonials.length; i--;){
 		container.append(
 			"<div>" +
