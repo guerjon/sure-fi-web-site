@@ -17,7 +17,7 @@ function getTestimionals(type){
     .then(response => response.text())
     .then(contents =>  {
         let results = JSON.parse(contents)
-        console.log(results)
+        
         if(results.status == "success"){
             let testimonials = results.data;
             appendTestimonials(testimonials)
@@ -41,7 +41,7 @@ function getTestimionals(type){
         */
         for(let i = testimonials.length; i--;){
             const testimonial =  testimonials[i]
-
+            const company = testimonial.testimonial_company.toUpperCase()
             container.append(
                 "<div>" +
                     "<div class='testimonials-carouse-item'>" + 
@@ -53,7 +53,7 @@ function getTestimionals(type){
                         "</div>" +
                         "<div class='testimonial-people'>" +
                             "<h6>" +
-                                testimonial.testimonial_name +
+                                testimonial.testimonial_name + "<br> " + company  +
                             "</h6>" +
                         "</div>" +
                     "</div>" +
