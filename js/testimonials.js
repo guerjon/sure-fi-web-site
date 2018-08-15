@@ -99,7 +99,7 @@ function getTestimionals(type){
 
     function startSlick(container){
         container.slick({
-            autoplay: false,
+            autoplay: true,
             autoplaySpeed: 10000,
             arrows:false,
             dots:true
