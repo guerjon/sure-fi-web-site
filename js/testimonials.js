@@ -27,7 +27,11 @@ function getTestimionals(type){
             let testimonials = results.data;
 
             testimonials = filterTestimonials(testimonials,type)
-            appendTestimonials(testimonials)
+            if(testimonials.length > 0){
+                $('#testimonials-section').show()    
+                appendTestimonials(testimonials);    
+            }
+            
         }else{
             $('#testimonials-section').hide()
         }
