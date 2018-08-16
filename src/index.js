@@ -2,7 +2,6 @@
 
 const e = React.createElement;
 
-
 class Fotter extends React.Component {
   
   constructor(props) {
@@ -89,8 +88,10 @@ class Fotter extends React.Component {
 }
 
 document.addEventListener("DOMContentLoaded", function(event) { 
+  
   const domContainer = document.querySelector('#footer');
   ReactDOM.render(e(Fotter), domContainer);
+  
 });
 
 

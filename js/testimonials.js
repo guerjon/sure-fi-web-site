@@ -41,77 +41,73 @@ function getTestimionals(type){
     })
 }
 
-    function filterTestimonials(testimonials,type){
-        let new_testimonias = [];
-        for(let i = testimonials.length; i--;){
-            
-            const testimonial = testimonials[i];
-            const testimonial_type = testimonial.testimonial_product
-            const object_type =  object_types[type]
-            
-            if(object_type != null){
-                if(object_type == 9000)
-                    return testimonials
-
-                if(testimonial_type == object_type)
-                    new_testimonias.push(testimonial);
-            }
-        }
-
-        return new_testimonias
-    }
-    
-    function appendTestimonials(testimonials){
-        var container = $('.testimonials-carouse');
-        /*
-                        "<div class='testimonials-image-container'>" +
-                            "<div class='testimonials-image-item'>" +
-                                "<img src='images/Long.png' class='img-responsive-header'/>" +
-                            "</div>" +
-                        "</div>" +
-        */
+function filterTestimonials(testimonials,type){
+    let new_testimonias = [];
+    for(let i = testimonials.length; i--;){
         
-        for(let i = testimonials.length; i--;){
-            const testimonial =  testimonials[i]
-            const company = testimonial.testimonial_company.toUpperCase()
+        const testimonial = testimonials[i];
+        const testimonial_type = testimonial.testimonial_product
+        const object_type =  object_types[type]
+        
+        if(object_type != null){
+            if(object_type == 9000)
+                return testimonials
 
-            container.append(
-                "<div>" +
-                    "<div class='testimonials-carouse-item'>" + 
-                        
-                        "<div class='testimonials-text'>" +
-                            "<p>" + 
-                                testimonial.testimonial_text +
-                            "</p>" +
-                        "</div>" +
-                        "<div class='testimonial-people'>" +
-                            "<h6>" +
-                                testimonial.testimonial_name + "<br> " + company  +
-                            "</h6>" +
+            if(testimonial_type == object_type)
+                new_testimonias.push(testimonial);
+        }
+    }
+
+    return new_testimonias
+}
+
+function appendTestimonials(testimonials){
+    var container = $('.testimonials-carouse');
+    /*
+                    "<div class='testimonials-image-container'>" +
+                        "<div class='testimonials-image-item'>" +
+                            "<img src='images/Long.png' class='img-responsive-header'/>" +
                         "</div>" +
                     "</div>" +
-                "</div>" 
-            );
-        }
+    */
+    
+    for(let i = testimonials.length; i--;){
+        const testimonial =  testimonials[i]
+        const company = testimonial.testimonial_company.toUpperCase()
 
-        startSlick(container);
+        container.append(
+            "<div>" +
+                "<div class='testimonials-carouse-item'>" + 
+                    
+                    "<div class='testimonials-text'>" +
+                        "<p>" + 
+                            testimonial.testimonial_text +
+                        "</p>" +
+                    "</div>" +
+                    "<div class='testimonial-people'>" +
+                        "<h6>" +
+                            testimonial.testimonial_name + "<br> " + company  +
+                        "</h6>" +
+                    "</div>" +
+                "</div>" +
+            "</div>" 
+        );
     }
 
-    function startSlick(container){
-        container.slick({
-            autoplay: true,
-            autoplaySpeed: 4000,
-            arrows:false,
-            dots:true
-        }); 
-    }
+    startSlick(container);
+}
+
+function startSlick(container){
+    container.slick({
+        autoplay: true,
+        autoplaySpeed: 4000,
+        arrows:false,
+        dots:true
+    }); 
+}
 
 $(function() {
     'use strict';
     var type = $('.testimonials-carouse').attr("type");    
     const testimonials = getTestimionals(type);
-    
-	
 });
-
-
