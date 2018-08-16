@@ -109,5 +109,5 @@ function startSlick(container){
 $(function() {
     'use strict';
     var type = $('.testimonials-carouse').attr("type");    
-    const testimonials = getTestimionals(type);
+    //const testimonials = getTestimionals(type);
 });
