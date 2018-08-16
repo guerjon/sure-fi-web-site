@@ -1,48 +1,113 @@
-/*(function($) {
-    var origAppend = $.fn.append;
+const proxyurl = "https://cors-anywhere.herokuapp.com/";
+const url = "http://admin.sure-fi.com/api/get_testimonials";
+const object_types = {
+    "WIEGAND" : 4,
+    "HVAC" : 7,
+    "RELAY" : 9,
+    "MODULE": 0,
+    "ALL": 9000
+}
 
-    $.fn.append = function () {
-        return origAppend.apply(this, arguments).trigger("append");
-    };
-})(jQuery);
-*/
-
-$(function() {
+function getTestimionals(type){
+    let data = {
+        method : "POST",
+        headers :{
+        'Accept': 'application/json',
+        },
+        body : JSON.stringify({
+            type : type
+        })
+    }
     
-	var container = $('.testimonials-carouse');
-	var testimonials = ["string 1", "string 2", "string 3"];
-	var testimonials_objects = []
+    fetch(url ,data)
+    .then(response => response.text())
+    .then(contents =>  {
+        let results = JSON.parse(contents)    
+        if(results.status == "success"){
+            let testimonials = results.data;
 
-	for(let i = testimonials.length; i--;){
-		container.append(
-			"<div>" +
-                "<div class='testimonials-carouse-item'>" + 
+            testimonials = filterTestimonials(testimonials,type)
+            if(testimonials.length > 0){
+                $('#testimonials-section').show()    
+                appendTestimonials(testimonials);    
+            }
+            
+        }else{
+            $('#testimonials-section').hide()
+        }
+
+    }).catch(error => {
+        console.error(error)
+    })
+}
+
+function filterTestimonials(testimonials,type){
+    let new_testimonias = [];
+    for(let i = testimonials.length; i--;){
+        
+        const testimonial = testimonials[i];
+        const testimonial_type = testimonial.testimonial_product
+        const object_type =  object_types[type]
+        
+        if(object_type != null){
+            if(object_type == 9000)
+                return testimonials
+
+            if(testimonial_type == object_type)
+                new_testimonias.push(testimonial);
+        }
+    }
+
+    return new_testimonias
+}
+
+function appendTestimonials(testimonials){
+    var container = $('.testimonials-carouse');
+    /*
                     "<div class='testimonials-image-container'>" +
-                       	"<div class='testimonials-image-item'>" +
+                        "<div class='testimonials-image-item'>" +
                             "<img src='images/Long.png' class='img-responsive-header'/>" +
                         "</div>" +
                     "</div>" +
+    */
+    
+    for(let i = testimonials.length; i--;){
+        const testimonial =  testimonials[i]
+        const company = testimonial.testimonial_company.toUpperCase()
+
+        container.append(
+            "<div>" +
+                "<div class='testimonials-carouse-item'>" + 
+                    
                     "<div class='testimonials-text'>" +
                         "<p>" + 
-                           	"Sure-Fi is Awesome, Incredible, Fabulous, Astonishing, Astounding, Breathtaking, Fantastic but over all is Sure." +
+                            testimonial.testimonial_text +
                         "</p>" +
                     "</div>" +
                     "<div class='testimonial-people'>" +
                         "<h6>" +
-                        	"- Sure-Fi Lover" +
+                            testimonial.testimonial_name + "<br> " + company  +
                         "</h6>" +
                     "</div>" +
                 "</div>" +
             "</div>" 
-		);
-	}
-	container.slick({
-	    autoplay: false,
-	    autoplaySpeed: 4000,
-	    arrows:false,
-	    dots:true
-	}); 
-	
+        );
+    }
+
+    startSlick(container);
+}
+
+function startSlick(container){
+    container.slick({
+        autoplay: true,
+        autoplaySpeed: 4000,
+        arrows:false,
+        dots:true
+    }); 
+}
+
+$(function() {
+    'use strict';
+    var type = $('.testimonials-carouse').attr("type");    
+    //const testimonials = getTestimionals(type);
 });
-
-
