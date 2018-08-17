@@ -22,7 +22,8 @@ function getTestimionals(type){
     fetch(url ,data)
     .then(response => response.text())
     .then(contents =>  {
-        let results = JSON.parse(contents)    
+        let results = JSON.parse(contents) 
+        console.log("results");   
         if(results.status == "success"){
             let testimonials = results.data;
 
@@ -109,5 +110,5 @@ function startSlick(container){
 $(function() {
     'use strict';
     var type = $('.testimonials-carouse').attr("type");    
-    //const testimonials = getTestimionals(type);
+    const testimonials = getTestimionals(type);
 });
