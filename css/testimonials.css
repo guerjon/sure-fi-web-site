@@ -13,8 +13,8 @@
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-	#testimonials-section{
-		padding: 1rem 0;
+	.testimonials-section-container{
+		padding:10px;
 	}
 
 	.section-title{
