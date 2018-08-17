@@ -552,8 +552,13 @@ ul{
 		font-size: 20px;
 	}	
 
-	.product-on-index{
-		margin-top: 20px;
+	.gray-our-product{
+		background: rgb(240,240,240);
+		padding-top: 20px;
+	}
+
+	.white-our-product{
+		padding-top: 20px;		
 	}
 
 }
