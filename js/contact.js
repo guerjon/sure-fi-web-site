@@ -5,7 +5,7 @@ const SUCCESS_RESPONSE = 200
 
 
 async function sendFormInptus(form){
-	console.log("sendFormInptus()",form.serialize())
+	console.log("sendFormInptus()")
 	
 	var form = new FormData(document.getElementById('contact-form'));
 	

@@ -509,7 +509,7 @@ ul{
 	}
 
 	.product-container{
-		height: 85px;
+		height: auto;
 	}
 
 	.product-title-container{
@@ -552,7 +552,17 @@ ul{
 		font-size: 20px;
 	}	
 
+	.gray-our-product{
+		background: rgb(245,245,245);
+		padding-bottom: 20px;
+	}
+
+	.white-our-product{
+		padding-bottom : 20px;		
+	}
+
 	.product-on-index{
+		margin-bottom: 20px;
 		margin-top: 20px;
 	}
 
@@ -789,7 +799,8 @@ ul{
 	}
 
 	.product-container{
-		height: 120px;
+		height: auto;
+		margin-top: 20px;
 	}
 
 	.product-text-container{
@@ -816,9 +827,6 @@ ul{
 		margin:0px -20px 0px -70px;	
 	}
 
-	.product-title-container{
-		height: 60px;
-	}
 
 	.product-on-index{
 		margin-top: 20px;
