@@ -23,7 +23,7 @@ class Fotter extends React.Component {
               </div>
               <div className="row">
                 <div className="col-lg-12 mx-auto text-center">
-                 <img src="images/hall-labs-70.png" alt="hall-labls-image" style={{borderTopTightRadius: 5,borderTopLeftRadius: 5,width: "80%"}}/> 
+                 <img src="images/hall-labs-70.png" id="hall-labs-image" alt="hall-labls-image" style={{borderTopTightRadius: 5,borderTopLeftRadius: 5}}/> 
                   
                   <div id="hall-bottom-foot">
                     <div style={{width: "20%",float: "right",marginTop: 20,marginRight: 20}}>
