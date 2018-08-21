@@ -31,6 +31,10 @@ ul{
 }
 
 
+#hall-labs-image{
+	width: 100%;
+}
+
 .device img {
 	height: 100%;
 	width: 100%;
@@ -817,6 +821,10 @@ ul{
 		height: 130px;
 		width: 80%;
 		margin: 0 auto;
+	}
+
+	#hall-labs-image{
+		width: 80%;
 	}
 
 	.shadow-container{

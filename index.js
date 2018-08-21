@@ -54,7 +54,7 @@ var Fotter = function (_React$Component) {
               React.createElement(
                 "div",
                 { className: "col-lg-12 mx-auto text-center" },
-                React.createElement("img", { src: "images/hall-labs-70.png", alt: "hall-labls-image", style: { borderTopTightRadius: 5, borderTopLeftRadius: 5, width: "80%" } }),
+                React.createElement("img", { src: "images/hall-labs-70.png", id: "hall-labs-image", alt: "hall-labls-image", style: { borderTopTightRadius: 5, borderTopLeftRadius: 5 } }),
                 React.createElement(
                   "div",
                   { id: "hall-bottom-foot" },
