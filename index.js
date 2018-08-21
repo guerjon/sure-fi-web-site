@@ -9,6 +9,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var e = React.createElement;
+// run npx babel --watch src --out-dir . --presets react-app/prod in the sure-fi-web-site directory to reflect changes on this file
 
 var Fotter = function (_React$Component) {
   _inherits(Fotter, _React$Component);
@@ -53,7 +54,7 @@ var Fotter = function (_React$Component) {
               React.createElement(
                 "div",
                 { className: "col-lg-12 mx-auto text-center" },
-                React.createElement("img", { src: "images/hall-labs.jpg", alt: "hall-labls-image", style: { borderTopTightRadius: 5, borderTopLeftRadius: 5, width: "100%" } }),
+                React.createElement("img", { src: "images/hall-labs-70.png", alt: "hall-labls-image", style: { borderTopTightRadius: 5, borderTopLeftRadius: 5, width: "80%" } }),
                 React.createElement(
                   "div",
                   { id: "hall-bottom-foot" },
@@ -165,6 +166,7 @@ var Fotter = function (_React$Component) {
 }(React.Component);
 
 document.addEventListener("DOMContentLoaded", function (event) {
+
   var domContainer = document.querySelector('#footer');
   ReactDOM.render(e(Fotter), domContainer);
 });
