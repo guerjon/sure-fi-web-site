@@ -799,7 +799,7 @@
 
     .masthead {
         height: 80vh;
-        
+        background-color: #2e2c2f;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -903,8 +903,7 @@
 
     header.masthead-desktop{
         height: 100vh;
-        /**
-        background-color: #2e2c2f; */
+        background-color: #2e2c2f; 
     }    
 
     .header-container{
@@ -917,7 +916,8 @@
     .where-to-buy-header{
         height: 20vh;
         display: flex;
-        background: #7BC143;
+        background: var(--wiegand-color);
+        
     }
     
     .where-to-buy-header-child-1{
