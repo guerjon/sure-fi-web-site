@@ -108,7 +108,7 @@
 
 
 .where-to-buy-button{
-
+	margin: 0px 20px; 
 }
 
 .where-to-buy-button i{
@@ -116,11 +116,13 @@
 }
 
 .where-to-buy-button div{
-	width: 200px;
+	width: 300px;
 	margin: 0 auto;
 	border-radius: 10px;
 	border-width: 5px;
 	border-style: solid;
-	margin-top: 10px;
-	margin-bottom: 10px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	min-height: 80px;
 }
