@@ -39,3 +39,14 @@
 #events{
 	margin-top: 20px;
 }
+
+
+/**
+this solve the bug with the nav bar
+*/
+
+@media only screen and (min-width: 1025px){
+	#events{
+		margin-top: 117px;
+	}
+}
