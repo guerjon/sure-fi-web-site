@@ -59,7 +59,7 @@ function appendEvents(events){
                     '<div class="event-date"> ' +
                         '<div class="event-stick">' +
                         '</div>' +
-                        '<div>' +
+                        '<div style="width:50px;">' +
                             '<h1> '+ start_date.getDay() + '</h1>' +
                             '<h5>'+ months[start_date.getMonth()].substring(0,3) + '</h5>' +
                         '</div>' + 
