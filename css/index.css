@@ -39,3 +39,10 @@
     display: none;
   }
 }
+
+.events-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
