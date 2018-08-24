@@ -23,7 +23,7 @@ function getTestimionals(type){
     .then(response => response.text())
     .then(contents =>  {
         let results = JSON.parse(contents) 
-        console.log("results");   
+
         if(results.status == "success"){
             let testimonials = results.data;
 
@@ -116,10 +116,6 @@ function orderList(list){
         const list_half = Math.round(list.length / 2);
         const first_part = list.slice(0,list_half)
         const second_part = list.slice(list_half,list.length)
-
-        console.log("first_part",first_part);
-        console.log("second_part",second_part);
-
     }
 
 }
@@ -129,8 +125,5 @@ $(function() {
     var type = $('.testimonials-carouse').attr("type");    
     const testimonials = getTestimionals(type);
     const list = [1,3,5,2,4,6,8];
-
-
-    console.log(orderList(list))
 
 });

@@ -50,11 +50,12 @@ function appendEvents(events){
 
     for(let i = events.length; i--;){
         const event =  events[i]
+        console.log(event)
         const start_date = new Date(event.event_start_date);
         const end_date = new Date(event.event_end_date);
 
         container.append(
-            '<div class="row">' + 
+            '<div class="row" style="margin-bottom:20px;">' + 
                 '<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">' +
                     '<div class="event-date"> ' +
                         '<div class="event-stick">' +
@@ -77,10 +78,9 @@ function appendEvents(events){
                         '</div>' +
                     '</div>' +
                 '</div>'+
-            '</div>' 
+            '</div>'
         );
     }
-
 }
 
 
