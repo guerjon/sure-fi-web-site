@@ -105,3 +105,22 @@
 		padding: 80px;
 	}
 }
+
+
+.where-to-buy-button{
+
+}
+
+.where-to-buy-button i{
+	font-size: 34px;
+}
+
+.where-to-buy-button div{
+	width: 200px;
+	margin: 0 auto;
+	border-radius: 10px;
+	border-width: 5px;
+	border-style: solid;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
