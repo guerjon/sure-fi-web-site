@@ -56,12 +56,16 @@ function appendEvents(events){
         const start_date_date = split_start_date[0].split("-").map(x => parseInt(x));
         const start_date_hour = split_start_date[1].split(":").map(x => parseInt(x));
         
-        const day = start_date_date[2]
+        let day = start_date_date[2]
         const month = start_date_date[1] - 1
         const year = start_date_date[0]
         const hour = start_date_hour[0]
         const minutes = start_date_hour[1]
- 
+
+        if(day < 10){
+            day = "0" + day;
+        }
+
         console.log("day " + day + " month " + month + " year " + year + " ");
 
         console.log(start_date_hour)
@@ -70,6 +74,8 @@ function appendEvents(events){
         //var d = new Date(year, month, day, hours, minutes, seconds, milliseconds);
         const end_date = new Date(event.event_end_date);
 
+        
+
         container.append(
             '<div class="row" style="margin-bottom:20px;">' + 
                 '<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">' +
@@ -77,8 +83,9 @@ function appendEvents(events){
                         '<div class="event-stick">' +
                         '</div>' +
                         '<div style="width:50px;">' +
-                            '<h1> '+ start_date.getDate() + '</h1>' +
+                            '<h1> '+ day + '</h1>' +
                             '<h5>'+ months[start_date.getMonth()].substring(0,3) + '</h5>' +
+                            "<small>" + 
                         '</div>' + 
                     '</div>' + 
                 '</div>' +
