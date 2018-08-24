@@ -1,0 +1,41 @@
+@media only screen and (min-width: 767px){
+
+  .event{
+    width: 50%;
+    margin: 0 auto;
+  }  
+}
+
+.upcoming-events{
+	color: rgb(36,86,138);
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.event h1{
+	color: rgb(26,80,130);
+}
+
+.event h5{
+	color: rgb(94,135,168);
+}
+
+.event h4{
+	color: rgb(128,204,227);
+}
+
+.event .event-date{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.event .event-stick{
+	background: rgb(85,189,219);
+	width: 5px;
+	height: 80px;
+}
+
+#events{
+	margin-top: 20px;
+}
