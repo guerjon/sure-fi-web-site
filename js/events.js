@@ -58,7 +58,7 @@ function eventClick(event,jsEvent,view){
     
     $(".modal-title").text(event.title)
     $(".description").text(event.description)
-
+    $(".time").text(event.start.format('MMMM Do , h:mm:ss a'))
     modal.modal()
 
 }
