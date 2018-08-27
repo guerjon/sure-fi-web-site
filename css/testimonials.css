@@ -6,7 +6,7 @@
 .testimonials-section-container{
 	width: 100%;
 	text-align: center;
-	padding:10%;
+	
 }
 
 
@@ -145,6 +145,10 @@
 	.testimonials-index{
 		height: 500px;	
 	}
+
+	.testimonials-section-container{
+		padding:50px;
+	}
 } 
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -152,12 +156,17 @@
 	.testimonials-index{
 		height: 500px;	
 	}
+
+
+	.testimonials-section-container{
+		padding:50px;
+	}	
 } 
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
 	.testimonials-section-container{
-		padding: 5%;
+		
 	}
 
 	#testimonials-section{
