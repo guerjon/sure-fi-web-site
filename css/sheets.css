@@ -140,7 +140,7 @@ ul{
 
 .green-title{
   	color : #7BC143;
-  	color : var(--wiegand-green);	
+  	color : var(--wiegand-green	);	
 }
 
 .red-title{

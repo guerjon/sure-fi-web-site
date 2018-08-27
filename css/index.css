@@ -53,15 +53,11 @@
 }
 
 .learn-more-button{
-  padding: 10px;
-  border-width: 2px;
-  border-style: solid;
-  border-radius: 10px;
-  border-color:white;
-  margin-top: 20px;
-  width: 200px;
   display: flex;
-  justify-content: space-around;
+  
+  justify-content: center;
+  align-items: center;
+
 }
 
 .learn-more-button-container{
