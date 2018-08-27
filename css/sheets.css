@@ -2,6 +2,7 @@
 
 * {
 	font-family : 'Nudista','Open Sans';
+	--wiegand-green :  rgb(94, 186, 83);
 }
 
 ul{
@@ -80,7 +81,7 @@ ul{
   font-weight : bold;
   font-size : 54px;
   color : #7BC143;
-  color : rgb(123, 193, 67);
+  color : var(--wiegand-green);
 }
 
 
@@ -112,8 +113,7 @@ ul{
 }
 
 .medio-green-title{
-  	color : #7BC143;
-  	color : rgb(123, 193, 67);
+  	color : var(--wiegand-green);
 }
 
 .medio-red-title{
@@ -140,7 +140,7 @@ ul{
 
 .green-title{
   	color : #7BC143;
-  	color : rgb(123, 193, 67);	
+  	color : var(--wiegand-green);	
 }
 
 .red-title{
