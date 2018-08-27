@@ -56,10 +56,12 @@
   padding: 10px;
   border-width: 2px;
   border-style: solid;
-  border-radius: 20px;
+  border-radius: 10px;
   border-color:white;
   margin-top: 20px;
   width: 200px;
+  display: flex;
+  justify-content: space-around;
 }
 
 .learn-more-button-container{
