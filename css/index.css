@@ -46,3 +46,22 @@
   justify-content: center;
 }
 
+.learn-more-button-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.learn-more-button{
+  padding: 10px;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 20px;
+  border-color:white;
+  margin-top: 20px;
+  width: 200px;
+}
+
+.learn-more-button-container{
+  color: white;
+}
