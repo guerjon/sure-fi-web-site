@@ -68,7 +68,8 @@ function appendEventsOnCalendar(events){
       eventLimit: true, // allow "more" link when too many events
       events: events,
       aspectRatio: 2,
-      height: "parent"
+      height: "parent",
+      datClick: ()
     });    
 };
 
@@ -180,6 +181,8 @@ function appendEvents(events){
         );
     }
 }
+
+
 
 
 $(function() {
