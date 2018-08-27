@@ -1,9 +1,10 @@
 'use strict';
 
 const events_url = "http://admin.sure-fi.com/api/get_upcoming_events";
+let events = null;
 
 function getEvents(){
-    console.log("getting events")
+
     let data = {
         method : "POST",
         headers :{
@@ -17,10 +18,12 @@ function getEvents(){
         let result = JSON.parse(contents)
         
         if(result.status == 200){
-            let events = result.data;
+            events = result.data;
             
-            appendEvents(events)    
-            $("#events").show();
+            appendEvents(events);
+            appendEventsOnCalendar(events);
+            showList(events)
+
         }else{
             $("#events").hide();
         }
@@ -28,6 +31,74 @@ function getEvents(){
     }).catch(error => {
         console.error(error)
     })
+}
+
+function getToday(){
+    var date = new Date();
+    var day = date.getDate();
+    var month = date.getMonth() + 1;
+    var year = date.getFullYear();
+
+    if(month < 10){
+        month = "0" + month;
+    }
+
+    if(day < 10){
+        day = "0" + day;
+    }
+
+    return year + "-" + month + "-" + day
+
+}
+
+
+function appendEventsOnCalendar(events){
+    var today = getToday();
+    events = parseEvents(events)
+
+    $('#calendar').fullCalendar({
+      header: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'month,basicWeek,basicDay'
+      },
+      defaultDate: today,
+      navLinks: true, // can click day/week names to navigate views
+      editable: true,
+      eventLimit: true, // allow "more" link when too many events
+      events: events,
+      aspectRatio: 2,
+      height: "parent"
+    });    
+};
+
+
+function parseEvents(events){
+    const parser_events = [];
+
+    events.map(x => {
+        let event = {
+            title: x.event_title,
+            start: x.event_start_date,
+            end: x.event_end_time,
+            color:"#55bddb",
+            allDay : false
+        }
+        parser_events.push(event);
+    });
+
+    return parser_events;
+}
+
+function showCalendar(){
+
+    $("#calendar").show();
+    $(".event").hide();
+}
+
+function showList(){
+    $(".event").show();
+    $("#calendar").hide();
 }
 
 
@@ -66,9 +137,9 @@ function appendEvents(events){
             day = "0" + day;
         }
 
-        console.log("day " + day + " month " + month + " year " + year + " ");
+        //console.log("day " + day + " month " + month + " year " + year + " ");
 
-        console.log(start_date_hour)
+        //console.log(start_date_hour)
 
         const start_date = new Date(year,month,day,hour,minutes);
         //var d = new Date(year, month, day, hours, minutes, seconds, milliseconds);

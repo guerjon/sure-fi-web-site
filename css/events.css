@@ -1,16 +1,15 @@
+body {
+	--stick-blue : rgb(85,189,219);
+}
+
+
 .event{
 	width: 80%;
 	margin: 0 auto;
 }  
 
 
-@media only screen and (min-width: 767px){
 
-  .event{
-    width: 50%;
-    margin: 0 auto;
-  }  
-}
 
 
 
@@ -39,7 +38,7 @@
 }
 
 .event .event-stick{
-	background: rgb(85,189,219);
+	background: var(--stick-blue);
 	width: 5px;
 	height: 80px;
 	margin-right: 5px;
@@ -49,6 +48,18 @@
 	margin-top: 20px;
 }
 
+#calendar {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+
+@media only screen and (min-width: 767px){
+  .event{
+    width: 50%;
+    margin: 0 auto;
+  }  
+}
 
 /**
 this solve the bug with the nav bar

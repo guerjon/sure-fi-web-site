@@ -24,8 +24,15 @@
 
 		<!-- Custom styles for this template -->
 		<link href="css/creative.css" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="css/font-responsive.css">
+		<link rel="stylesheet" type="text/css" href="css/font-responsive.css">		
+		
+
 		<link rel="shortcut icon" type="image/x-icon" href="images/logo-icon.png" />
+		<link href='js/fullcalendar/fullcalendar.min.css' rel='stylesheet' />
+		<script src='js/fullcalendar/lib/moment.min.js'></script>
+		<script src='js/fullcalendar/lib/jquery.min.js'></script>
+		<script src='js/fullcalendar/fullcalendar.min.js'></script>
+
 	</head>
 
   	<body id="page-top">
@@ -93,23 +100,38 @@
 					<h2>
 						Upcoming events	
 					</h2>
-				</div>
+				
+	    		</div>
+	    		<div style="width: 50%;margin: 0 auto;">
+		    		<div style="display: flex;justify-content: center;align-items: center;margin-bottom: 20px;">
+		    			<button onclick="showList()">
+		    				<i class="fa fa-list" aria-hidden="true"></i>
+		    			</button>
+		    			<button onclick="showCalendar()">
+		    				<i class="fa fa-calendar" aria-hidden="true"></i>
+		    			</button>
+		    		</div>				
+	    		</div>
 				<div id="events-container">    
+					<div class="calendar-container container">
+						<div class="row">
+							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+								<div id="calendar" style="display: none;"></div>
+							</div>
+						</div>
+					</div>
 				  	<div class="event">
-
 					</div>
         		</div>			
         	</div>
         </div>
-		
 	   	
 	    <div id="footer"></div>
-	    
-	    <script src="vendor/jquery/jquery.min.js"></script>
 	    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-	    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-	    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
-	    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+	    <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+
+	    
 		<script type="text/javascript" src="js/events.js"></script>
 
 	    <!-- This add React -->
