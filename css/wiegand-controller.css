@@ -1,3 +1,7 @@
+* {
+	--wiegand-green :  rgb(94, 186, 83);
+}
+
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
 @media screen and (min-width: 0px) and (max-width: 768px){

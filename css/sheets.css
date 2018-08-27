@@ -955,3 +955,19 @@ ul{
     max-width: 100%;
     height: auto;
 }
+
+
+.learn-more-button{
+	display: flex;
+  	justify-content: space-between;
+  	flex-direction: row;
+  	color:var(--wiegand-green);
+   	margin-top: 20px;
+   	border-color:var(--wiegand-green);
+   	border-width: 2px;
+   	border-style: solid;
+   	padding:5px;
+   	width: 170px;
+   	
+   	border-radius: 10px;
+}
