@@ -51,6 +51,13 @@ function getToday(){
 
 }
 
+function eventClick(event,jsEvent,view){
+    console.log(event);
+
+    $("#modal").modal()    
+
+}
+
 
 function appendEventsOnCalendar(events){
     var today = getToday();
@@ -69,9 +76,11 @@ function appendEventsOnCalendar(events){
       events: events,
       aspectRatio: 2,
       height: "parent",
-
+      eventClick: eventClick
     });    
 };
+
+
 
 
 function parseEvents(events){
