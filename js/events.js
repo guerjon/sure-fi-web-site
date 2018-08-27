@@ -91,12 +91,16 @@ function parseEvents(events){
 }
 
 function showCalendar(){
-
+    $("#show-list-button").addClass("button-unactivated");
+    $("#show-calendar-button").removeClass("button-unactivated");
     $("#calendar").show();
     $(".event").hide();
 }
 
 function showList(){
+    $("#show-list-button").removeClass("button-unactivated");
+    $("#show-calendar-button").addClass("button-unactivated");
+
     $(".event").show();
     $("#calendar").hide();
 }
