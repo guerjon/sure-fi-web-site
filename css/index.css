@@ -57,6 +57,8 @@
    border-style: solid;
    padding:5px;
    width: 150px;
+   min-width: 150px;
+   max-width: 150px;
    border-radius: 10px;
 
 }
