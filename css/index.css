@@ -46,20 +46,18 @@
   justify-content: center;
 }
 
-.learn-more-button-container{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .learn-more-button{
   display: flex;
-  
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  color:white;
+   margin-top: 20px;
+   border-color:white;
+   border-width: 2px;
+   border-style: solid;
+   padding:5px;
+   width: 150px;
+   border-radius: 10px;
 
 }
 
-.learn-more-button-container{
-  color: white;
-}
