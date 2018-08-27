@@ -69,7 +69,7 @@ function appendEventsOnCalendar(events){
       events: events,
       aspectRatio: 2,
       height: "parent",
-      datClick: ()
+
     });    
 };
 
