@@ -54,8 +54,18 @@ function getToday(){
 function eventClick(event,jsEvent,view){
     console.log(event);
 
-    $("#modal").modal()    
+    const modal = $("#modal");
+    
+    $(".modal-title").text(event.title)
+    $(".description").text(event.description)
 
+    modal.modal()
+
+}
+
+function eventRender(event,element){
+    element.find('.fc-title').append("<div style='word-break: break-all;width:100px;'>" + event.description + "</div>" ); 
+    element.height(100)
 }
 
 
@@ -64,35 +74,46 @@ function appendEventsOnCalendar(events){
     events = parseEvents(events)
 
     $('#calendar').fullCalendar({
-      header: {
-        left: 'prev,next today',
-        center: 'title',
-        right: 'month,basicWeek,basicDay'
-      },
-      defaultDate: today,
-      navLinks: true, // can click day/week names to navigate views
-      editable: true,
-      eventLimit: true, // allow "more" link when too many events
-      events: events,
-      aspectRatio: 2,
-      height: "parent",
-      eventClick: eventClick
+        header: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'month,basicWeek,basicDay'
+        },
+        defaultDate: today,
+        navLinks: true, // can click day/week names to navigate views
+        editable: false,
+        eventLimit: false, // allow "more" link when too many events
+        events: events,
+        height: "parent",
+        eventClick: eventClick,
+        eventRender: eventRender
     });    
 };
 
 
 
-
+/*
+*
+*
+event_description: String
+event_end_time :  String "2018-10-10 13:00:00"
+event_id : "7"
+event_location : null
+event_start_date:"2018-10-10 13:00:00"
+event_title:"Sure-Fi Webinar Oct 10 - HVAC"
+*/
 function parseEvents(events){
     const parser_events = [];
-
+    console.log("events",events)
     events.map(x => {
         let event = {
             title: x.event_title,
             start: x.event_start_date,
             end: x.event_end_time,
-            color:"#55bddb",
-            allDay : false
+            color:"#FFFFFF",
+            allDay : false,
+            id: x.event_id,
+            description : x.event_description
         }
         parser_events.push(event);
     });
