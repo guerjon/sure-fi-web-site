@@ -57,6 +57,11 @@ body {
 	opacity: 0.5;
 }
 
+.calendar-event{
+	background: red;
+	background-color: red;
+}
+
 
 @media only screen and (min-width: 767px){
   .event{
