@@ -32,6 +32,7 @@
 		<link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
 		<link rel="stylesheet" type="text/css" href="css/relay.css">
 		<link rel="stylesheet" type="text/css" href="css/testimonials.css">
+		<link rel="stylesheet" type="text/css" href="css/wiegand-controller.css">
 	</head>
 
   	<body id="page-top">
@@ -84,40 +85,9 @@
 	                </li>	                                              
 	              </ul>
 		            </li>   
-		            <li class="nav-item dropdown">
-		              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">WHERE TO BUY
-		              <span class="caret"></span></a>
-	              	<ul class="dropdown-menu">
-		                <li>
-		                  <a href="where-to-buy-wiegand.html">
-		                    <div class="dropdown-list-item">
-		                      Wiegand Bridge
-		                    </div>
-		                  </a>
-		                </li>
-		                <li> 
-		                    <a href="where-to-buy-hvac.html">
-		                      <div class="dropdown-list-item">
-		                        HVAC Bridge
-		                      </div>
-		                    </a>
-		                </li>
-		                <li>
-		                  <a  href="where-to-buy-relay.html">
-		                    <div class="dropdown-list-item">
-		                        Relay Bridge
-		                    </div>
-		                  </a>
-		                </li>		                
-		                <li>
-		                    <a  href="where-to-buy-development-kit.html">
-		                      <div class="dropdown-list-item">
-		                        Development kit
-		                      </div>
-		                    </a>  
-		                </li>	                	                
-	              	</ul>
-		            </li>              
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="events.html">Upcoming Events</a>
+                    </li>      		            
 		            <li class="nav-item">
 		              <a class="nav-link js-scroll-trigger" href="contact.html">Contact</a>
 		            </li>            
@@ -129,8 +99,16 @@
 			<div class="row" id="body">	
 				<div class="container shadow-container">
 					<div class="row">
-						<div class=" col-sm-12 col-md-8 col-lg-8" style="padding: 20px;">
+						<div class=" col-sm-12 col-md-8 col-lg-8" style="padding: 20px;text-align: center;">
 							<img src="images/heavy-green.png" class="rounded bridge-image">
+							<div>
+								<a href="where-to-buy-wiegand.html" class="where-to-buy-button">
+									<div>
+										<i class="fa fa-shopping-cart"></i>
+										<h4>Buy this product</h4>
+									</div>
+								</a>								
+							</div>
 						</div>
 						<div class=" col-sm-12 col-md-4 col-lg-4" style="background: rgb(236,236,238)">
 							<div class="row" style="padding-top: 20px;">
@@ -408,7 +386,7 @@
 										<li>
 											<span class="mini-green-list-fat">MOUNTING OPTIONS:</span><br>
 											<span class="mini-green-list-thin"> 
-												DIN 35 (35mm x 7.5mm) or directly mount with two screws												
+												DIN 35 (35mm x 7.5mm) or directly mount with two screws				
 											</span>
 										</li>
 									</ul>
@@ -470,6 +448,8 @@
 	    <script src="js/creative.js"></script>
 	    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
 	    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+	    <script type="text/javascript" src="js/wiegand-controller.js"></script>
+
 	    
 	    <!-- This add React -->
 	    <script src="index.js"></script>

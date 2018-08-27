@@ -63,37 +63,39 @@ function shuffle(array) {
     scale: 0.3,
     distance: '0px'    
   }
+  try{
+    window.sr = ScrollReveal();
+    sr.reveal('.sr-icons',sr_icons,200);
+    sr.reveal('.sr-icons-2',sr_icons,200);
+    sr.reveal('.sr-icons-3',sr_icons,200);
+    sr.reveal('.sr-icons-4',sr_icons,200);
 
-  window.sr = ScrollReveal();
-  sr.reveal('.sr-icons',sr_icons,200);
-  sr.reveal('.sr-icons-2',sr_icons,200);
-  sr.reveal('.sr-icons-3',sr_icons,200);
-  sr.reveal('.sr-icons-4',sr_icons,200);
-
-  sr.reveal('.sr-button', {
-    duration: 1000,
-    delay: 200
-  });
-  
-  sr.reveal('.sr-contact', {
-    duration: 600,
-    scale: 0.3,
-    distance: '0px'
-  }, 300);
+    sr.reveal('.sr-button', {
+      duration: 1000,
+      delay: 200
+    });
+    
+    sr.reveal('.sr-contact', {
+      duration: 600,
+      scale: 0.3,
+      distance: '0px'
+    }, 300);
 
 
-  sr.reveal('.show-on-scroll', {
-    duration: 600,
-    scale: 0.3,
-    distance: '0px'
-  }, 300);
+    sr.reveal('.show-on-scroll', {
+      duration: 600,
+      scale: 0.3,
+      distance: '0px'
+    }, 300);
 
-  sr.reveal('.bunker-busting-animation',{
-    duration: 1200,
-    scale: 0.3,
-    distance: '0px'
-  },200)
-
+    sr.reveal('.bunker-busting-animation',{
+      duration: 1200,
+      scale: 0.3,
+      distance: '0px'
+    },200)
+  }catch(e){
+    console.log("e on creative js",e)
+  }
   var myArray = [0, 1, 2];   
   var rand = myArray[Math.floor(Math.random() * myArray.length)];
 

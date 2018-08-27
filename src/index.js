@@ -1,7 +1,7 @@
 'use strict';
 
 const e = React.createElement;
-
+// run npx babel --watch src --out-dir . --presets react-app/prod in the sure-fi-web-site directory to reflect changes on this file
 class Fotter extends React.Component {
   
   constructor(props) {
@@ -23,7 +23,8 @@ class Fotter extends React.Component {
               </div>
               <div className="row">
                 <div className="col-lg-12 mx-auto text-center">
-                 <img src="images/hall-labs.jpg" alt="hall-labls-image" style={{borderTopTightRadius: 5,borderTopLeftRadius: 5,width: "100%"}}/> 
+                 <img src="images/hall-labs-70.png" id="hall-labs-image" alt="hall-labls-image" style={{borderTopTightRadius: 5,borderTopLeftRadius: 5}}/> 
+                  
                   <div id="hall-bottom-foot">
                     <div style={{width: "20%",float: "right",marginTop: 20,marginRight: 20}}>
                       <img src="http://halllabs.com/wp-content/uploads/2017/06/HallLabs-Logo-2.png" className="img-responsive" style={{marginTop: "5%",marginBottom: "5%",width: "100%"}}/> 

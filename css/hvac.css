@@ -105,3 +105,25 @@
 		padding: 80px;
 	}
 }
+
+
+.where-to-buy-button{
+	margin: 0px 20px; 
+}
+
+.where-to-buy-button i{
+	font-size: 34px;
+}
+
+.where-to-buy-button div{
+	width: 300px;
+	margin: 0 auto;
+	border-radius: 10px;
+	border-width: 5px;
+	border-style: solid;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	min-height: 80px;
+	padding : 10px;
+}

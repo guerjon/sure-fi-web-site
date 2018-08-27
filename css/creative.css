@@ -916,7 +916,8 @@
     .where-to-buy-header{
         height: 20vh;
         display: flex;
-        background: #7BC143;
+        background: var(--wiegand-color);
+        
     }
     
     .where-to-buy-header-child-1{
