@@ -117,7 +117,6 @@ function orderList(list){
         const first_part = list.slice(0,list_half)
         const second_part = list.slice(list_half,list.length)
     }
-
 }
 
 $(function() {
