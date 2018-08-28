@@ -161,7 +161,9 @@ window.onload = function () {
 
   $(".black-logo-background").click(function(){
     var attr = $(this).attr("href")
-    window.location.replace(attr);
+    window.open(attr)
+    //window.location.href = ;
+    //window.location.replace();
     
   });
 
