@@ -23,11 +23,8 @@ function getEvents(){
         
         if(result.status == 200){
             events = result.data;
-            
-            appendEvents(events);
-            appendEventsOnCalendar(events);
-            showList(events)
-
+            updateEvents(events)
+            showList()
         }else{
             $("#events").hide();
         }
@@ -72,6 +69,7 @@ function eventRender(event,element){
 
 
 function appendEventsOnCalendar(events){
+    console.log("events appendEventsOnCalendar",events)
     var today = getToday();
     let parser_events = parseEvents(events)
 
@@ -85,7 +83,7 @@ function appendEventsOnCalendar(events){
         navLinks: true, // can click day/week names to navigate views
         editable: false,
         eventLimit: false, // allow "more" link when too many events
-        events: events,
+        events: parser_events,
         height: "parent",
         eventClick: eventClick,
         eventRender: eventRender
@@ -137,6 +135,34 @@ function showList(){
     $("#calendar").hide();
 }
 
+function parseHour(time){
+        const split_start_date = time.split(" ");
+        const start_date_date = split_start_date[0].split("-").map(x => parseInt(x));
+        const start_date_hour = split_start_date[1].split(":").map(x => parseInt(x));
+        
+        let day = start_date_date[2]
+        const month = start_date_date[1] - 1
+        const year = start_date_date[0]
+        const hour = start_date_hour[0]
+        let minutes = start_date_hour[1]
+
+        if(day < 10){
+            day = "0" + day;
+        }
+
+        if(minutes < 10){
+            minutes = "0" + minutes
+        }
+
+    return {
+        minutes : minutes,
+        hour: hour,
+        day: day,
+        month: month,
+        year: year,
+    }
+
+}
 
 function appendEvents(events){
     var container = $('.event');
@@ -160,23 +186,8 @@ function appendEvents(events){
     for(let i = events.length; i--;){
         const event =  events[i]
         
-        const split_start_date = event.event_start_date.split(" ");
-        
-        const start_date_date = split_start_date[0].split("-").map(x => parseInt(x));
-        const start_date_hour = split_start_date[1].split(":").map(x => parseInt(x));
-        
-        let day = start_date_date[2]
-        const month = start_date_date[1] - 1
-        const year = start_date_date[0]
-        const hour = start_date_hour[0]
-        const minutes = start_date_hour[1]
-
-        if(day < 10){
-            day = "0" + day;
-        }
-
-        const start_date = new Date(year,month,day,hour,minutes);
-        const end_date = new Date(event.event_end_date);
+        const start_date = parseHour(event.event_start_date);
+        const end_date = parseHour(event.event_end_time);
 
         
         container.append(
@@ -186,8 +197,8 @@ function appendEvents(events){
                         '<div class="event-stick">' +
                         '</div>' +
                         '<div style="width:50px;">' +
-                            '<h1> '+ day + '</h1>' +
-                            '<h5>'+ months[start_date.getMonth()].substring(0,3) + '</h5>' +
+                            '<h1> '+ start_date.day + '</h1>' +
+                            '<h5>'+ months[start_date.month].substring(0,3) + '</h5>' +
                             "<small>" + 
                         '</div>' + 
                     '</div>' + 
@@ -195,6 +206,7 @@ function appendEvents(events){
                 '<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">' + 
                     '<div>' + 
                         '<h4>' + event.event_title + '</h4>' + 
+                        '<h6>Time : ' + start_date.hour + ":" + start_date.minutes + " - " + end_date.hour + ":" + end_date.minutes +'</h6>' +
                         '<div>' +
                             '<div>' +
                                 '<p>' +
