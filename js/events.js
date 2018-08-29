@@ -69,7 +69,15 @@ function eventClick(event,jsEvent,view){
         $(".description").text(event.description)
         if(event.event_url){
             $(".url").attr("href",event.event_url)
-            $(".url").text("Join now")            
+            if(event.type == "webinar"){
+                $(".url").text("Join now")
+            }else if(event.type == "presentation" || event.type == "convention"){
+                $(".url").text("See Metting website.");
+            }
+            
+        }
+        if(event.event_location){
+            
         }
 
         if(event.type){
