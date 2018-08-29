@@ -52,8 +52,6 @@ function getToday(){
 }
 
 function eventClick(event,jsEvent,view){
-    console.log(event);
-
     const modal = $("#modal");
     
     $(".modal-title").text(event.title)
@@ -104,7 +102,6 @@ event_title:"Sure-Fi Webinar Oct 10 - HVAC"
 */
 function parseEvents(events){
     const parser_events = [];
-    console.log("events",events)
     events.map(x => {
         let event = {
             title: x.event_title,
@@ -172,16 +169,10 @@ function appendEvents(events){
             day = "0" + day;
         }
 
-        //console.log("day " + day + " month " + month + " year " + year + " ");
-
-        //console.log(start_date_hour)
-
         const start_date = new Date(year,month,day,hour,minutes);
-        //var d = new Date(year, month, day, hours, minutes, seconds, milliseconds);
         const end_date = new Date(event.event_end_date);
 
         
-
         container.append(
             '<div class="row" style="margin-bottom:20px;">' + 
                 '<div class="col-xs-2 col-sm-2 col-md-2 col-lg-1">' +
@@ -213,8 +204,24 @@ function appendEvents(events){
 }
 
 
+function hideOrShowSection(){
+    var w = window.innerWidth;
+   
+    if(w < 780){
+        $(".hidden-sm").hide();
+    }else{
+        $(".hidden-sm").show();
+    }
+
+}
 
 
 $(function() {
+    $( window ).resize(function() {
+        hideOrShowSection()
+
+    });
+
+    hideOrShowSection();
     getEvents();
 });
