@@ -90,6 +90,18 @@ body {
 	justify-content: center;
 }
 
+.fc-title-personalize{
+	color: black !important;
+	width: 100%;
+	white-space:normal !important;
+}
+
+.image-in-calendar{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
 .simple-button{
 
     background: none;
@@ -102,11 +114,24 @@ body {
 
 }
 
+.event-type{
+	word-break: break-all;
+	color:black;
+	text-align:center;
+	font-size: 12px;	
+}
+
 @media only screen and (min-width: 767px){
 	.event{
 		width: 50%;
 		margin: 0 auto;
 	}  
+
+	.event-type{
+		font-size: {
+			font-size:14px;
+		}
+	}
 
 	.img-type-event-container p{
 		font-size: 18px;
@@ -121,4 +146,10 @@ this solve the bug with the nav bar
 	#events{
 		margin-top: 117px;
 	}
+
+	.event-type{
+		font-size: {
+			font-size:18px;
+		}
+	}	
 }

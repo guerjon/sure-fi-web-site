@@ -55,7 +55,6 @@ function getToday(){
 
 function eventClick(event,jsEvent,view){
     if(event.id == null || event.id == undefined){
-
         let results = events.filter(x => x.event_id == event);
         let parse_events = parseEvents(results)
         event = parse_events[0]
@@ -68,8 +67,8 @@ function eventClick(event,jsEvent,view){
     try{
         $(".modal-title").text(event.title)
         $(".description").text(event.description)
-        if(event.url){
-            $(".url").attr("href",event.url)
+        if(event.event_url){
+            $(".url").attr("href",event.event_url)
             $(".url").text("Join now")            
         }
 
@@ -77,7 +76,7 @@ function eventClick(event,jsEvent,view){
             $(".img-event").attr("src", "images/" + event.type + ".png");
         }
 
-        $(".time").text(event.start.format('MMMM Do , h:mm:ss a'))
+        $(".time").text(event.start.format('MMMM Do , h:mm a') + " - " + event.end.format("h:mm a"))
         modal.modal()
 
     }catch(e){
@@ -86,16 +85,28 @@ function eventClick(event,jsEvent,view){
 }
 
 function eventRender(event,element){
-    element.find('.fc-title').append("<div style='word-break: break-all;width:100px;'>" + event.description + "</div>" ); 
-    element.height(100)
+    element.find(".fc-content").empty();
+    element.find(".fc-content").addClass("fc-title-personalize")
+    element.find('.fc-content').append(
+        "<div> "+
+            "<div class='image-in-calendar'>" +
+                "<div style='width:50px;'>" +
+                    "<img src='images/"+ event.type +".png' class='responsive'/>"+
+                "</div>" +
+            "</div>" +
+            "<div class='event-type'>" + 
+                event.type.toUpperCase() + 
+            "</div>" +
+        "</div>" 
+    ); 
+    
 }
 
 
 function appendEventsOnCalendar(events){
-    
     var today = getToday();
     let parser_events = parseEvents(events)
-
+    console.log(parser_events);
     $('#calendar').fullCalendar({
         header: {
             left: 'prev,next today',
@@ -136,7 +147,7 @@ function parseEvents(events){
             allDay : false,
             id: x.event_id,
             description : x.event_description,
-            url: x.event_url,
+            event_url: x.event_url,
             type: x.event_type
         }
         parser_events.push(event);
