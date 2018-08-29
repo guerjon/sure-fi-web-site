@@ -53,13 +53,26 @@ function getToday(){
 }
 
 function eventClick(event,jsEvent,view){
-    const modal = $("#modal");
-    
-    $(".modal-title").text(event.title)
-    $(".description").text(event.description)
-    $(".time").text(event.start.format('MMMM Do , h:mm:ss a'))
-    modal.modal()
+    if(event.id == null || event.id == undefined){
 
+        let results = events.filter(x => x.event_id == event);
+        let parse_events = parseEvents(results)
+        event = parse_events[0]
+        event.start = moment(event.start)
+        event.end = moment(event.end)    
+        
+    }    
+
+    const modal = $("#modal");
+    try{
+        $(".modal-title").text(event.title)
+        $(".description").text(event.description)
+        $(".time").text(event.start.format('MMMM Do , h:mm:ss a'))
+        modal.modal()
+
+    }catch(e){
+        console.log(e)
+    }
 }
 
 function eventRender(event,element){
@@ -69,7 +82,7 @@ function eventRender(event,element){
 
 
 function appendEventsOnCalendar(events){
-    console.log("events appendEventsOnCalendar",events)
+    
     var today = getToday();
     let parser_events = parseEvents(events)
 
@@ -189,46 +202,47 @@ function appendEvents(events){
         const start_date = parseHour(event.event_start_date);
         const end_date = parseHour(event.event_end_time);
 
-        
+        var click = "eventClick(" + event.event_id + ")";
+
         container.append(
-            '<div class="row" style="margin-bottom:20px;">' + 
-                '<div class="col-xs-2 col-sm-2 col-md-2 col-lg-1">' +
-                    '<div class="event-date"> ' +
-                        '<div class="event-stick">' +
-                        '</div>' +
-                        '<div style="width:50px;">' +
-                            '<h1> '+ start_date.day + '</h1>' +
-                            '<h5>'+ months[start_date.month].substring(0,3) + '</h5>' +
-                            "<small>" + 
+            '<a onClick="' + click + '" class="simple-button">' +
+                '<div class="row" style="margin-bottom:20px;">' + 
+                    '<div class="col-xs-2 col-sm-2 col-md-2 col-lg-1">' +
+                        '<div class="event-date"> ' +
+                            '<div class="event-stick">' +
+                            '</div>' +
+                            '<div style="width:50px;">' +
+                                '<h1> '+ start_date.day + '</h1>' +
+                                '<h5>'+ months[start_date.month].substring(0,3) + '</h5>' +
+                                "<small>" + 
+                            '</div>' + 
                         '</div>' + 
-                    '</div>' + 
-                '</div>' +
-                '<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">' + 
-                    '<div>' + 
-                        '<h4>' + event.event_title + '</h4>' + 
-                        '<h6>Time : ' + start_date.hour + ":" + start_date.minutes + " - " + end_date.hour + ":" + end_date.minutes +'</h6>' +
-                        '<div>' +
+                    '</div>' +
+                    '<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">' + 
+                        '<div>' + 
+                            '<h4>' + event.event_title + '</h4>' + 
+                            '<h6>Schedule : ' + start_date.hour + ":" + start_date.minutes + " - " + end_date.hour + ":" + end_date.minutes +'</h6>' +
                             '<div>' +
-                                '<p>' +
-                                    event.event_description +
-                                '</p>' +
+                                '<div>' +
+                                    '<p>' +
+                                        event.event_description +
+                                    '</p>' +
+                                '</div>' +
                             '</div>' +
                         '</div>' +
-                    '</div>' +
-                '</div>'+
-            '</div>'
+                    '</div>'+
+                '</div>' +
+            '</a>'
         );
     }
 }
 
 
 function filterByType(type){
-    console.log(type)
     
     let filter_events = events;
     if(type != "all") {
         filter_events = filter_events.filter(x => x.event_type == type)
-        console.log(filter_events)
     }
 
     updateEvents(filter_events);
