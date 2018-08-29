@@ -23,6 +23,7 @@ function getEvents(){
         
         if(result.status == 200){
             events = result.data;
+            console.log(events);
             updateEvents(events)
             showList()
         }else{
@@ -64,9 +65,14 @@ function eventClick(event,jsEvent,view){
     }    
 
     const modal = $("#modal");
+    console.log("event",event)
     try{
         $(".modal-title").text(event.title)
         $(".description").text(event.description)
+        if(event.url){
+            $(".url").attr("href",event.url)
+            $(".url").text("Join now")            
+        }
         $(".time").text(event.start.format('MMMM Do , h:mm:ss a'))
         modal.modal()
 
@@ -125,7 +131,8 @@ function parseEvents(events){
             color:"#FFFFFF",
             allDay : false,
             id: x.event_id,
-            description : x.event_description
+            description : x.event_description,
+            url: x.event_url
         }
         parser_events.push(event);
     });
@@ -269,8 +276,7 @@ $(function() {
     $(".event-link").click(function(data,event) {
         const type = $(this).attr("type")
         $(".event-type-active").removeClass("event-type-active");
-        $("#" + type).addClass("event-type-active");
-        
+        $("#" + type).addClass("event-type-active");     
         filterByType(type)
     });
         

@@ -83,6 +83,10 @@ body {
 
 }
 
+#body-content{
+	height: 80vh;	
+}
+
 .simple-button{
 
     background: none;
