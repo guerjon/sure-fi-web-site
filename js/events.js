@@ -77,7 +77,7 @@ function eventClick(event,jsEvent,view){
             
         }
         if(event.event_location){
-            
+            $(".location").text(event.location)
         }
 
         if(event.type){
