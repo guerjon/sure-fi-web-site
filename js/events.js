@@ -76,7 +76,7 @@ function eventClick(event,jsEvent,view){
         if(event.type){
             $(".img-event").attr("src", "images/" + event.type + ".png");
         }
-        
+
         $(".time").text(event.start.format('MMMM Do , h:mm:ss a'))
         modal.modal()
 
@@ -211,8 +211,10 @@ function appendEvents(events){
     for(let i = events.length; i--;){
         const event =  events[i]
         
-        const start_date = parseHour(event.event_start_date);
-        const end_date = parseHour(event.event_end_time);
+
+        const start_date =  moment(event.event_start_date) ;
+        console.log(event.event_start_date)
+        const end_date = moment(event.event_end_time);
 
         var click = "eventClick(" + event.event_id + ")";
 
@@ -223,9 +225,9 @@ function appendEvents(events){
                         '<div class="event-date"> ' +
                             '<div class="event-stick">' +
                             '</div>' +
-                            '<div style="width:50px;">' +
-                                '<h1> '+ start_date.day + '</h1>' +
-                                '<h5>'+ months[start_date.month].substring(0,3) + '</h5>' +
+                            '<div style="width:200px;">' +
+                                '<h1> '+ event.event_start_date.split(" ")[0].split("-")[2] + '</h1>' +
+                                '<h5>'+ months[start_date.format("M") - 1].substring(0,3) + '</h5>' +
                                 "<small>" + 
                             '</div>' + 
                         '</div>' + 
@@ -233,7 +235,7 @@ function appendEvents(events){
                     '<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">' + 
                         '<div>' + 
                             '<h4>' + event.event_title + '</h4>' + 
-                            '<h6>Schedule : ' + start_date.hour + ":" + start_date.minutes + " - " + end_date.hour + ":" + end_date.minutes +'</h6>' +
+                            '<h6>Time : ' + start_date.format("h:mm a ") + " - " + end_date.format("h:mm a") + '</h6>' +
                             '<div>' +
                                 '<div>' +
                                     '<p>' +
