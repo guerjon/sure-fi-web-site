@@ -2,6 +2,10 @@
 
 const events_url = "http://admin.sure-fi.com/api/get_upcoming_events";
 let events = null;
+const ALL = "all";
+const CONVENTIONS = "conventions";
+const WEBINAR = "webinar";
+const PRESENTATIONS = "presentations";
 
 function getEvents(){
 
@@ -69,7 +73,7 @@ function eventRender(event,element){
 
 function appendEventsOnCalendar(events){
     var today = getToday();
-    events = parseEvents(events)
+    let parser_events = parseEvents(events)
 
     $('#calendar').fullCalendar({
         header: {
@@ -136,6 +140,8 @@ function showList(){
 
 function appendEvents(events){
     var container = $('.event');
+
+    container.empty();
     var months = [
         "January",
         "February",
@@ -204,24 +210,44 @@ function appendEvents(events){
 }
 
 
-function hideOrShowSection(){
-    var w = window.innerWidth;
-   
-    if(w < 780){
-        $(".hidden-sm").hide();
-    }else{
-        $(".hidden-sm").show();
+function filterByType(type){
+    console.log(type)
+    
+    let filter_events = events;
+    if(type != "all") {
+        filter_events = filter_events.filter(x => x.event_type == type)
+        console.log(filter_events)
     }
+
+    updateEvents(filter_events);
+
+}
+
+
+function updateEvents(events){
+    if(events.length > 0){
+        $("#calendar-list-buttons-container").show()
+        $("#no-results-container").hide();
+    }else{
+        $("#calendar-list-buttons-container").hide()
+        $("#no-results-container").show();
+    }
+
+    appendEvents(events);
+    appendEventsOnCalendar(events);
 
 }
 
 
 $(function() {
-    $( window ).resize(function() {
-        hideOrShowSection()
-
+    $(".event-link").click(function(data,event) {
+        const type = $(this).attr("type")
+        $(".event-type-active").removeClass("event-type-active");
+        $("#" + type).addClass("event-type-active");
+        
+        filterByType(type)
     });
+        
 
-    hideOrShowSection();
     getEvents();
 });
