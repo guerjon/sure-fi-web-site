@@ -61,7 +61,6 @@ function eventClick(event,jsEvent,view){
         event = parse_events[0]
         event.start = moment(event.start)
         event.end = moment(event.end)    
-        
     }    
 
     const modal = $("#modal");
@@ -73,6 +72,11 @@ function eventClick(event,jsEvent,view){
             $(".url").attr("href",event.url)
             $(".url").text("Join now")            
         }
+
+        if(event.type){
+            $(".img-event").attr("src", "images/" + event.type + ".png");
+        }
+        
         $(".time").text(event.start.format('MMMM Do , h:mm:ss a'))
         modal.modal()
 
@@ -132,7 +136,8 @@ function parseEvents(events){
             allDay : false,
             id: x.event_id,
             description : x.event_description,
-            url: x.event_url
+            url: x.event_url,
+            type: x.event_type
         }
         parser_events.push(event);
     });
