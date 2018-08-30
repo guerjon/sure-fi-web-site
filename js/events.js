@@ -72,7 +72,7 @@ function eventClick(event,jsEvent,view){
             if(event.type == "webinar"){
                 $(".url").text("Join now")
             }else if(event.type == "presentation" || event.type == "convention"){
-                $(".url").text("See Metting website.");
+                $(".url").text("See Event Website");
             }
             
         }
