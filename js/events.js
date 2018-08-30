@@ -23,7 +23,7 @@ function getEvents(){
         
         if(result.status == 200){
             events = result.data;
-            
+            console.log("events",events)
             updateEvents(events)
             showList()
         }else{
@@ -82,7 +82,10 @@ function eventClick(event,jsEvent,view){
             $(".location").text(event.location)
         }
 
-        if(event.type){
+        if(event.event_logo){
+
+            $(".img-event").attr("src", event.event_logo);
+            //$(".img-event").attr("src", "images/" + event.type + ".png");
             //$(".img-event").attr("src", "images/" + event.type + ".png");
         }
 
@@ -97,13 +100,20 @@ function eventClick(event,jsEvent,view){
 function eventRender(event,element){
     element.find(".fc-content").empty();
     element.find(".fc-content").addClass("fc-title-personalize")
+    let logo = ""
+    
+    if(event.event_logo){
+        console.log("event.log",event.event_logo)
+        logo = ("<div class='image-in-calendar'>" +
+                    "<div style='width:100%;'>" +
+                        "<img class='responsive' src='" + event.event_logo + "'/>" +
+                    "</div>" +
+                "</div>")
+    }
+
     element.find('.fc-content').append(
         "<div> "+
-            "<div class='image-in-calendar'>" +
-                "<div style='width:50px;'>" +
-                    //"<img src='images/"+ event.type +".png' class='responsive'/>"+
-                "</div>" +
-            "</div>" +
+            logo + 
             "<div class='event-type'>" + 
                 event.type.toUpperCase() + 
             "</div>" +
@@ -158,7 +168,8 @@ function parseEvents(events){
             id: x.event_id,
             description : x.event_description,
             event_url: x.event_url,
-            type: x.event_type
+            type: x.event_type,
+            event_logo: x.event_logo
         }
         parser_events.push(event);
     });
