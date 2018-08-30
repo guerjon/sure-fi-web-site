@@ -271,7 +271,7 @@ function appendEvents(events){
 }
 
 
-function filterByType(type){
+function filterByType(events,type){
     
     let filter_events = events;
     if(type != "all") {
@@ -283,6 +283,14 @@ function filterByType(type){
 }
 
 
+function filterEventsByStatus(events){
+    let events_actived_status = 1;
+    let filter_events = events.filter(x => parseInt(x.event_status) == events_actived_status);
+
+    return filter_events;
+
+}
+
 function updateEvents(events){
     if(events.length > 0){
         $("#calendar-list-buttons-container").show()
@@ -290,6 +298,11 @@ function updateEvents(events){
     }else{
         $("#calendar-list-buttons-container").hide()
         $("#no-results-container").show();
+    }
+    const website_location =  window.location.href;
+    
+    if(website_location === "http://sure-fi.com/events.html"){
+        events = filterEventsByStatus(events);
     }
 
     appendEvents(events);
@@ -303,7 +316,7 @@ $(function() {
         const type = $(this).attr("type")
         $(".event-type-active").removeClass("event-type-active");
         $("#" + type).addClass("event-type-active");     
-        filterByType(type)
+        filterByType(events,type)
     });
         
 
