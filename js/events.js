@@ -71,8 +71,10 @@ function eventClick(event,jsEvent,view){
             $(".url").attr("href",event.event_url)
             if(event.type == "webinar"){
                 $(".url").text("Join now")
+                $(".time").text(event.start.format('MMMM Do , h:mm a') + " - " + event.end.format("h:mm a"))
             }else if(event.type == "presentation" || event.type == "convention"){
                 $(".url").text("See Event Website");
+                $(".time").append("<p>From : " + event.start.format("MM-DD-YYYY") + "<br>  To : " + event.end.format("MM-DD-YYYY") + "</p>")
             }
             
         }
@@ -81,10 +83,10 @@ function eventClick(event,jsEvent,view){
         }
 
         if(event.type){
-            $(".img-event").attr("src", "images/" + event.type + ".png");
+            //$(".img-event").attr("src", "images/" + event.type + ".png");
         }
 
-        $(".time").text(event.start.format('MMMM Do , h:mm a') + " - " + event.end.format("h:mm a"))
+        
         modal.modal()
 
     }catch(e){
@@ -99,7 +101,7 @@ function eventRender(event,element){
         "<div> "+
             "<div class='image-in-calendar'>" +
                 "<div style='width:50px;'>" +
-                    "<img src='images/"+ event.type +".png' class='responsive'/>"+
+                    //"<img src='images/"+ event.type +".png' class='responsive'/>"+
                 "</div>" +
             "</div>" +
             "<div class='event-type'>" + 
@@ -236,6 +238,11 @@ function appendEvents(events){
         const end_date = moment(event.event_end_time);
 
         var click = "eventClick(" + event.event_id + ")";
+        var date = start_date.format("h:mm a ") + " - " + end_date.format("h:mm a");
+
+        if(event.event_type == "convention" || event.event_type == "presentation"){
+            date = "From: " + start_date.format("MM/DD/YYYY") + "<br>  To: " + end_date.format("MM/DD/YYYY");
+        }
 
         container.append(
             '<a onClick="' + click + '" class="simple-button">' +
@@ -254,7 +261,7 @@ function appendEvents(events){
                     '<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">' + 
                         '<div>' + 
                             '<h4>' + event.event_title + '</h4>' + 
-                            '<h6>Time : ' + start_date.format("h:mm a ") + " - " + end_date.format("h:mm a") + '</h6>' +
+                            '<h6>Time : ' + date + '</h6>' +
                             '<div>' +
                                 '<div>' +
                                     '<p>' +
