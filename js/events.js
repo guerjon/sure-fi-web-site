@@ -300,8 +300,8 @@ function updateEvents(events){
         $("#no-results-container").show();
     }
     const website_location =  window.location.href;
-    
-    if(website_location === "http://sure-fi.com/events.html"){
+    const production_url = "http://sure-fi.com/events.html";
+    if(website_location === production_url){
         events = filterEventsByStatus(events);
     }
 
