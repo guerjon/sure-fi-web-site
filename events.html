@@ -2,16 +2,19 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
 		<meta name="description" content="">
 		<meta name="author" content="">
 		<meta http-equiv='cache-control' content='no-cache'>
 		<meta http-equiv='expires' content='0'>
 		<meta http-equiv='pragma' content='no-cache'>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Sure-Fi</title>
 
+
 		<!-- Bootstrap core CSS -->
-		<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+
 
 		<!-- Custom fonts for this template -->
 		<link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -25,14 +28,8 @@
 		<!-- Custom styles for this template -->
 		<link href="css/creative.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/font-responsive.css">		
-		
-
 		<link rel="shortcut icon" type="image/x-icon" href="images/logo-icon.png" />
 		<link href='js/fullcalendar/fullcalendar.min.css' rel='stylesheet' />
-		<script src='js/fullcalendar/lib/moment.min.js'></script>
-		<script src='js/fullcalendar/lib/jquery.min.js'></script>
-		<script src='js/fullcalendar/fullcalendar.min.js'></script>
-
 	</head>
 
   	<body id="page-top">
@@ -100,9 +97,82 @@
 					<h2>
 						Upcoming events	
 					</h2>
-				
 	    		</div>
-	    		<div style="width: 50%;margin: 0 auto;">
+	    		<!--
+	    		<div class="container" style="text-align: center;" >
+	    			<div class="row">
+	    				<div class="col-6 col-sm-6 col-md-3 ">
+	    					<a href="#" class="event-link" type="all" >
+		    					<div class="event-type-active" id="all">
+			    					<div class="hidden-sm hidden-xs img-type-event-container d-none d-sm-block">
+										<img src="images/all-events.png" class="responsive " style="padding: 10px;" />
+			    					</div>
+			    					<div style="text-align: center;">
+				    					<p>
+				    						All
+				    					</p>
+			    					</div>
+		    					</div>
+	    					</a>
+	    				</div>	    				
+	    				<div class="col-6 col-sm-6 col-md-3 ">
+	    					<a href="#" class="event-link" type="webinar" >
+	    						<div id="webinar">
+			    					<div class="hidden-sm hidden-xs img-type-event-container d-none d-sm-block">
+										<img src="images/webinar.png" class="responsive" style="padding: 10px;"/>
+			    					</div>
+			    					<div style="text-align: center;">
+				    					<p >
+				    						Webinars
+				    					</p>
+			    					</div>
+			    				</div>
+	    					</a>
+	    				</div>
+	    				<div class="col-6 col-sm-6 col-md-3 ">
+	    					<a href="#" class="event-link" type="convention" >
+	    						<div id="convention">
+			    					<div class="hidden-sm hidden-xs img-type-event-container d-none d-sm-block">
+										<img src="images/convention.png" class="responsive" style="padding: 10px;"/>
+			    					</div>
+			    					<div style="text-align: center;">
+				    					<p >
+				    						Conventions
+				    					</p>
+			    					</div>
+			    				</div>
+	    					</a>
+	    				</div>	    				
+	    				<div class="col-6 col-sm-6 col-md-3 ">
+	    					<a href="#" class="event-link" type="presentation" >
+	    						<div id="presentation">
+			    					<div  class="hidden-sm hidden-xs img-type-event-container d-none d-sm-block">
+										<img src="images/presentation.png" class="responsive" style="padding: 10px;"/>
+			    					</div>
+			    					<div style="text-align: center;">
+				    					<p >
+				    						Presentations
+				    					</p>
+			    					</div>	   
+			    				</div>
+	    					</a> 
+	    				</div>
+	    			</div>
+	    		</div>
+	    		-->
+	    		<div id="no-results-container" style="display: none;">
+	    			<div class="container" style="">
+						<div class="alert alert-dark" role="alert" style="display: flex;align-items: center;justify-content: space-around;">
+						  	<div>
+						  		No events found		
+						  	</div>
+							<div style="width: 50px;">
+								<img src="images/no-results-icon.png" class="responsive"/>
+							</div>
+						</div>	 
+					</div>
+	    		</div>
+	    		<div style="width: 50%;margin: 0 auto;" id="calendar-list-buttons-container">
 		    		<div style="display: flex;justify-content: center;align-items: center;margin-bottom: 20px;">
 		    			<button onclick="showList()" style="margin-right: 5px;" id="show-list-button">
 		    				<i class="fa fa-list" aria-hidden="true"></i>
@@ -112,17 +182,18 @@
 		    			</button>
 		    		</div>				
 	    		</div>
-				<div id="events-container">    
+				<div id="events-container" >    
 					<div class="calendar-container container-fluid">
 						<div class="row">
-							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<div class="col-12 col-sm-12 col-md-12 col-lg-12">
 								<div id="calendar" style="display: none;"></div>
 							</div>
-						</div>
+						</di d-none d-sm-blockv>
 					</div>
 				  	<div class="event">
 					</div>
-        		</div>			
+        		</div>	
+
         	</div>
         </div>
 	   	
@@ -130,17 +201,31 @@
 
 		<div class="modal fade" id="modal" role="dialog">
 			<div class="modal-dialog">
-				
-				<div class="modal-content">
+				<div class="modal-content" id="body-content">
 					<div class="modal-header">
 					  	<h5 class="modal-title"></h5>
 					</div>
-					<div class="modal-body">
-					  	<p class="description">	
-					  	</p>
-					  	<hr>
+					<div class="modal-body" style="text-align: center;display: flex;align-items: center;justify-content: center;flex-direction: column;">
+						<div style="display: flex;align-items: center;justify-content: center;margin-bottom: 20px;">
+							<div style="width: 150px">
+								<img class="responsive img-event" />
+							</div>
+						</div>
+						<hr>
+						<div style="margin-left: 20px;margin-right: 20px;">						
+						  	<p class="description">	
+						  	</p>
+						</div>
 					  	<p class="time">
 					  	</p>
+					  	<p class="location">
+					  		
+					  	</p>
+					  	<div style="display: flex;align-items: center;justify-content: center;flex-direction: column;">
+						  	<div style="font-size: 12px;margin-bottom: 10px;">
+						  		<a class="btn btn-primary url"></a> 
+						  	</div>	
+					  	</div>
 					</div>
 					<div class="modal-footer">
 					  	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -148,12 +233,12 @@
 				</div>
 			</div>
 		</div>
-
-	    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="vendor/jquery/jquery.min.js"></script>
+		<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+		<script src='js/fullcalendar/lib/moment.min.js'></script>
+		<script src='js/fullcalendar/fullcalendar.min.js'></script>
 	    <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
         <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
-
-	    
 		<script type="text/javascript" src="js/events.js"></script>
 
 	    <!-- This add React -->

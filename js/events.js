@@ -2,6 +2,10 @@
 
 const events_url = "http://admin.sure-fi.com/api/get_upcoming_events";
 let events = null;
+const ALL = "all";
+const CONVENTIONS = "conventions";
+const WEBINAR = "webinar";
+const PRESENTATIONS = "presentations";
 
 function getEvents(){
 
@@ -19,11 +23,9 @@ function getEvents(){
         
         if(result.status == 200){
             events = result.data;
-            
-            appendEvents(events);
-            appendEventsOnCalendar(events);
-            showList(events)
-
+            console.log(events);
+            updateEvents(events)
+            showList()
         }else{
             $("#events").hide();
         }
@@ -52,27 +54,67 @@ function getToday(){
 }
 
 function eventClick(event,jsEvent,view){
-    console.log(event);
+    if(event.id == null || event.id == undefined){
+        let results = events.filter(x => x.event_id == event);
+        let parse_events = parseEvents(results)
+        event = parse_events[0]
+        event.start = moment(event.start)
+        event.end = moment(event.end)    
+    }    
 
     const modal = $("#modal");
-    
-    $(".modal-title").text(event.title)
-    $(".description").text(event.description)
-    $(".time").text(event.start.format('MMMM Do , h:mm:ss a'))
-    modal.modal()
+    console.log("event",event)
+    try{
+        $(".modal-title").text(event.title)
+        $(".description").text(event.description)
+        if(event.event_url){
+            $(".url").attr("href",event.event_url)
+            if(event.type == "webinar"){
+                $(".url").text("Join now")
+            }else if(event.type == "presentation" || event.type == "convention"){
+                $(".url").text("See Metting website.");
+            }
+            
+        }
+        if(event.event_location){
+            $(".location").text(event.location)
+        }
 
+        if(event.type){
+            $(".img-event").attr("src", "images/" + event.type + ".png");
+        }
+
+        $(".time").text(event.start.format('MMMM Do , h:mm a') + " - " + event.end.format("h:mm a"))
+        modal.modal()
+
+    }catch(e){
+        console.log(e)
+    }
 }
 
 function eventRender(event,element){
-    element.find('.fc-title').append("<div style='word-break: break-all;width:100px;'>" + event.description + "</div>" ); 
-    element.height(100)
+    element.find(".fc-content").empty();
+    element.find(".fc-content").addClass("fc-title-personalize")
+    element.find('.fc-content').append(
+        "<div> "+
+            "<div class='image-in-calendar'>" +
+                "<div style='width:50px;'>" +
+                    "<img src='images/"+ event.type +".png' class='responsive'/>"+
+                "</div>" +
+            "</div>" +
+            "<div class='event-type'>" + 
+                event.type.toUpperCase() + 
+            "</div>" +
+        "</div>" 
+    ); 
+    
 }
 
 
 function appendEventsOnCalendar(events){
     var today = getToday();
-    events = parseEvents(events)
-
+    let parser_events = parseEvents(events)
+    console.log(parser_events);
     $('#calendar').fullCalendar({
         header: {
             left: 'prev,next today',
@@ -83,7 +125,7 @@ function appendEventsOnCalendar(events){
         navLinks: true, // can click day/week names to navigate views
         editable: false,
         eventLimit: false, // allow "more" link when too many events
-        events: events,
+        events: parser_events,
         height: "parent",
         eventClick: eventClick,
         eventRender: eventRender
@@ -104,7 +146,6 @@ event_title:"Sure-Fi Webinar Oct 10 - HVAC"
 */
 function parseEvents(events){
     const parser_events = [];
-    console.log("events",events)
     events.map(x => {
         let event = {
             title: x.event_title,
@@ -113,7 +154,9 @@ function parseEvents(events){
             color:"#FFFFFF",
             allDay : false,
             id: x.event_id,
-            description : x.event_description
+            description : x.event_description,
+            event_url: x.event_url,
+            type: x.event_type
         }
         parser_events.push(event);
     });
@@ -136,9 +179,39 @@ function showList(){
     $("#calendar").hide();
 }
 
+function parseHour(time){
+        const split_start_date = time.split(" ");
+        const start_date_date = split_start_date[0].split("-").map(x => parseInt(x));
+        const start_date_hour = split_start_date[1].split(":").map(x => parseInt(x));
+        
+        let day = start_date_date[2]
+        const month = start_date_date[1] - 1
+        const year = start_date_date[0]
+        const hour = start_date_hour[0]
+        let minutes = start_date_hour[1]
+
+        if(day < 10){
+            day = "0" + day;
+        }
+
+        if(minutes < 10){
+            minutes = "0" + minutes
+        }
+
+    return {
+        minutes : minutes,
+        hour: hour,
+        day: day,
+        month: month,
+        year: year,
+    }
+
+}
 
 function appendEvents(events){
     var container = $('.event');
+
+    container.empty();
     var months = [
         "January",
         "February",
@@ -157,64 +230,95 @@ function appendEvents(events){
     for(let i = events.length; i--;){
         const event =  events[i]
         
-        const split_start_date = event.event_start_date.split(" ");
-        
-        const start_date_date = split_start_date[0].split("-").map(x => parseInt(x));
-        const start_date_hour = split_start_date[1].split(":").map(x => parseInt(x));
-        
-        let day = start_date_date[2]
-        const month = start_date_date[1] - 1
-        const year = start_date_date[0]
-        const hour = start_date_hour[0]
-        const minutes = start_date_hour[1]
 
-        if(day < 10){
-            day = "0" + day;
-        }
+        const start_date =  moment(event.event_start_date) ;
+        console.log(event.event_start_date)
+        const end_date = moment(event.event_end_time);
 
-        //console.log("day " + day + " month " + month + " year " + year + " ");
-
-        //console.log(start_date_hour)
-
-        const start_date = new Date(year,month,day,hour,minutes);
-        //var d = new Date(year, month, day, hours, minutes, seconds, milliseconds);
-        const end_date = new Date(event.event_end_date);
-
-        
+        var click = "eventClick(" + event.event_id + ")";
 
         container.append(
-            '<div class="row" style="margin-bottom:20px;">' + 
-                '<div class="col-xs-2 col-sm-2 col-md-2 col-lg-1">' +
-                    '<div class="event-date"> ' +
-                        '<div class="event-stick">' +
-                        '</div>' +
-                        '<div style="width:50px;">' +
-                            '<h1> '+ day + '</h1>' +
-                            '<h5>'+ months[start_date.getMonth()].substring(0,3) + '</h5>' +
-                            "<small>" + 
+            '<a onClick="' + click + '" class="simple-button">' +
+                '<div class="row" style="margin-bottom:20px;">' + 
+                    '<div class="col-xs-2 col-sm-2 col-md-2 col-lg-1">' +
+                        '<div class="event-date"> ' +
+                            '<div class="event-stick">' +
+                            '</div>' +
+                            '<div style="width:200px;">' +
+                                '<h1> '+ event.event_start_date.split(" ")[0].split("-")[2] + '</h1>' +
+                                '<h5>'+ months[start_date.format("M") - 1].substring(0,3) + '</h5>' +
+                                "<small>" + 
+                            '</div>' + 
                         '</div>' + 
-                    '</div>' + 
-                '</div>' +
-                '<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">' + 
-                    '<div>' + 
-                        '<h4>' + event.event_title + '</h4>' + 
-                        '<div>' +
+                    '</div>' +
+                    '<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">' + 
+                        '<div>' + 
+                            '<h4>' + event.event_title + '</h4>' + 
+                            '<h6>Time : ' + start_date.format("h:mm a ") + " - " + end_date.format("h:mm a") + '</h6>' +
                             '<div>' +
-                                '<p>' +
-                                    event.event_description +
-                                '</p>' +
+                                '<div>' +
+                                    '<p>' +
+                                        event.event_description +
+                                    '</p>' +
+                                '</div>' +
                             '</div>' +
                         '</div>' +
-                    '</div>' +
-                '</div>'+
-            '</div>'
+                    '</div>'+
+                '</div>' +
+            '</a>'
         );
     }
 }
 
 
+function filterByType(events,type){
+    
+    let filter_events = events;
+    if(type != "all") {
+        filter_events = filter_events.filter(x => x.event_type == type)
+    }
+
+    updateEvents(filter_events);
+
+}
+
+
+function filterEventsByStatus(events){
+    let events_actived_status = 1;
+    let filter_events = events.filter(x => parseInt(x.event_status) == events_actived_status);
+
+    return filter_events;
+
+}
+
+function updateEvents(events){
+    if(events.length > 0){
+        $("#calendar-list-buttons-container").show()
+        $("#no-results-container").hide();
+    }else{
+        $("#calendar-list-buttons-container").hide()
+        $("#no-results-container").show();
+    }
+    const website_location =  window.location.href;
+    const production_url = "http://sure-fi.com/events.html";
+    if(website_location === production_url){
+        events = filterEventsByStatus(events);
+    }
+
+    appendEvents(events);
+    appendEventsOnCalendar(events);
+
+}
 
 
 $(function() {
+    $(".event-link").click(function(data,event) {
+        const type = $(this).attr("type")
+        $(".event-type-active").removeClass("event-type-active");
+        $("#" + type).addClass("event-type-active");     
+        filterByType(events,type)
+    });
+        
+
     getEvents();
 });
