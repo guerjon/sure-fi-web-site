@@ -23,7 +23,7 @@ function getEvents(){
         
         if(result.status == 200){
             events = result.data;
-            console.log(events);
+            
             updateEvents(events)
             showList()
         }else{
@@ -63,7 +63,7 @@ function eventClick(event,jsEvent,view){
     }    
 
     const modal = $("#modal");
-    console.log("event",event)
+    
     try{
         $(".modal-title").text(event.title)
         $(".description").text(event.description)
@@ -116,7 +116,7 @@ function eventRender(event,element){
 function appendEventsOnCalendar(events){
     var today = getToday();
     let parser_events = parseEvents(events)
-    console.log(parser_events);
+    
     $('#calendar').fullCalendar({
         header: {
             left: 'prev,next today',
@@ -234,7 +234,7 @@ function appendEvents(events){
         
 
         const start_date =  moment(event.event_start_date) ;
-        console.log(event.event_start_date)
+        
         const end_date = moment(event.event_end_time);
 
         var click = "eventClick(" + event.event_id + ")";
