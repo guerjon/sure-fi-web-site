@@ -114,7 +114,6 @@ function eventRender(event,element){
     
     if(width < 768) // is a tablet we need render the small balls
     {
-        
         const event_type = "ball ball-" + event.event_type ;
 
         element.find('.fc-content').append(
@@ -198,6 +197,10 @@ function showCalendar(){
     $("#show-calendar-button").removeClass("button-unactivated");
     $("#calendar").show();
     $(".event").hide();
+
+    if(width < 768){
+        $("#legends").show();
+    }
 }
 
 function showList(){
@@ -206,6 +209,9 @@ function showList(){
 
     $(".event").show();
     $("#calendar").hide();
+    if(width < 768){
+        $("#legends").hide();
+    }
 }
 
 function parseHour(time){
