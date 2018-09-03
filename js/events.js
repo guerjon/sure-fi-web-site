@@ -6,6 +6,8 @@ const ALL = "all";
 const CONVENTIONS = "conventions";
 const WEBINAR = "webinar";
 const PRESENTATIONS = "presentations";
+const width = window.innerWidth;
+const height = window.innerHeight;
 
 function getEvents(){
 
@@ -83,13 +85,11 @@ function eventClick(event,jsEvent,view){
         }
 
         if(event.event_logo){
-
             $(".img-event").attr("src", event.event_logo);
             //$(".img-event").attr("src", "images/" + event.type + ".png");
             //$(".img-event").attr("src", "images/" + event.type + ".png");
         }
 
-        
         modal.modal()
 
     }catch(e){
@@ -102,6 +102,7 @@ function eventRender(event,element){
     element.find(".fc-content").addClass("fc-title-personalize")
     let logo = ""
     
+
     if(event.event_logo){
         console.log("event.log",event.event_logo)
         logo = ("<div class='image-in-calendar'>" +
@@ -110,16 +111,31 @@ function eventRender(event,element){
                     "</div>" +
                 "</div>")
     }
-
-    element.find('.fc-content').append(
-        "<div> "+
-            logo + 
-            "<div class='event-type'>" + 
-                event.type.toUpperCase() + 
-            "</div>" +
-        "</div>" 
-    ); 
     
+    if(width < 768) // is a tablet we need render the small balls
+    {
+        
+        const event_type = "ball ball-" + event.event_type ;
+
+        element.find('.fc-content').append(
+            "<div style='text-align:center'> "+
+                logo + 
+                "<div class='" +event_type+  " '>" + 
+                    event.event_type.toUpperCase().split("")[0] + 
+                "</div>" +
+            "</div>" 
+        ); 
+
+    }else{
+        element.find('.fc-content').append(
+            "<div> "+
+                logo + 
+                "<div class='event-type'>" + 
+                    event.event_type.toUpperCase() + 
+                "</div>" +
+            "</div>" 
+        ); 
+    }    
 }
 
 
@@ -168,7 +184,7 @@ function parseEvents(events){
             id: x.event_id,
             description : x.event_description,
             event_url: x.event_url,
-            type: x.event_type,
+            event_type: x.event_type,
             event_logo: x.event_logo
         }
         parser_events.push(event);
@@ -272,7 +288,7 @@ function appendEvents(events){
                     '<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">' + 
                         '<div>' + 
                             '<h4>' + event.event_title + '</h4>' + 
-                            '<h6>Time : ' + date + '</h6>' +
+                            '<h6> ' + date + '</h6>' +
                             '<div>' +
                                 '<div>' +
                                     '<p>' +
