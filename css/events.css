@@ -120,6 +120,28 @@ body {
 	text-align:center;
 	font-size: 12px;	
 }
+.ball{
+	border-radius: 100px;
+	height: 25px;
+	width: 25px;	
+	margin: 0 auto;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.ball-webinar{
+	background-color: #82E0AA;
+}
+
+.ball-convention{
+	background-color: #85C1E9;
+}
+
+.ball-presentation{
+	background-color: #F1948A;
+}
 
 @media only screen and (min-width: 767px){
 	.event{

@@ -374,9 +374,6 @@ ul{
 	color: white;
 }
 
-.product-link{
-	margin-bottom: 100px;
-}
 
 #hall-bottom-foot{
 	background: black;
@@ -560,10 +557,12 @@ ul{
 	.gray-our-product{
 		background: rgb(245,245,245);
 		padding-bottom: 20px;
+		padding-top:20px;
 	}
 
 	.white-our-product{
 		padding-bottom : 20px;		
+		padding-top:20px;	
 	}
 
 	.product-on-index{
