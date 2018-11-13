@@ -27,7 +27,7 @@ class Fotter extends React.Component {
                   
                   <div id="hall-bottom-foot">
                     <div style={{width: "20%",float: "right",marginTop: 20,marginRight: 20}}>
-                      <img src="http://halllabs.com/wp-content/uploads/2017/06/HallLabs-Logo-2.png" className="img-responsive" style={{marginTop: "5%",marginBottom: "5%",width: "100%"}}/> 
+                      <img src="images/HallLabs-Logo.png" className="img-responsive" style={{marginTop: "5%",marginBottom: "5%",width: "100%"}}/> 
                     </div>
                   </div>
                   <div id="contact_text_container" style={{textAlign: "left"}}>

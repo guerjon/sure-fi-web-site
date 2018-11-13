@@ -61,7 +61,7 @@ var Fotter = function (_React$Component) {
                   React.createElement(
                     "div",
                     { style: { width: "20%", float: "right", marginTop: 20, marginRight: 20 } },
-                    React.createElement("img", { src: "http://halllabs.com/wp-content/uploads/2017/06/HallLabs-Logo-2.png", className: "img-responsive", style: { marginTop: "5%", marginBottom: "5%", width: "100%" } })
+                    React.createElement("img", { src: "images/HallLabs-Logo.png", className: "img-responsive", style: { marginTop: "5%", marginBottom: "5%", width: "100%" } })
                   )
                 ),
                 React.createElement(
