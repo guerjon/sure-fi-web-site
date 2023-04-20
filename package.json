@@ -42,7 +42,7 @@
     "react-responsive-carousel": "^3.1.41",
     "scrollreveal": "3.3.6",
     "webpack": "^4.16.2",
-    "webpack-cli": "^3.1.0",
+    "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.1.5"
   },
   "devDependencies": {
